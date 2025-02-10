@@ -1,4 +1,4 @@
-import { type ReactNode } from "react";
+import { type ReactNode } from 'react';
 
 type CardProps = {
   title: string;
@@ -7,7 +7,7 @@ type CardProps = {
 
 export function Card({ title, children }: CardProps) {
   return (
-    <div className="flex flex-col gap-2 p-2 rounded shadow">
+    <div className="flex w-1.5 flex-col gap-2 rounded p-2 shadow">
       <span className="text-success">{title}</span>
       {children}
     </div>

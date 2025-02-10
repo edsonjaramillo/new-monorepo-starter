@@ -1,0 +1,20 @@
+# git
+**/.git
+**/.gitignore
+
+# modules
+**/node_modules
+
+# build
+**/.next
+**/dist
+**/build
+
+# monorepo
+**/.turbo
+
+# misc
+pnpm-lock.yaml
+pnpm-workspace.yaml
+README.md
+docker-compose.yaml

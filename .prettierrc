@@ -7,7 +7,7 @@
   "importOrder": ["^ui", "^\\."],
   "importOrderSeparation": true,
   "importOrderSortSpecifiers": true,
-  "tailwindStylesheet": "./packages/tailwind-config/theme.css",
+  "tailwindStylesheet": "@repo/tailwind-config/theme.css",
   "tailwindAttributes": ["cn", "tv"],
   "tailwindFunctions": ["cn", "tv"]
 }

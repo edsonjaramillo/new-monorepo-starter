@@ -20,20 +20,20 @@
   --color-gray-neutral: #737373;
 
   /* Alert */
+  --color-success: #06752c;
   --color-success-light: #edfff2;
-  --color-success-default: #06752c;
   --color-success-dark: #003613;
 
+  --color-info: #0f62be;
   --color-info-light: #edfaff;
-  --color-info-default: #0f62be;
   --color-info-dark: #0c2345;
 
+  --color-warning: #b2500b;
   --color-warning-light: #fffbeb;
-  --color-warning-default: #b2500b;
   --color-warning-dark: #441904;
 
+  --color-error: #cc0000;
   --color-error-light: #fff0f0;
-  --color-error-default: #cc0000;
   --color-error-dark: #500000;
 
   /* fonts */

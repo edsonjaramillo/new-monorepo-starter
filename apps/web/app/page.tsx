@@ -5,7 +5,7 @@ export default function Page() {
     <div className="w-responsive mx-auto grid grid-cols-4 gap-2">
       {Array.from({ length: 10 }).map((_, index) => (
         <Card key={index} title={`Card ${index + 1}`}>
-          <p className="text-primary">Card content</p>
+          <p>Card content</p>
         </Card>
       ))}
     </div>

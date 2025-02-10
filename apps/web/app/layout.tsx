@@ -3,7 +3,13 @@ import { Inter } from 'next/font/google';
 
 import './app.css';
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({
+  subsets: ['latin'],
+  preload: true,
+  weight: ['400', '500', '600', '700'],
+  display: 'swap',
+  variable: '--font-custom-sans',
+});
 
 export const metadata: Metadata = {
   title: 'Create Turborepo',

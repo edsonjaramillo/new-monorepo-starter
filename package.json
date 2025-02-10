@@ -2,18 +2,21 @@
   "name": "with-tailwind",
   "private": true,
   "scripts": {
-    "clean": "turbo run clean",
     "build": "turbo build",
-    "dev": "turbo run dev",
-    "lint": "turbo run lint",
+    "check": "manypkg check",
     "check-types": "turbo run check-types",
-    "format": "prettier --write . --cache"
+    "clean": "turbo run clean",
+    "dev": "turbo run dev",
+    "fix": "manypkg fix",
+    "format": "prettier --write . --cache",
+    "lint": "turbo run lint"
   },
   "devDependencies": {
-    "prettier": "^3.4.2",
-    "prettier-plugin-tailwindcss": "0.6.11",
+    "@manypkg/cli": "0.23.0",
     "@trivago/prettier-plugin-sort-imports": "5.2.2",
-    "turbo": "^2.4.0"
+    "prettier": "3.5.0",
+    "prettier-plugin-tailwindcss": "0.6.11",
+    "turbo": "2.4.0"
   },
   "packageManager": "pnpm@8.15.6",
   "engines": {

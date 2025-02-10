@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colors */
+  --color-*: initial;
+
+  /* Brand */
+  --color-primary: #ff00ff;
+  --color-primary-light: #ff00ff;
+  --color-primary-dark: #ff00ff;
+
+  /* Secondary */
+  --color-secondary: #00ff00;
+  --color-secondary-light: #00ff00;
+  --color-secondary-dark: #00ff00;
+
+  /* Grayscale */
+  --color-gray-dark: #171717;
+  --color-gray-light: #fafafa;
+  --color-gray-neutral: #737373;
+
+  /* Alert */
+  --color-success-light: #edfff2;
+  --color-success-default: #06752c;
+  --color-success-dark: #003613;
+
+  --color-info-light: #edfaff;
+  --color-info-default: #0f62be;
+  --color-info-dark: #0c2345;
+
+  --color-warning-light: #fffbeb;
+  --color-warning-default: #b2500b;
+  --color-warning-dark: #441904;
+
+  --color-error-light: #fff0f0;
+  --color-error-default: #cc0000;
+  --color-error-dark: #500000;
+
+  /* fonts */
+  --font-*: initial;
+  --font-sans: var(--font-custom-sans);
+  --font-serif: var(--font-custom-serif);
+  --font-mono: var(--font-custom-mono);
+
+  /* spacing */
+  --responsive-width: 65rem;
+  --navigation-height: 3.5rem;
+  --half-responsive-width: calc(--responsive-width / 2);
+
+  --spacing-responsive: min(90%, var(--responsive-width));
+  --spacing-half-responsive: min(90%, var(--half-responsive-width));
+  --spacing-split-form: min(90%, 27rem);
+  --spacing-navigation: var(--navigation-height);
+
+  /* Shadow */
+  --shadow-*: initial;
+  --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+
+  /* Rounded Corners */
+  --radius-*: initial;
+  --radius: 0.25rem;
+
+  /* Blur */
+  --blur-*: initial;
+  --blur: 84px;
+
+  /* Transition */
+  --transition-duration*: initial;
+  --transition-duration-base: 350ms;
+
+  /* Z-Index */
+  --z-index-*: initial;
+  --z-index-modal: 4;
+  --z-index-blur: 3;
+}

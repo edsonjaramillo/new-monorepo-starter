@@ -7,8 +7,8 @@ type CardProps = {
 
 export function Card({ title, children }: CardProps) {
   return (
-    <div className="flex flex-col gap p-2 border">
-      <span>{title}</span>
+    <div className="flex flex-col gap-2 p-2 rounded shadow">
+      <span className="text-success-default">{title}</span>
       {children}
     </div>
   );

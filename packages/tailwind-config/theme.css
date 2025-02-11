@@ -96,39 +96,46 @@
 
   /* Brand */
   --color-primary: var(--primary-500);
-  --color-primary-light: var(--primary-100);
-  --color-primary-dark: var(--primary-800);
+  --color-primary-accent: var(--primary-50);
+  --color-primary-hover: var(--primary-600);
+  --color-primary-pressed: var(--primary-700);
 
   /* Secondary */
   --color-secondary: var(--secondary-500);
-  --color-secondary-light: var(--secondary-100);
-  --color-secondary-dark: var(--secondary-800);
+  --color-secondary-accent: var(--secondary-50);
+  --color-secondary-hover: var(--secondary-600);
+  --color-secondary-pressed: var(--secondary-700);
 
   /* Grayscale */
   --color-gray: var(--gray-700);
-  --color-gray-light: var(--gray-50);
-  --color-gray-dark: var(--gray-950);
+  --color-black: var(--gray-950);
+  --color-white: var(--gray-50);
 
   /* Alert */
-  --color-success: var(--success-500);
-  --color-success-light: var(--success-50);
-  --color-success-dark: var(--success-800);
+  --color-success: var(--success-400);
+  --color-success-accent: var(--success-50);
+  --color-success-hover: var(--success-500);
+  --color-success-pressed: var(--success-600);
 
-  --color-info: var(--info-500);
-  --color-info-light: var(--info-50);
-  --color-info-dark: var(--info-800);
+  --color-info: var(--info-400);
+  --color-info-accent: var(--info-50);
+  --color-info-hover: var(--info-500);
+  --color-info-pressed: var(--info-600);
 
-  --color-warning: var(--warning-500);
-  --color-warning-light: var(--warning-50);
-  --color-warning-dark: var(--warning-800);
+  --color-warning: var(--warning-400);
+  --color-warning-accent: var(--warning-50);
+  --color-warning-hover: var(--warning-500);
+  --color-warning-pressed: var(--warning-600);
 
-  --color-danger: var(--danger-500);
-  --color-danger-light: var(--danger-50);
-  --color-danger-dark: var(--danger-800);
+  --color-danger: var(--danger-400);
+  --color-danger-accent: var(--danger-50);
+  --color-danger-hover: var(--danger-500);
+  --color-danger-pressed: var(--danger-600);
 
-  --color-neutral: var(--gray-700);
-  --color-neutral-light: var(--gray-50);
-  --color-neutral-dark: var(--gray-950);
+  --color-neutral: var(--gray-100);
+  --color-neutral-accent: var(--gray-50);
+  --color-neutral-hover: var(--gray-200);
+  --color-neutral-pressed: var(--gray-300);
 
   /* fonts */
   --font-*: initial;

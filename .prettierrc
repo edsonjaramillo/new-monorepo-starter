@@ -8,6 +8,6 @@
   "importOrderSeparation": true,
   "importOrderSortSpecifiers": true,
   "tailwindStylesheet": "@repo/tailwind-config/theme.css",
-  "tailwindAttributes": ["cn", "tv"],
-  "tailwindFunctions": ["cn", "tv"]
+  "tailwindAttributes": ["cn", "cva"],
+  "tailwindFunctions": ["cn", "cva"]
 }

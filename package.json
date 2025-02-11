@@ -1,5 +1,5 @@
 {
-  "name": "with-tailwind",
+  "name": "monorepo-starter",
   "private": true,
   "scripts": {
     "build": "turbo build",
@@ -8,7 +8,7 @@
     "clean": "turbo run clean",
     "dev": "turbo run dev",
     "fix": "manypkg fix",
-    "format": "prettier --write . --cache",
+    "format": "prettier --write --cache .",
     "lint": "turbo run lint"
   },
   "devDependencies": {

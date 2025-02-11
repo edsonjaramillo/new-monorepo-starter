@@ -1,13 +1,32 @@
-import { Card } from '@repo/ui/card';
+import { Button } from '@repo/ui/button';
 
 export default function Page() {
   return (
-    <div className="w-responsive mx-auto grid grid-cols-4 gap-2">
-      {Array.from({ length: 10 }).map((_, index) => (
-        <Card key={index} title={`Card ${index + 1}`}>
-          <p>Card content</p>
-        </Card>
-      ))}
+    <div className="w-responsive mx-auto flex gap-2">
+      <Button type="button" color="primary">
+        Primary
+      </Button>
+      <Button type="button" color="secondary">
+        Secondary
+      </Button>
+      <Button type="button" color="success">
+        Success
+      </Button>
+      <Button type="button" color="info">
+        Info
+      </Button>
+      <Button type="button" color="danger">
+        Danger
+      </Button>
+      <Button type="button" color="warning">
+        Warning
+      </Button>
+      <Button type="button" color="neutral">
+        Neutral
+      </Button>
+      <Button type="button" disabled>
+        Disabled
+      </Button>
     </div>
   );
 }

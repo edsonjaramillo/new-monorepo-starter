@@ -166,7 +166,7 @@
 
   /* Rounded Corners */
   --radius-*: initial;
-  --radius: 0.25rem;
+  --radius-base: 0.25rem;
 
   /* Blur */
   --blur-*: initial;

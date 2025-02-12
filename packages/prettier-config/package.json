@@ -6,6 +6,7 @@
   "exports": {
     "./base": "./base.prettier.mjs",
     "./import": "./import.prettier.mjs",
+    "./package": "./package.prettier.mjs",
     "./tailwind": "./tailwind.prettier.mjs"
   },
   "devDependencies": {

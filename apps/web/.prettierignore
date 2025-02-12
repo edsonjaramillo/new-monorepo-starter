@@ -7,14 +7,3 @@
 
 # build
 **/.next
-**/dist
-**/build
-
-# monorepo
-**/.turbo
-
-# misc
-pnpm-lock.yaml
-pnpm-workspace.yaml
-README.md
-docker-compose.yaml

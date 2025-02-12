@@ -8,5 +8,7 @@
     "./import": "./import.prettier.mjs",
     "./tailwind": "./tailwind.prettier.mjs"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "prettier": "3.5.0"
+  }
 }

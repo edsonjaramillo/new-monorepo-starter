@@ -8,7 +8,7 @@
     "clean": "turbo run clean",
     "dev": "turbo run dev",
     "fix": "manypkg fix",
-    "format": "prettier --write --cache .",
+    "format": "turbo format",
     "lint": "turbo run lint"
   },
   "devDependencies": {

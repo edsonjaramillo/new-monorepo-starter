@@ -1,0 +1,12 @@
+{
+  "name": "@repo/prettier-config",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./base": "./base.prettier.mjs",
+    "./import": "./import.prettier.mjs",
+    "./tailwind": "./tailwind.prettier.mjs"
+  },
+  "devDependencies": {}
+}

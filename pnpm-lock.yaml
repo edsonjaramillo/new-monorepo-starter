@@ -26,9 +26,6 @@ importers:
 
   apps/web:
     dependencies:
-      '@repo/prettier-config':
-        specifier: workspace:*
-        version: link:../../packages/prettier-config
       '@repo/ui':
         specifier: workspace:*
         version: link:../../packages/ui
@@ -48,6 +45,9 @@ importers:
       '@repo/eslint-config':
         specifier: workspace:*
         version: link:../../packages/eslint-config
+      '@repo/prettier-config':
+        specifier: workspace:*
+        version: link:../../packages/prettier-config
       '@repo/tailwind-config':
         specifier: workspace:*
         version: link:../../packages/tailwind-config

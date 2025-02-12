@@ -1,9 +1,10 @@
 /**
  * @type {import("prettier").Config}
  */
-export default {
-    importOrder: ['^ui', '^\\.'],
-    importOrderSeparation: true,
-    importOrderSortSpecifiers: true,
-  };
-  
+export const importSortConfig = {
+  importOrder: ["^ui", "^\\."],
+  importOrderSeparation: true,
+  importOrderSortSpecifiers: true,
+};
+
+export const importSortPlugin = "@trivago/prettier-plugin-sort-imports";

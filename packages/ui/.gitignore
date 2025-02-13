@@ -1,8 +1,8 @@
+# build
+dist
+
 # dependencies
 node_modules
-
-# monorepo
-.turbo
 
 # environment variables
 .env

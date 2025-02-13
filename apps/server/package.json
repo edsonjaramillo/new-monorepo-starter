@@ -1,0 +1,29 @@
+{
+  "name": "server",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf dist",
+    "dev": "kill-port 4000 && tsx watch src/index.ts",
+    "format": "prettier --write --cache ."
+  },
+  "dependencies": {
+    "@hono/node-server": "1.13.8",
+    "consola": "3.4.0",
+    "dotenv": "16.4.7",
+    "hono": "4.7.0"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:*",
+    "@repo/prettier-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "@trivago/prettier-plugin-sort-imports": "5.2.2",
+    "@types/node": "22.13.1",
+    "kill-port-process": "3.2.1",
+    "prettier": "3.5.0",
+    "prettier-plugin-packagejson": "2.5.8",
+    "tsx": "4.19.2",
+    "typescript": "5.7.3",
+    "valibot": "1.0.0-rc.0"
+  }
+}

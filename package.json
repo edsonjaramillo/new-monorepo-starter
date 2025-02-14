@@ -5,6 +5,7 @@
     "build": "turbo build",
     "check": "manypkg check",
     "check-types": "turbo run check-types",
+    "clean-node-modules": "turbo run clean-node-modules",
     "clean": "turbo run clean",
     "dev": "turbo run dev",
     "docker:dev:down": "docker compose --env-file ./docker-dev/.env -f ./docker-dev/docker-compose.dev.yml down",

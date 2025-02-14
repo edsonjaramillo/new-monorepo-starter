@@ -7,6 +7,7 @@
     "build": "next build",
     "check-types": "tsc --noEmit",
     "clean": "rm -rf .next",
+    "clean-node-modules": "rm -rf node_modules",
     "dev": "next dev --port 3000 --turbopack",
     "format": "prettier --write --cache .",
     "lint": "next lint --max-warnings 0",

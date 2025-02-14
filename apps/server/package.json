@@ -4,6 +4,7 @@
   "scripts": {
     "build": "tsc",
     "clean": "rm -rf dist",
+    "clean-node-modules": "rm -rf node_modules",
     "dev": "kill-port 4000 && tsx watch src/index.ts",
     "format": "prettier --write --cache ."
   },

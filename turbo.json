@@ -22,6 +22,9 @@
     "clean": {
       "cache": false
     },
+    "clean-node-modules": {
+      "cache": false
+    },
     "dev": {
       "cache": false,
       "persistent": true

@@ -6,8 +6,8 @@ import { usersTable } from './users.schema';
 
 export const sessionsTable = pgTable('sessions', {
   id,
-  expiresAt: timestamp().notNull(),
-  userId: varchar({ length: 255 }).notNull(),
+  expiresAt: timestamp('expires_at').notNull(),
+  userId: varchar('user_id', { length: 255 }).notNull(),
   createdAt,
   updatedAt,
 });

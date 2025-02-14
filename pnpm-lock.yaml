@@ -176,6 +176,9 @@ importers:
 
   packages/database:
     dependencies:
+      '@repo/cache':
+        specifier: workspace:*
+        version: link:../cache
       dotenv:
         specifier: 16.4.7
         version: 16.4.7

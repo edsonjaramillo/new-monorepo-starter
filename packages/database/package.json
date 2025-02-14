@@ -1,5 +1,9 @@
 {
   "name": "@repo/database",
+  "exports": {
+    "./queries/users": "./dist/src/queries/users.queries.js",
+    "./queries/sessions": "./dist/src/queries/sessions.queries.js"
+  },
   "scripts": {
     "build": "tsc",
     "clean": "rm -rf dist .turbo",
@@ -12,6 +16,7 @@
     "studio": "drizzle-kit studio"
   },
   "dependencies": {
+    "@repo/cache": "workspace:*",
     "dotenv": "16.4.7",
     "drizzle-orm": "0.39.3",
     "postgres": "3.4.5",

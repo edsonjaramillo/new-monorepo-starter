@@ -1,7 +1,7 @@
 import { CacheClient } from '@repo/cache/client';
 import { type Database, createDBConnection } from '@repo/database/client';
 
-import { serverEnv } from './env';
+import { serverEnv } from './server.env';
 
 export const databaseConnection: Database = createDBConnection(
   {

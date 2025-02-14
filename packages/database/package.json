@@ -2,7 +2,7 @@
   "name": "@repo/database",
   "scripts": {
     "build": "tsc",
-    "clean": "rm -rf dist",
+    "clean": "rm -rf dist .turbo",
     "dev": "tsc --watch --preserveWatchOutput",
     "format": "prettier --write --cache .",
     "generate": "drizzle-kit generate",

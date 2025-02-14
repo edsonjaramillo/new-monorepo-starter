@@ -32,6 +32,12 @@ importers:
       '@hono/node-server':
         specifier: 1.13.8
         version: 1.13.8(hono@4.7.0)
+      '@repo/cache':
+        specifier: workspace:*
+        version: link:../../packages/cache
+      '@repo/database':
+        specifier: workspace:*
+        version: link:../../packages/database
       consola:
         specifier: 3.4.0
         version: 3.4.0

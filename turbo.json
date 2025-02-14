@@ -36,10 +36,10 @@
       "persistent": true
     },
     "format": {
-      "cache": false
+      "cache": true
     },
     "lint": {
-      "cache": false
+      "cache": true
     },
     "prep": {
       "dependsOn": ["^prep"]

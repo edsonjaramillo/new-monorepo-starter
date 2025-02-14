@@ -1,8 +1,10 @@
 {
   "name": "@repo/database",
+  "type": "module",
   "exports": {
-    "./queries/users": "./dist/src/queries/users.queries.js",
-    "./queries/sessions": "./dist/src/queries/sessions.queries.js"
+    "./queries": "./dist/src/queries/index.js",
+    "./client": "./dist/src/database.client.js",
+    "./types": "./dist/src/types/index.js"
   },
   "scripts": {
     "build": "tsc",

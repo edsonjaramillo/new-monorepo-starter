@@ -20,7 +20,7 @@
       "outputs": ["dist/**", ".next/**", "!.next/cache/**"]
     },
     "check-types": {
-      "cache": false
+      "cache": true
     },
     "clean": {
       "cache": false
@@ -41,8 +41,8 @@
     "lint": {
       "cache": false
     },
-    "setup": {
-      "dependsOn": ["^setup"]
+    "prep": {
+      "dependsOn": ["^prep"]
     }
   }
 }

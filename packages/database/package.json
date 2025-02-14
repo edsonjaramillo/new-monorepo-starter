@@ -8,6 +8,7 @@
   },
   "scripts": {
     "build": "tsc",
+    "check-types": "tsc --noEmit",
     "clean": "rm -rf dist",
     "clean-cache": "rm -rf .turbo",
     "clean-node-modules": "rm -rf node_modules",
@@ -16,8 +17,8 @@
     "generate": "drizzle-kit generate",
     "lint": "eslint src --max-warnings 0",
     "migrate": "drizzle-kit migrate",
+    "prep": "tsc",
     "push": "drizzle-kit push",
-    "setup": "tsc",
     "studio": "drizzle-kit studio"
   },
   "dependencies": {

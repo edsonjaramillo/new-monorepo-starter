@@ -24,15 +24,6 @@
     },
     "dev": {
       "cache": false,
-      "env": [
-        "PORT",
-        "POSTGRES_HOST",
-        "POSTGRES_NAME",
-        "POSTGRES_PASSWORD",
-        "POSTGRES_PORT",
-        "POSTGRES_URL",
-        "POSTGRES_USER"
-      ],
       "persistent": true
     },
     "format": {

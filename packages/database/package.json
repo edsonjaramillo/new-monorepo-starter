@@ -1,0 +1,32 @@
+{
+  "name": "@repo/database",
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf dist",
+    "dev": "tsc --watch --preserveWatchOutput",
+    "format": "prettier --write --cache .",
+    "generate": "drizzle-kit generate",
+    "lint": "eslint src --max-warnings 0",
+    "migrate": "drizzle-kit migrate",
+    "push": "drizzle-kit push",
+    "studio": "drizzle-kit studio"
+  },
+  "dependencies": {
+    "dotenv": "16.4.7",
+    "drizzle-orm": "0.39.3",
+    "postgres": "3.4.5",
+    "uuidv7": "1.0.2"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:*",
+    "@repo/prettier-config": "workspace:*",
+    "@repo/typescript-config": "workspace:*",
+    "@trivago/prettier-plugin-sort-imports": "5.2.2",
+    "@types/node": "22.13.1",
+    "drizzle-kit": "0.30.4",
+    "prettier": "3.5.0",
+    "prettier-plugin-packagejson": "2.5.8",
+    "typescript": "5.7.3",
+    "valibot": "1.0.0-rc.0"
+  }
+}

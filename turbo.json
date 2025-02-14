@@ -4,6 +4,15 @@
   "tasks": {
     "build": {
       "dependsOn": ["^build"],
+      "env": [
+        "PORT",
+        "POSTGRES_HOST",
+        "POSTGRES_NAME",
+        "POSTGRES_PASSWORD",
+        "POSTGRES_PORT",
+        "POSTGRES_URL",
+        "POSTGRES_USER"
+      ],
       "inputs": ["$TURBO_DEFAULT$", ".env*"],
       "outputs": ["dist/**", ".next/**", "!.next/cache/**"]
     },
@@ -14,8 +23,16 @@
       "cache": false
     },
     "dev": {
-      "env": ["PORT"],
       "cache": false,
+      "env": [
+        "PORT",
+        "POSTGRES_HOST",
+        "POSTGRES_NAME",
+        "POSTGRES_PASSWORD",
+        "POSTGRES_PORT",
+        "POSTGRES_URL",
+        "POSTGRES_USER"
+      ],
       "persistent": true
     },
     "format": {

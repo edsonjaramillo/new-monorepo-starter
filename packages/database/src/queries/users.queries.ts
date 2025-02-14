@@ -1,5 +1,6 @@
-import { CacheClient } from '@repo/cache/client';
 import { eq } from 'drizzle-orm';
+
+import { CacheClient } from '@repo/cache/client';
 
 import { USERS_COLUMNS, USERS_CREDENTIALS_COLUMNS } from '../columns/users.columns';
 import { Database } from '../database.client';

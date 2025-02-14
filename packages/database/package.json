@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "@repo/cache": "workspace:*",
+    "@repo/validation": "workspace:*",
     "dotenv": "16.4.7",
     "drizzle-orm": "0.39.3",
     "postgres": "3.4.5",

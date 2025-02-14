@@ -38,6 +38,9 @@ importers:
       '@repo/database':
         specifier: workspace:*
         version: link:../../packages/database
+      '@repo/validation':
+        specifier: workspace:*
+        version: link:../../packages/validation
       consola:
         specifier: 3.4.0
         version: 3.4.0
@@ -185,6 +188,9 @@ importers:
       '@repo/cache':
         specifier: workspace:*
         version: link:../cache
+      '@repo/validation':
+        specifier: workspace:*
+        version: link:../validation
       dotenv:
         specifier: 16.4.7
         version: 16.4.7
@@ -329,6 +335,40 @@ importers:
       tailwindcss:
         specifier: 4.0.6
         version: 4.0.6
+      typescript:
+        specifier: 5.7.3
+        version: 5.7.3
+
+  packages/validation:
+    dependencies:
+      valibot:
+        specifier: 1.0.0-rc.0
+        version: 1.0.0-rc.0(typescript@5.7.3)
+    devDependencies:
+      '@repo/eslint-config':
+        specifier: workspace:*
+        version: link:../eslint-config
+      '@repo/prettier-config':
+        specifier: workspace:*
+        version: link:../prettier-config
+      '@repo/typescript-config':
+        specifier: workspace:*
+        version: link:../typescript-config
+      '@trivago/prettier-plugin-sort-imports':
+        specifier: 5.2.2
+        version: 5.2.2(prettier@3.5.0)
+      '@types/node':
+        specifier: 22.13.1
+        version: 22.13.1
+      prettier:
+        specifier: 3.5.0
+        version: 3.5.0
+      prettier-plugin-packagejson:
+        specifier: 2.5.8
+        version: 2.5.8(prettier@3.5.0)
+      tsx:
+        specifier: 4.19.2
+        version: 4.19.2
       typescript:
         specifier: 5.7.3
         version: 5.7.3

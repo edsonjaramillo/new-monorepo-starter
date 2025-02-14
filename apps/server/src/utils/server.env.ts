@@ -1,15 +1,11 @@
+import { CacheEnvSchema, NodeEnvSchema, PostgresEnvSchema } from '@repo/validation/env';
 import * as v from 'valibot';
 
 const envSchema = v.object({
-  NODE_ENV: v.pipe(v.string(), v.picklist(['development', 'production'])),
   PORT: v.pipe(v.string(), v.transform(Number)),
-  POSTGRES_HOST: v.string(),
-  POSTGRES_PORT: v.pipe(v.string(), v.transform(Number)),
-  POSTGRES_USER: v.string(),
-  POSTGRES_PASSWORD: v.string(),
-  POSTGRES_DATABASE: v.string(),
-  VALKEY_HOST: v.string(),
-  VALKEY_PORT: v.pipe(v.string(), v.transform(Number)),
+  ...NodeEnvSchema,
+  ...PostgresEnvSchema,
+  ...CacheEnvSchema,
 });
 
 const env = process.env;

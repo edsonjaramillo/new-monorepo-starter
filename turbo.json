@@ -5,13 +5,16 @@
     "build": {
       "dependsOn": ["^build"],
       "env": [
+        "NODE_ENV",
         "PORT",
         "POSTGRES_HOST",
         "POSTGRES_NAME",
         "POSTGRES_PASSWORD",
         "POSTGRES_PORT",
         "POSTGRES_URL",
-        "POSTGRES_USER"
+        "POSTGRES_USER",
+        "VALKEY_HOST",
+        "VALKEY_PORT"
       ],
       "inputs": ["$TURBO_DEFAULT$", ".env*"],
       "outputs": ["dist/**", ".next/**", "!.next/cache/**"]

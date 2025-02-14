@@ -5,8 +5,8 @@
     "build": "turbo build",
     "check": "manypkg check",
     "check-types": "turbo run check-types",
-    "clean-node-modules": "turbo run clean-node-modules",
     "clean": "turbo run clean",
+    "clean-node-modules": "turbo run clean-node-modules",
     "dev": "turbo run dev",
     "docker:dev:down": "docker compose --env-file ./docker-dev/.env -f ./docker-dev/docker-compose.dev.yml down",
     "docker:dev:up": "docker compose -f ./docker-dev/docker-compose.dev.yml up -d",
@@ -19,8 +19,8 @@
     "@trivago/prettier-plugin-sort-imports": "5.2.2",
     "prettier": "3.5.0",
     "prettier-plugin-tailwindcss": "0.6.11",
-    "typescript": "5.7.3",
-    "turbo": "2.4.1"
+    "turbo": "2.4.1",
+    "typescript": "5.7.3"
   },
   "packageManager": "pnpm@10.2.1",
   "engines": {

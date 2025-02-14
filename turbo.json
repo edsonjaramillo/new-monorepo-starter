@@ -25,6 +25,9 @@
     "clean": {
       "cache": false
     },
+    "clean-cache": {
+      "cache": false
+    },
     "clean-node-modules": {
       "cache": false
     },

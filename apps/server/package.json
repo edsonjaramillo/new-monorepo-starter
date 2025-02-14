@@ -3,7 +3,8 @@
   "type": "module",
   "scripts": {
     "build": "tsc",
-    "clean": "rm -rf dist .turbo",
+    "clean": "rm -rf dist",
+    "clean-cache": "rm -rf .turbo",
     "clean-node-modules": "rm -rf node_modules",
     "dev": "tsx watch src/index.ts",
     "format": "prettier --write --cache ."

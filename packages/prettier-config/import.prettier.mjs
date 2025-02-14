@@ -2,7 +2,7 @@
  * @type {import("prettier").Config}
  */
 export const importSortConfig = {
-  importOrder: ["^ui", "^\\."],
+  importOrder: ["^@repo", "^\\."],
   importOrderSeparation: true,
   importOrderSortSpecifiers: true,
 };

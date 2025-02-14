@@ -7,7 +7,7 @@
     "check-types": "turbo run check-types",
     "clean": "turbo run clean",
     "clean-node-modules": "turbo run clean-node-modules",
-    "dev": "turbo run dev",
+    "dev": "kill-port 3000 4000 && turbo run dev",
     "docker:dev:down": "docker compose --env-file ./docker-dev/.env -f ./docker-dev/docker-compose.dev.yml down",
     "docker:dev:up": "docker compose -f ./docker-dev/docker-compose.dev.yml up -d",
     "fix": "manypkg fix",
@@ -20,6 +20,7 @@
   "devDependencies": {
     "@manypkg/cli": "0.23.0",
     "@trivago/prettier-plugin-sort-imports": "5.2.2",
+    "kill-port-process": "3.2.1",
     "prettier": "3.5.0",
     "prettier-plugin-tailwindcss": "0.6.11",
     "turbo": "2.4.1",

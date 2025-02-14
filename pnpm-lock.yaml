@@ -14,6 +14,9 @@ importers:
       '@trivago/prettier-plugin-sort-imports':
         specifier: 5.2.2
         version: 5.2.2(prettier@3.5.0)
+      kill-port-process:
+        specifier: 3.2.1
+        version: 3.2.1
       prettier:
         specifier: 3.5.0
         version: 3.5.0
@@ -66,9 +69,6 @@ importers:
       '@types/node':
         specifier: 22.13.1
         version: 22.13.1
-      kill-port-process:
-        specifier: 3.2.1
-        version: 3.2.1
       prettier:
         specifier: 3.5.0
         version: 3.5.0

@@ -5,7 +5,7 @@
     "build": "tsc",
     "clean": "rm -rf dist .turbo",
     "clean-node-modules": "rm -rf node_modules",
-    "dev": "kill-port 4000 && tsx watch src/index.ts",
+    "dev": "tsx watch src/index.ts",
     "format": "prettier --write --cache ."
   },
   "dependencies": {
@@ -23,7 +23,6 @@
     "@repo/typescript-config": "workspace:*",
     "@trivago/prettier-plugin-sort-imports": "5.2.2",
     "@types/node": "22.13.1",
-    "kill-port-process": "3.2.1",
     "prettier": "3.5.0",
     "prettier-plugin-packagejson": "2.5.8",
     "tsx": "4.19.2",

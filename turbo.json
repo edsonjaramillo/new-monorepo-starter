@@ -37,6 +37,9 @@
     },
     "lint": {
       "cache": false
+    },
+    "setup": {
+      "dependsOn": ["^setup"]
     }
   }
 }

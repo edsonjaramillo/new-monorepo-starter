@@ -1,5 +1,6 @@
 {
   "name": "@repo/cache",
+  "type": "module",
   "exports": {
     "./client": "./src/cache.client.ts"
   },

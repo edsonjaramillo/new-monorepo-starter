@@ -36,7 +36,7 @@ export class CacheClient {
     return JSON.parse(value) as T;
   }
 
-  async set(key: string, value: Data, expiration: number) {
+  async set(key: string, value: Data, expiration?: number) {
     if (this.skipCache) {
       return;
     }
@@ -45,7 +45,7 @@ export class CacheClient {
       console.log('YELLOW', 'CACHE SET', key);
     }
 
-    await this.client.set(key, JSON.stringify(value), 'EX', expiration);
+    await this.client.set(key, JSON.stringify(value), 'EX', expiration ?? 600);
   }
 
   async delete(key: string) {

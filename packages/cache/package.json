@@ -2,7 +2,7 @@
   "name": "@repo/cache",
   "type": "module",
   "exports": {
-    "./client": "./src/cache.client.ts"
+    "./client": "./dist/cache.client.js"
   },
   "scripts": {
     "build": "tsc",

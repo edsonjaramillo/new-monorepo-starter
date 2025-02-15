@@ -21,7 +21,6 @@
   "devDependencies": {
     "@manypkg/cli": "0.23.0",
     "@repo/configs": "workspace:*",
-    "@repo/prettier-config": "workspace:*",
     "@trivago/prettier-plugin-sort-imports": "5.2.2",
     "kill-port-process": "3.2.1",
     "prettier": "3.5.0",

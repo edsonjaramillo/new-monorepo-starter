@@ -1,7 +1,7 @@
-import { baseConfig } from '@repo/prettier-config/base';
-import { importSortConfig, importSortPlugin } from '@repo/prettier-config/import';
-import { packageSortPlugin } from '@repo/prettier-config/package';
-import { tailwindSortConfig, tailwindSortPlugin } from '@repo/prettier-config/tailwind';
+import { baseConfig } from '@repo/configs/prettier/base';
+import { importSortConfig, importSortPlugin } from '@repo/configs/prettier/import';
+import { packageSortPlugin } from '@repo/configs/prettier/package';
+import { tailwindSortConfig, tailwindSortPlugin } from '@repo/configs/prettier/tailwind';
 
 export default {
   ...baseConfig,

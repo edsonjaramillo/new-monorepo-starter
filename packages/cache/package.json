@@ -21,7 +21,6 @@
   },
   "devDependencies": {
     "@repo/configs": "workspace:*",
-    "@repo/prettier-config": "workspace:*",
     "@trivago/prettier-plugin-sort-imports": "5.2.2",
     "@types/node": "22.13.1",
     "eslint": "9.19.0",

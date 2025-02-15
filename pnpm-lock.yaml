@@ -14,9 +14,6 @@ importers:
       '@repo/configs':
         specifier: workspace:*
         version: link:packages/configs
-      '@repo/prettier-config':
-        specifier: workspace:*
-        version: link:packages/prettier-config
       '@trivago/prettier-plugin-sort-imports':
         specifier: 5.2.2
         version: 5.2.2(prettier@3.5.0)
@@ -66,9 +63,6 @@ importers:
       '@repo/configs':
         specifier: workspace:*
         version: link:../../packages/configs
-      '@repo/prettier-config':
-        specifier: workspace:*
-        version: link:../../packages/prettier-config
       '@trivago/prettier-plugin-sort-imports':
         specifier: 5.2.2
         version: 5.2.2(prettier@3.5.0)
@@ -112,9 +106,6 @@ importers:
       '@repo/configs':
         specifier: workspace:*
         version: link:../../packages/configs
-      '@repo/prettier-config':
-        specifier: workspace:*
-        version: link:../../packages/prettier-config
       '@repo/tailwind-config':
         specifier: workspace:*
         version: link:../../packages/tailwind-config
@@ -164,9 +155,6 @@ importers:
       '@repo/configs':
         specifier: workspace:*
         version: link:../configs
-      '@repo/prettier-config':
-        specifier: workspace:*
-        version: link:../prettier-config
       '@trivago/prettier-plugin-sort-imports':
         specifier: 5.2.2
         version: 5.2.2(prettier@3.5.0)
@@ -215,6 +203,9 @@ importers:
       globals:
         specifier: 15.14.0
         version: 15.14.0
+      prettier:
+        specifier: 3.5.0
+        version: 3.5.0
       typescript:
         specifier: 5.7.3
         version: 5.7.3
@@ -246,9 +237,6 @@ importers:
       '@repo/configs':
         specifier: workspace:*
         version: link:../configs
-      '@repo/prettier-config':
-        specifier: workspace:*
-        version: link:../prettier-config
       '@trivago/prettier-plugin-sort-imports':
         specifier: 5.2.2
         version: 5.2.2(prettier@3.5.0)
@@ -274,12 +262,6 @@ importers:
         specifier: 1.0.0-rc.0
         version: 1.0.0-rc.0(typescript@5.7.3)
 
-  packages/prettier-config:
-    devDependencies:
-      prettier:
-        specifier: 3.5.0
-        version: 3.5.0
-
   packages/tailwind-config:
     devDependencies:
       tailwindcss:
@@ -291,9 +273,6 @@ importers:
       '@repo/configs':
         specifier: workspace:*
         version: link:../configs
-      '@repo/prettier-config':
-        specifier: workspace:*
-        version: link:../prettier-config
       '@repo/tailwind-config':
         specifier: workspace:*
         version: link:../tailwind-config
@@ -346,9 +325,6 @@ importers:
       '@repo/configs':
         specifier: workspace:*
         version: link:../configs
-      '@repo/prettier-config':
-        specifier: workspace:*
-        version: link:../prettier-config
       '@trivago/prettier-plugin-sort-imports':
         specifier: 5.2.2
         version: 5.2.2(prettier@3.5.0)

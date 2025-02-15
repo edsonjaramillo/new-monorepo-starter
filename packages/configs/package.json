@@ -9,7 +9,11 @@
     "./eslint/react-internal": "./eslint/react-internal.js",
     "./typescript/base": "./typescript/base.json",
     "./typescript/nextjs": "./typescript/nextjs.json",
-    "./typescript/react-library": "./typescript/react-library.json"
+    "./typescript/react-library": "./typescript/react-library.json",
+    "./prettier/base": "./prettier/base.prettier.mjs",
+    "./prettier/import": "./prettier/import.prettier.mjs",
+    "./prettier/package": "./prettier/package.prettier.mjs",
+    "./prettier/tailwind": "./prettier/tailwind.prettier.mjs"
   },
   "scripts": {
     "clean-node-modules": "rm -rf node_modules"
@@ -24,6 +28,7 @@
     "eslint-plugin-react-hooks": "5.1.0",
     "eslint-plugin-turbo": "2.3.4",
     "globals": "15.14.0",
+    "prettier": "3.5.0",
     "typescript": "5.7.3",
     "typescript-eslint": "8.23.0"
   },

@@ -36,7 +36,7 @@
       "persistent": true
     },
     "format": {
-      "cache": true
+      "cache": false
     },
     "lint": {
       "cache": true

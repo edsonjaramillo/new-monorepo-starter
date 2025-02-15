@@ -7,14 +7,14 @@
     "./eslint/base": "./eslint/base.js",
     "./eslint/next": "./eslint/next.js",
     "./eslint/react-internal": "./eslint/react-internal.js",
-    "./typescript/base": "./typescript/base.json",
-    "./typescript/nextjs": "./typescript/nextjs.json",
-    "./typescript/react-library": "./typescript/react-library.json",
     "./prettier/base": "./prettier/base.prettier.mjs",
     "./prettier/import": "./prettier/import.prettier.mjs",
     "./prettier/package": "./prettier/package.prettier.mjs",
     "./prettier/tailwind": "./prettier/tailwind.prettier.mjs",
-    "./tailwind/theme.css": "./tailwind/theme.css"
+    "./tailwind/theme.css": "./tailwind/theme.css",
+    "./typescript/base": "./typescript/base.json",
+    "./typescript/nextjs": "./typescript/nextjs.json",
+    "./typescript/react-library": "./typescript/react-library.json"
   },
   "scripts": {
     "clean-node-modules": "rm -rf node_modules"

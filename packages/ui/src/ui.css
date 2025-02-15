@@ -1,2 +1,2 @@
-@import '@repo/tailwind-config/theme.css';
+@import '@repo/configs/tailwind/theme.css';
 @source "./**/*.tsx";

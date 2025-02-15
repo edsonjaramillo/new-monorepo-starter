@@ -5,7 +5,7 @@
   "type": "module",
   "exports": {
     "./eslint/base": "./eslint/base.js",
-    "./eslint/next-js": "./eslint/next.js",
+    "./eslint/next": "./eslint/next.js",
     "./eslint/react-internal": "./eslint/react-internal.js",
     "./typescript/base": "./typescript/base.json",
     "./typescript/nextjs": "./typescript/nextjs.json",

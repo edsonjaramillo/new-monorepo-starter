@@ -1,5 +1,5 @@
 {
-  "extends": "@repo/configs/typescript/react-library",
+  "extends": "@repo/configs/tsconfig/react-library",
   "include": ["src"],
   "exclude": ["dist", "build", "node_modules"],
   "compilerOptions": {

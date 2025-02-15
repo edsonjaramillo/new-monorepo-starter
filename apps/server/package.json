@@ -22,7 +22,7 @@
     "hono": "4.7.0"
   },
   "devDependencies": {
-    "@repo/eslint-config": "workspace:*",
+    "@repo/configs": "workspace:*",
     "@repo/prettier-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
     "@trivago/prettier-plugin-sort-imports": "5.2.2",

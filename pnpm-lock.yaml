@@ -11,6 +11,9 @@ importers:
       '@manypkg/cli':
         specifier: 0.23.0
         version: 0.23.0
+      '@repo/configs':
+        specifier: workspace:*
+        version: link:packages/configs
       '@repo/prettier-config':
         specifier: workspace:*
         version: link:packages/prettier-config
@@ -60,9 +63,9 @@ importers:
         specifier: 4.7.0
         version: 4.7.0
     devDependencies:
-      '@repo/eslint-config':
+      '@repo/configs':
         specifier: workspace:*
-        version: link:../../packages/eslint-config
+        version: link:../../packages/configs
       '@repo/prettier-config':
         specifier: workspace:*
         version: link:../../packages/prettier-config
@@ -109,9 +112,9 @@ importers:
       '@next/eslint-plugin-next':
         specifier: 15.1.6
         version: 15.1.6
-      '@repo/eslint-config':
+      '@repo/configs':
         specifier: workspace:*
-        version: link:../../packages/eslint-config
+        version: link:../../packages/configs
       '@repo/prettier-config':
         specifier: workspace:*
         version: link:../../packages/prettier-config
@@ -164,9 +167,9 @@ importers:
         specifier: 0.3.1
         version: 0.3.1
     devDependencies:
-      '@repo/eslint-config':
+      '@repo/configs':
         specifier: workspace:*
-        version: link:../eslint-config
+        version: link:../configs
       '@repo/prettier-config':
         specifier: workspace:*
         version: link:../prettier-config
@@ -192,62 +195,7 @@ importers:
         specifier: 5.7.3
         version: 5.7.3
 
-  packages/database:
-    dependencies:
-      '@repo/cache':
-        specifier: workspace:*
-        version: link:../cache
-      '@repo/validation':
-        specifier: workspace:*
-        version: link:../validation
-      dotenv:
-        specifier: 16.4.7
-        version: 16.4.7
-      drizzle-orm:
-        specifier: 0.39.3
-        version: 0.39.3(postgres@3.4.5)
-      postgres:
-        specifier: 3.4.5
-        version: 3.4.5
-      uuidv7:
-        specifier: 1.0.2
-        version: 1.0.2
-    devDependencies:
-      '@repo/eslint-config':
-        specifier: workspace:*
-        version: link:../eslint-config
-      '@repo/prettier-config':
-        specifier: workspace:*
-        version: link:../prettier-config
-      '@repo/typescript-config':
-        specifier: workspace:*
-        version: link:../typescript-config
-      '@trivago/prettier-plugin-sort-imports':
-        specifier: 5.2.2
-        version: 5.2.2(prettier@3.5.0)
-      '@types/node':
-        specifier: 22.13.1
-        version: 22.13.1
-      drizzle-kit:
-        specifier: 0.30.4
-        version: 0.30.4
-      eslint:
-        specifier: 9.19.0
-        version: 9.19.0(jiti@2.4.2)
-      prettier:
-        specifier: 3.5.0
-        version: 3.5.0
-      prettier-plugin-packagejson:
-        specifier: 2.5.8
-        version: 2.5.8(prettier@3.5.0)
-      typescript:
-        specifier: 5.7.3
-        version: 5.7.3
-      valibot:
-        specifier: 1.0.0-rc.0
-        version: 1.0.0-rc.0(typescript@5.7.3)
-
-  packages/eslint-config:
+  packages/configs:
     devDependencies:
       '@eslint/js':
         specifier: 9.19.0
@@ -283,6 +231,61 @@ importers:
         specifier: 8.23.0
         version: 8.23.0(eslint@9.19.0(jiti@2.4.2))(typescript@5.7.3)
 
+  packages/database:
+    dependencies:
+      '@repo/cache':
+        specifier: workspace:*
+        version: link:../cache
+      '@repo/validation':
+        specifier: workspace:*
+        version: link:../validation
+      dotenv:
+        specifier: 16.4.7
+        version: 16.4.7
+      drizzle-orm:
+        specifier: 0.39.3
+        version: 0.39.3(postgres@3.4.5)
+      postgres:
+        specifier: 3.4.5
+        version: 3.4.5
+      uuidv7:
+        specifier: 1.0.2
+        version: 1.0.2
+    devDependencies:
+      '@repo/configs':
+        specifier: workspace:*
+        version: link:../configs
+      '@repo/prettier-config':
+        specifier: workspace:*
+        version: link:../prettier-config
+      '@repo/typescript-config':
+        specifier: workspace:*
+        version: link:../typescript-config
+      '@trivago/prettier-plugin-sort-imports':
+        specifier: 5.2.2
+        version: 5.2.2(prettier@3.5.0)
+      '@types/node':
+        specifier: 22.13.1
+        version: 22.13.1
+      drizzle-kit:
+        specifier: 0.30.4
+        version: 0.30.4
+      eslint:
+        specifier: 9.19.0
+        version: 9.19.0(jiti@2.4.2)
+      prettier:
+        specifier: 3.5.0
+        version: 3.5.0
+      prettier-plugin-packagejson:
+        specifier: 2.5.8
+        version: 2.5.8(prettier@3.5.0)
+      typescript:
+        specifier: 5.7.3
+        version: 5.7.3
+      valibot:
+        specifier: 1.0.0-rc.0
+        version: 1.0.0-rc.0(typescript@5.7.3)
+
   packages/prettier-config:
     devDependencies:
       prettier:
@@ -299,9 +302,9 @@ importers:
 
   packages/ui:
     devDependencies:
-      '@repo/eslint-config':
+      '@repo/configs':
         specifier: workspace:*
-        version: link:../eslint-config
+        version: link:../configs
       '@repo/prettier-config':
         specifier: workspace:*
         version: link:../prettier-config
@@ -357,9 +360,9 @@ importers:
         specifier: 1.0.0-rc.0
         version: 1.0.0-rc.0(typescript@5.7.3)
     devDependencies:
-      '@repo/eslint-config':
+      '@repo/configs':
         specifier: workspace:*
-        version: link:../eslint-config
+        version: link:../configs
       '@repo/prettier-config':
         specifier: workspace:*
         version: link:../prettier-config

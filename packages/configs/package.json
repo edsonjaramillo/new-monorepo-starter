@@ -1,15 +1,15 @@
 {
-  "name": "@repo/eslint-config",
+  "name": "@repo/configs",
   "version": "0.0.0",
   "private": true,
   "type": "module",
+  "exports": {
+    "./eslint/base": "./eslint/base.js",
+    "./eslint/next-js": "./eslint/next.js",
+    "./eslint/react-internal": "./eslint/react-internal.js"
+  },
   "scripts": {
     "clean-node-modules": "rm -rf node_modules"
-  },
-  "exports": {
-    "./base": "./base.js",
-    "./next-js": "./next.js",
-    "./react-internal": "./react-internal.js"
   },
   "devDependencies": {
     "@eslint/js": "9.19.0",

@@ -6,7 +6,10 @@
   "exports": {
     "./eslint/base": "./eslint/base.js",
     "./eslint/next-js": "./eslint/next.js",
-    "./eslint/react-internal": "./eslint/react-internal.js"
+    "./eslint/react-internal": "./eslint/react-internal.js",
+    "./typescript/base": "./typescript/base.json",
+    "./typescript/nextjs": "./typescript/nextjs.json",
+    "./typescript/react-library": "./typescript/react-library.json"
   },
   "scripts": {
     "clean-node-modules": "rm -rf node_modules"
@@ -23,5 +26,8 @@
     "globals": "15.14.0",
     "typescript": "5.7.3",
     "typescript-eslint": "8.23.0"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

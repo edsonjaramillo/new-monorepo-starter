@@ -69,9 +69,6 @@ importers:
       '@repo/prettier-config':
         specifier: workspace:*
         version: link:../../packages/prettier-config
-      '@repo/typescript-config':
-        specifier: workspace:*
-        version: link:../../packages/typescript-config
       '@trivago/prettier-plugin-sort-imports':
         specifier: 5.2.2
         version: 5.2.2(prettier@3.5.0)
@@ -121,9 +118,6 @@ importers:
       '@repo/tailwind-config':
         specifier: workspace:*
         version: link:../../packages/tailwind-config
-      '@repo/typescript-config':
-        specifier: workspace:*
-        version: link:../../packages/typescript-config
       '@tailwindcss/postcss':
         specifier: 4.0.6
         version: 4.0.6
@@ -173,9 +167,6 @@ importers:
       '@repo/prettier-config':
         specifier: workspace:*
         version: link:../prettier-config
-      '@repo/typescript-config':
-        specifier: workspace:*
-        version: link:../typescript-config
       '@trivago/prettier-plugin-sort-imports':
         specifier: 5.2.2
         version: 5.2.2(prettier@3.5.0)
@@ -258,9 +249,6 @@ importers:
       '@repo/prettier-config':
         specifier: workspace:*
         version: link:../prettier-config
-      '@repo/typescript-config':
-        specifier: workspace:*
-        version: link:../typescript-config
       '@trivago/prettier-plugin-sort-imports':
         specifier: 5.2.2
         version: 5.2.2(prettier@3.5.0)
@@ -298,8 +286,6 @@ importers:
         specifier: 4.0.6
         version: 4.0.6
 
-  packages/typescript-config: {}
-
   packages/ui:
     devDependencies:
       '@repo/configs':
@@ -311,9 +297,6 @@ importers:
       '@repo/tailwind-config':
         specifier: workspace:*
         version: link:../tailwind-config
-      '@repo/typescript-config':
-        specifier: workspace:*
-        version: link:../typescript-config
       '@tailwindcss/postcss':
         specifier: 4.0.6
         version: 4.0.6
@@ -366,9 +349,6 @@ importers:
       '@repo/prettier-config':
         specifier: workspace:*
         version: link:../prettier-config
-      '@repo/typescript-config':
-        specifier: workspace:*
-        version: link:../typescript-config
       '@trivago/prettier-plugin-sort-imports':
         specifier: 5.2.2
         version: 5.2.2(prettier@3.5.0)

@@ -16,7 +16,7 @@
     "dev": "tsup --watch",
     "format": "prettier --write --cache .",
     "lint": "eslint src --max-warnings 0",
-    "prep": "tsc"
+    "prep": "tsup"
   },
   "dependencies": {
     "@repo/logger": "workspace:*",

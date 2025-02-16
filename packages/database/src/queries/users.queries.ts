@@ -1,4 +1,4 @@
-import { eq } from 'drizzle-orm';
+import { count, eq } from 'drizzle-orm';
 
 import { CacheClient } from '@repo/cache/client';
 
@@ -6,6 +6,7 @@ import { USERS_COLUMNS, USERS_CREDENTIALS_COLUMNS } from '../columns/users.colum
 import { Database } from '../database.client';
 import { UsersKeys } from '../keys/users.keys';
 import { usersTable } from '../schema/users.schema';
+import { RowCount } from '../types/shared.types';
 import type { User, UserCreate, UserCredentials, UserUpdate } from '../types/users.types';
 
 export class UsersQueries {
@@ -35,19 +36,22 @@ export class UsersQueries {
     return users;
   }
 
-  // async getUserCounts(): Promise<RowCount> {
-  //   const key = UsersKeys.count();
-  //   const cachedCountSeasonRecords = await this.cache.get<RowCount>(key);
-  //   if (cachedCountSeasonRecords) {
-  //     return cachedCountSeasonRecords;
-  //   }
+  async getUserCounts(): Promise<RowCount> {
+    const key = UsersKeys.count();
+    const cachedCountSeasonRecords = await this.cache.get<RowCount>(key);
+    if (cachedCountSeasonRecords) {
+      return cachedCountSeasonRecords;
+    }
 
-  //   const data = await this.database.select({ count: count() }).from(usersTable);
+    const [rows] = await this.database.select({ count: count() }).from(usersTable);
+    if (!rows) {
+      throw new Error('No data returned from database');
+    }
 
-  //   await this.cache.set(key, { amountOfRows });
+    await this.cache.set(key, { amountOfRows: rows.count });
 
-  //   return { amountOfRows };
-  // }
+    return { amountOfRows: rows.count };
+  }
 
   async getUserById(id: string): Promise<User | undefined> {
     const cachedUserKey = UsersKeys.byId(id);

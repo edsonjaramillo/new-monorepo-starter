@@ -17,7 +17,6 @@
   },
   "scripts": {
     "build": "tsup",
-    "check-types": "tsc --noEmit",
     "clean": "rm -rf dist",
     "clean-cache": "rm -rf .turbo",
     "clean-node-modules": "rm -rf node_modules",

@@ -19,9 +19,6 @@
       "inputs": ["$TURBO_DEFAULT$", ".env*"],
       "outputs": ["dist/**", ".next/**", "!.next/cache/**"]
     },
-    "check-types": {
-      "cache": true
-    },
     "clean": {
       "cache": false
     },

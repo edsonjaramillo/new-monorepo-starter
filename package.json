@@ -6,7 +6,6 @@
     "build:server": "turbo run build --filter=server",
     "build:web": "turbo run build --filter=web",
     "check": "manypkg check",
-    "check-types": "turbo run check-types",
     "clean": "turbo run clean",
     "clean-cache": "rm -rf .turbo && turbo run clean-cache",
     "clean-node-modules": "rm -rf node_modules && turbo run clean-node-modules",

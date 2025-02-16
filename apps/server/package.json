@@ -18,8 +18,8 @@
     "@repo/database": "workspace:*",
     "@repo/example": "workspace:*",
     "@repo/http": "workspace:*",
+    "@repo/logger": "workspace:*",
     "@repo/validation": "workspace:*",
-    "consola": "3.4.0",
     "dotenv": "16.4.7",
     "eslint": "9.19.0",
     "hono": "4.7.0"

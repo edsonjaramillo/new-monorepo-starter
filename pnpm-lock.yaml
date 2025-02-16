@@ -44,6 +44,9 @@ importers:
       '@repo/database':
         specifier: workspace:*
         version: link:../../packages/database
+      '@repo/example':
+        specifier: workspace:*
+        version: link:../../packages/example
       '@repo/http':
         specifier: workspace:*
         version: link:../../packages/http
@@ -267,12 +270,45 @@ importers:
       prettier-plugin-packagejson:
         specifier: 2.5.8
         version: 2.5.8(prettier@3.5.0)
+      tsup:
+        specifier: 8.3.6
+        version: 8.3.6(jiti@2.4.2)(postcss@8.5.1)(tsx@4.19.2)(typescript@5.7.3)
       typescript:
         specifier: 5.7.3
         version: 5.7.3
       valibot:
         specifier: 1.0.0-rc.0
         version: 1.0.0-rc.0(typescript@5.7.3)
+
+  packages/example:
+    devDependencies:
+      '@repo/configs':
+        specifier: workspace:*
+        version: link:../configs
+      '@trivago/prettier-plugin-sort-imports':
+        specifier: 5.2.2
+        version: 5.2.2(prettier@3.5.0)
+      '@types/node':
+        specifier: 22.13.1
+        version: 22.13.1
+      eslint:
+        specifier: 9.19.0
+        version: 9.19.0(jiti@2.4.2)
+      prettier:
+        specifier: 3.5.0
+        version: 3.5.0
+      prettier-plugin-packagejson:
+        specifier: 2.5.8
+        version: 2.5.8(prettier@3.5.0)
+      tsup:
+        specifier: 8.3.6
+        version: 8.3.6(jiti@2.4.2)(postcss@8.5.1)(tsx@4.19.2)(typescript@5.7.3)
+      tsx:
+        specifier: 4.19.2
+        version: 4.19.2
+      typescript:
+        specifier: 5.7.3
+        version: 5.7.3
 
   packages/http:
     devDependencies:

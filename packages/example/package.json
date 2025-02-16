@@ -1,38 +1,37 @@
 {
-  "name": "server",
+  "name": "@repo/example",
   "type": "module",
+  "exports": {
+    "./addition": {
+      "types": "./dist/addition/add.d.ts",
+      "import": "./dist/addition/add.js"
+    },
+    "./subtraction": {
+      "types": "./dist/subtraction/subtract.d.ts",
+      "import": "./dist/subtraction/subtract.js"
+    }
+  },
   "scripts": {
     "build": "tsup",
     "check-types": "tsc --noEmit",
     "clean": "rm -rf dist",
     "clean-cache": "rm -rf .turbo",
     "clean-node-modules": "rm -rf node_modules",
-    "dev": "tsx watch src/index.ts",
+    "dev": "tsup --watch",
     "format": "prettier --write --cache .",
     "lint": "eslint src --max-warnings 0",
-    "start": "node dist/index.js"
+    "prep": "tsup"
   },
-  "dependencies": {
-    "@hono/node-server": "1.13.8",
-    "@repo/cache": "workspace:*",
-    "@repo/database": "workspace:*",
-    "@repo/example": "workspace:*",
-    "@repo/http": "workspace:*",
-    "@repo/validation": "workspace:*",
-    "consola": "3.4.0",
-    "dotenv": "16.4.7",
-    "eslint": "9.19.0",
-    "hono": "4.7.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@repo/configs": "workspace:*",
     "@trivago/prettier-plugin-sort-imports": "5.2.2",
     "@types/node": "22.13.1",
+    "eslint": "9.19.0",
     "prettier": "3.5.0",
     "prettier-plugin-packagejson": "2.5.8",
     "tsup": "8.3.6",
     "tsx": "4.19.2",
-    "typescript": "5.7.3",
-    "valibot": "1.0.0-rc.0"
+    "typescript": "5.7.3"
   }
 }

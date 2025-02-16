@@ -179,6 +179,9 @@ importers:
       prettier-plugin-packagejson:
         specifier: 2.5.8
         version: 2.5.8(prettier@3.5.0)
+      tsup:
+        specifier: 8.3.6
+        version: 8.3.6(jiti@2.4.2)(postcss@8.5.1)(tsx@4.19.2)(typescript@5.7.3)
       typescript:
         specifier: 5.7.3
         version: 5.7.3
@@ -433,6 +436,9 @@ importers:
       prettier-plugin-packagejson:
         specifier: 2.5.8
         version: 2.5.8(prettier@3.5.0)
+      tsup:
+        specifier: 8.3.6
+        version: 8.3.6(jiti@2.4.2)(postcss@8.5.1)(tsx@4.19.2)(typescript@5.7.3)
       tsx:
         specifier: 4.19.2
         version: 4.19.2

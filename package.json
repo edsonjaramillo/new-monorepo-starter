@@ -3,6 +3,8 @@
   "private": true,
   "scripts": {
     "build": "turbo build",
+    "build:server": "turbo run build --filter=server",
+    "build:web": "turbo run build --filter=web",
     "check": "manypkg check",
     "check-types": "turbo run check-types",
     "clean": "turbo run clean",
@@ -16,7 +18,9 @@
     "graph:server": "turbo run build --filter=server --graph=server.jpg",
     "graph:web": "turbo run build --filter=web --graph=web.jpg",
     "lint": "turbo run lint",
-    "prep": "turbo run prep"
+    "prep": "turbo run prep",
+    "start:server": "turbo start --filter=server",
+    "start:web": "turbo start --filter=web"
   },
   "devDependencies": {
     "@manypkg/cli": "0.23.0",

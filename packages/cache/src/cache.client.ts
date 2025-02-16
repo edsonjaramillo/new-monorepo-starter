@@ -1,5 +1,7 @@
 import { Redis as Valkey } from 'iovalkey';
 
+import { Logger } from '@repo/logger';
+
 type Data = Record<string, unknown> | Array<Record<string, unknown>>;
 
 type CacheClientOptions = {
@@ -30,7 +32,7 @@ export class CacheClient {
     }
 
     if (this.debugMode) {
-      console.log('CYAN', 'CACHE GET', key);
+      Logger.log('GREEN', 'CACHE GET', key);
     }
 
     return JSON.parse(value) as T;
@@ -42,7 +44,7 @@ export class CacheClient {
     }
 
     if (this.debugMode) {
-      console.log('YELLOW', 'CACHE SET', key);
+      Logger.log('CYAN', 'CACHE SET', key);
     }
 
     await this.client.set(key, JSON.stringify(value), 'EX', expiration ?? 600);
@@ -55,7 +57,7 @@ export class CacheClient {
 
     await this.client.unlink(key);
     if (this.debugMode) {
-      console.log('RED', 'CACHE DEL', key);
+      Logger.log('RED', 'CACHE DEL', key);
     }
   }
 
@@ -74,7 +76,7 @@ export class CacheClient {
       stream.on('data', (keys) => {
         for (const key of keys) {
           if (this.debugMode) {
-            console.log('RED', 'CACHE DEL', key);
+            Logger.log('RED', 'CACHE DEL', key);
           }
 
           pipeline.unlink(key);

@@ -24,7 +24,6 @@ const DEFAULT_PAGE = 1;
 export function paginate(forced_limit?: number) {
   return createMiddleware(async (c, next) => {
     const query = c.req.query();
-    console.log(query);
 
     const { output: pagination, success } = v.safeParse(PaginationSchema, query);
 

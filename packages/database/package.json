@@ -2,22 +2,31 @@
   "name": "@repo/database",
   "type": "module",
   "exports": {
-    "./queries": "./dist/src/queries/index.js",
-    "./client": "./dist/src/database.client.js",
-    "./types": "./dist/src/types/index.js"
+    "./queries": {
+      "types": "./dist/queries/index.d.ts",
+      "import": "./dist/queries/index.js"
+    },
+    "./client": {
+      "types": "./dist/database.client.d.ts",
+      "import": "./dist/database.client.js"
+    },
+    "./types": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/types/index.js"
+    }
   },
   "scripts": {
-    "build": "tsc",
+    "build": "tsup",
     "check-types": "tsc --noEmit",
     "clean": "rm -rf dist",
     "clean-cache": "rm -rf .turbo",
     "clean-node-modules": "rm -rf node_modules",
-    "dev": "tsc --watch --preserveWatchOutput",
+    "dev": "tsup --watch",
     "format": "prettier --write --cache .",
     "generate": "drizzle-kit generate",
     "lint": "eslint src --max-warnings 0",
     "migrate": "drizzle-kit migrate",
-    "prep": "tsc",
+    "prep": "tsup",
     "push": "drizzle-kit push",
     "studio": "drizzle-kit studio"
   },
@@ -37,6 +46,7 @@
     "eslint": "9.19.0",
     "prettier": "3.5.0",
     "prettier-plugin-packagejson": "2.5.8",
+    "tsup": "8.3.6",
     "typescript": "5.7.3",
     "valibot": "1.0.0-rc.0"
   }

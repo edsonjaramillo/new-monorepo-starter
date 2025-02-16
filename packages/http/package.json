@@ -1,0 +1,29 @@
+{
+  "name": "@repo/http",
+  "type": "module",
+  "exports": {
+    "./JSend": "./dist/JSend.js",
+    "./paginate": "./dist/paginate.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "check-types": "tsc --noEmit",
+    "clean": "rm -rf dist",
+    "clean-cache": "rm -rf .turbo",
+    "clean-node-modules": "rm -rf node_modules",
+    "dev": "tsc --watch --preserveWatchOutput",
+    "format": "prettier --write --cache .",
+    "lint": "eslint src --max-warnings 0",
+    "prep": "tsc"
+  },
+  "devDependencies": {
+    "@repo/configs": "workspace:*",
+    "@trivago/prettier-plugin-sort-imports": "5.2.2",
+    "@types/node": "22.13.1",
+    "eslint": "9.19.0",
+    "prettier": "3.5.0",
+    "prettier-plugin-packagejson": "2.5.8",
+    "tsx": "4.19.2",
+    "typescript": "5.7.3"
+  }
+}

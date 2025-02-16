@@ -2,7 +2,7 @@
   "name": "server",
   "type": "module",
   "scripts": {
-    "build": "tsc",
+    "build": "tsup",
     "check-types": "tsc --noEmit",
     "clean": "rm -rf dist",
     "clean-cache": "rm -rf .turbo",
@@ -29,6 +29,7 @@
     "@types/node": "22.13.1",
     "prettier": "3.5.0",
     "prettier-plugin-packagejson": "2.5.8",
+    "tsup": "8.3.6",
     "tsx": "4.19.2",
     "typescript": "5.7.3",
     "valibot": "1.0.0-rc.0"

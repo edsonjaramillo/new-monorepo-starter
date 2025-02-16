@@ -15,7 +15,7 @@
     "./tsconfig/base": "./tsconfig/base.json",
     "./tsconfig/nextjs": "./tsconfig/nextjs.json",
     "./tsconfig/react-library": "./tsconfig/react-library.json",
-    "./tsup/base": "./tsup/base.mjs"
+    "./tsup/library": "./tsup/library.mjs"
   },
   "scripts": {
     "clean-node-modules": "rm -rf node_modules"

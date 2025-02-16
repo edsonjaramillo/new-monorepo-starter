@@ -7,7 +7,7 @@
     "clean": "rm -rf dist",
     "clean-cache": "rm -rf .turbo",
     "clean-node-modules": "rm -rf node_modules",
-    "dev": "tsx watch src/index.ts",
+    "dev": "tsup --watch",
     "format": "prettier --write --cache .",
     "lint": "eslint src --max-warnings 0",
     "start": "node dist/index.js"

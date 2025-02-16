@@ -1,12 +1,14 @@
+import { defineConfig } from 'tsup';
+
+import { devHonoConfig, prodHonoConfig } from '@repo/configs/tsup/hono';
+
+const entry = ['src/index.ts'];
 /**
  * @type {import('tsup').Options}
  */
-export default {
-  entry: ['src/index.ts'],
-  format: 'esm',
-  outDir: 'dist',
-  clean: true,
-  dts: false,
-  sourcemap: true,
-  splitting: false,
-};
+export default defineConfig((options) => {
+  if (options.watch) {
+    return { ...devHonoConfig, entry, onSuccess: 'pnpm start' };
+  }
+  return { ...prodHonoConfig, entry, onSuccess: 'pnpm start' };
+});

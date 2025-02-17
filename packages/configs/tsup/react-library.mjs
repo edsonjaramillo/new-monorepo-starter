@@ -19,6 +19,7 @@ export const prodReactLibraryConfig = {
    */
   export const devReactLibraryConfig = {
     ...prodReactLibraryConfig,
+    silent: true,
     sourcemap: true,
     minify: false,
     treeshake: false,

@@ -1,4 +1,4 @@
-import { Pagination } from './paginate';
+import type { Pagination } from './paginate';
 
 interface JSendSuccessResponse<T> {
   status: 'success';

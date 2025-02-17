@@ -16,7 +16,8 @@
     "./tsconfig/nextjs": "./tsconfig/nextjs.json",
     "./tsconfig/react-library": "./tsconfig/react-library.json",
     "./tsup/hono": "./tsup/hono.mjs",
-    "./tsup/library": "./tsup/library.mjs"
+    "./tsup/library": "./tsup/library.mjs",
+    "./tsup/react-library": "./tsup/react-library.mjs"
   },
   "scripts": {
     "clean-node-modules": "rm -rf node_modules"

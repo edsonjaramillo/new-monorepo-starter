@@ -1,9 +1,3 @@
-import { baseConfig } from '@repo/configs/prettier/base';
-import { importSortConfig, importSortPlugin } from '@repo/configs/prettier/import-order';
-import { packageSortPlugin } from '@repo/configs/prettier/package-sort';
+import { libraryPrettierConfig } from '@repo/configs/prettier/library';
 
-export default {
-  ...baseConfig,
-  ...importSortConfig,
-  plugins: [importSortPlugin, packageSortPlugin],
-};
+export default libraryPrettierConfig;

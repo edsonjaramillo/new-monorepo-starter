@@ -200,6 +200,9 @@ importers:
       '@next/eslint-plugin-next':
         specifier: 15.1.6
         version: 15.1.6
+      '@trivago/prettier-plugin-sort-imports':
+        specifier: 5.2.2
+        version: 5.2.2(prettier@3.5.0)
       eslint:
         specifier: 9.19.0
         version: 9.19.0(jiti@2.4.2)
@@ -224,6 +227,9 @@ importers:
       prettier:
         specifier: 3.5.0
         version: 3.5.0
+      prettier-plugin-packagejson:
+        specifier: 2.5.8
+        version: 2.5.8(prettier@3.5.0)
       rimraf:
         specifier: 6.0.1
         version: 6.0.1

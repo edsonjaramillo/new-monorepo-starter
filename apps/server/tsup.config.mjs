@@ -10,5 +10,5 @@ export default defineConfig((options) => {
   if (options.watch) {
     return { ...devHonoConfig, entry, onSuccess: 'pnpm start' };
   }
-  return { ...prodHonoConfig, entry, onSuccess: 'pnpm start' };
+  return { ...prodHonoConfig, entry };
 });

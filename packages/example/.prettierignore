@@ -1,9 +1,0 @@
-# git
-**/.git
-**/.gitignore
-
-# modules
-**/node_modules
-
-# build
-**/dist

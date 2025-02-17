@@ -13,9 +13,9 @@
   },
   "scripts": {
     "build": "tsup",
-    "clean": "rm -rf dist",
-    "clean-cache": "rm -rf .turbo",
-    "clean-node-modules": "rm -rf node_modules",
+    "clean": "rimraf dist",
+    "clean-cache": "rimraf .turbo",
+    "clean-node-modules": "rimraf node_modules",
     "dev": "tsup --watch",
     "format": "prettier --write --cache .",
     "lint": "eslint src --max-warnings 0",
@@ -28,6 +28,7 @@
     "eslint": "9.19.0",
     "prettier": "3.5.0",
     "prettier-plugin-packagejson": "2.5.8",
+    "rimraf": "6.0.1",
     "tsup": "8.3.6",
     "tsx": "4.19.2",
     "typescript": "5.7.3"

@@ -7,8 +7,8 @@ const positiveNonZeroInteger = /^[1-9]\d*$/;
 
 const nonZeroSchema = v.optional(
   v.pipe(
-    v.string('NON_ZERO_INTEGER'),
-    v.regex(positiveNonZeroInteger, 'REGEX WRONG'),
+    v.string(),
+    v.regex(positiveNonZeroInteger, 'Value must be a positive non-zero integer'),
     v.transform(Number),
   ),
 );
@@ -21,7 +21,7 @@ const PaginationSchema = v.object({
 const DEFAULT_LIMIT = 25;
 const DEFAULT_PAGE = 1;
 
-export function paginate(forced_limit?: number) {
+export function paginate(forcedLimit?: number) {
   return createMiddleware(async (c, next) => {
     const query = c.req.query();
 
@@ -31,17 +31,12 @@ export function paginate(forced_limit?: number) {
       return c.json(JSend.error('Invalid pagination parameters'), 400);
     }
 
-    const defaultLimit = forced_limit ?? DEFAULT_LIMIT;
-
     // All values are guarateeed to be positive integers and non-zero
-    const limit = pagination.limit ?? defaultLimit;
+    const limit = pagination.limit ?? forcedLimit ?? DEFAULT_LIMIT;
     const page = pagination.page ?? DEFAULT_PAGE;
 
-    if (page <= 1) {
-      c.set('pagination', { limit, offset: 0, page: 1 });
-    } else {
-      c.set('pagination', { limit, offset: limit * (page - 1), page });
-    }
+    const normalizedPage = Math.max(1, page);
+    c.set('pagination', { limit, offset: limit * (normalizedPage - 1), page: normalizedPage });
 
     await next();
   });

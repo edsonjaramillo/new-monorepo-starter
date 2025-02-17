@@ -19,18 +19,18 @@
     "@repo/logger": "workspace:*",
     "@repo/validation": "workspace:*",
     "dotenv": "16.4.7",
-    "eslint": "9.19.0",
-    "hono": "4.7.0"
+    "hono": "4.7.0",
+    "valibot": "1.0.0-rc.0"
   },
   "devDependencies": {
     "@repo/configs": "workspace:*",
     "@trivago/prettier-plugin-sort-imports": "5.2.2",
     "@types/node": "22.13.1",
+    "eslint": "9.19.0",
     "prettier": "3.5.0",
     "prettier-plugin-packagejson": "2.5.8",
     "rimraf": "6.0.1",
     "tsup": "8.3.6",
-    "typescript": "5.7.3",
-    "valibot": "1.0.0-rc.0"
+    "typescript": "5.7.3"
   }
 }

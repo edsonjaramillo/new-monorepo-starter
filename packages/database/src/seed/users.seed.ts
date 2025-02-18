@@ -1,4 +1,3 @@
-import { exit } from 'process';
 import { uuidv7 } from 'uuidv7';
 
 import { usersTable } from '../schema';
@@ -55,7 +54,7 @@ export async function createUsers() {
       id: uuidv7(),
       name: user.name,
       email: nameToEmail(user.name),
-      role: 'admin',
+      role: 'Admin',
       password,
     });
   }
@@ -65,7 +64,7 @@ export async function createUsers() {
       id: uuidv7(),
       name: user.name,
       email: nameToEmail(user.name),
-      role: 'user',
+      role: 'User',
       password,
     });
   }

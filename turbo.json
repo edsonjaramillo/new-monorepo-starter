@@ -38,10 +38,6 @@
     "lint": {
       "cache": true
     },
-    "prep": {
-      "cache": false,
-      "dependsOn": ["^prep"]
-    },
     "seed": {
       "cache": false
     },

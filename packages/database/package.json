@@ -27,6 +27,7 @@
     "migrate": "drizzle-kit migrate",
     "prep": "tsup",
     "push": "drizzle-kit push",
+    "seed": "tsx src/seed/seed.main.ts",
     "studio": "drizzle-kit studio"
   },
   "dependencies": {
@@ -48,6 +49,7 @@
     "prettier-plugin-packagejson": "2.5.8",
     "rimraf": "6.0.1",
     "tsup": "8.3.6",
+    "tsx": "4.19.2",
     "typescript": "5.7.3"
   }
 }

@@ -42,7 +42,13 @@
       "cache": false,
       "dependsOn": ["^prep"]
     },
+    "seed": {
+      "cache": false
+    },
     "start": {
+      "cache": false
+    },
+    "studio": {
       "cache": false
     }
   }

@@ -18,9 +18,11 @@
     "graph:web": "turbo run build --filter=web --graph=web.jpg",
     "lint": "turbo run lint",
     "prep": "turbo run prep",
+    "seed": "turbo build --filter=@repo/database... && turbo run seed",
     "start": "turbo run start",
     "start:server": "turbo start --filter=server",
-    "start:web": "turbo start --filter=web"
+    "start:web": "turbo start --filter=web",
+    "studio": "turbo run studio"
   },
   "devDependencies": {
     "@manypkg/cli": "0.23.0",

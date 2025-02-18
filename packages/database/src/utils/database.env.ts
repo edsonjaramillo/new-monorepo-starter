@@ -8,12 +8,11 @@ const databaseEnvSchema = v.object({
   ...PostgresEnvSchema,
 });
 
-const env = process.env;
 export const databaseEnv = v.parse(databaseEnvSchema, {
-  NODE_ENV: env.NODE_ENV,
-  POSTGRES_USER: env.POSTGRES_USER,
-  POSTGRES_PASSWORD: env.POSTGRES_PASSWORD,
-  POSTGRES_HOST: env.POSTGRES_HOST,
-  POSTGRES_PORT: env.POSTGRES_PORT,
-  POSTGRES_DATABASE: env.POSTGRES_DATABASE,
+  NODE_ENV: process.env.NODE_ENV,
+  POSTGRES_USER: process.env.POSTGRES_USER,
+  POSTGRES_PASSWORD: process.env.POSTGRES_PASSWORD,
+  POSTGRES_HOST: process.env.POSTGRES_HOST,
+  POSTGRES_PORT: process.env.POSTGRES_PORT,
+  POSTGRES_DATABASE: process.env.POSTGRES_DATABASE,
 });

@@ -15,6 +15,7 @@
     "docker:dev:up": "docker compose -f ./docker-dev/docker-compose.dev.yml up -d",
     "fix": "manypkg fix",
     "format": "turbo format",
+    "graph": "mkdir -p graphs && turbo run build --filter=server --graph=graphs/server.jpg && turbo run build --filter=web --graph=graphs/web.jpg",
     "graph:server": "turbo run build --filter=server --graph=server.jpg",
     "graph:web": "turbo run build --filter=web --graph=web.jpg",
     "lint": "turbo run lint",

@@ -29,5 +29,5 @@ type DatabaseConnection = {
 
 export function createDBConnection(connectionOptions: DatabaseConnection, env: NODE_ENV) {
   const connection = postgres({ ...connectionOptions, max: maxPoolCountByEnviroment(env) });
-  return drizzle(connection, { schema });
+  return drizzle(connection, { schema, casing: 'snake_case' });
 }

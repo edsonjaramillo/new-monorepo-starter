@@ -16,8 +16,6 @@
     "fix": "manypkg fix",
     "format": "turbo format",
     "graph": "mkdir -p graphs && turbo build --filter=server --graph=graphs/server.jpg && turbo build --filter=web --graph=graphs/web.jpg",
-    "graph:server": "turbo build --filter=server --graph=server.jpg",
-    "graph:web": "turbo build --filter=web --graph=web.jpg",
     "lint": "turbo lint",
     "seed": "turbo seed",
     "start": "turbo start",

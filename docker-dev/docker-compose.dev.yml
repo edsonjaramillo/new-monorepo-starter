@@ -1,4 +1,4 @@
-name: "monorepo-starter"
+name: 'monorepo-starter'
 
 volumes:
   database_data:
@@ -8,7 +8,7 @@ services:
   database:
     image: postgres:17.2-alpine
     ports:
-      - "5432:5432"
+      - '5432:5432'
     environment:
       - POSTGRES_USER=${POSTGRES_USER}
       - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
@@ -19,7 +19,7 @@ services:
   cache:
     image: valkey/valkey:8.0.2-alpine
     ports:
-      - "6379:6379"
+      - '6379:6379'
     environment:
       VALKEY_EXTRA_FLAGS: --save 60 1 --loglevel warning
     volumes:

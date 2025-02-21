@@ -33,7 +33,7 @@ importers:
         specifier: 5.7.3
         version: 5.7.3
 
-  apps/server:
+  apps/api:
     dependencies:
       '@hono/node-server':
         specifier: 1.13.8

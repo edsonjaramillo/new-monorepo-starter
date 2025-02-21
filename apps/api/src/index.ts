@@ -1,4 +1,4 @@
-import { serve } from '@hono/node-api';
+import { serve } from '@hono/node-server';
 import 'dotenv/config';
 
 import { Logger } from '@repo/logger';

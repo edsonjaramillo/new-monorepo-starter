@@ -4,7 +4,7 @@
 MONOREPO_STARTER_API_NAME := monorepo_starter_api
 MONOREPO_STARTER_API_IMAGE := monorepo-starter/api
 PORT := 4000
-DOCKERFILE := docker-dev/Dockerfile.api
+DOCKERFILE := docker/Dockerfile.api
 
 docker-stop-api:
 	docker stop $(MONOREPO_STARTER_API_NAME) && docker rm $(MONOREPO_STARTER_API_NAME)

@@ -9,7 +9,7 @@ const envSchema = v.object({
   ...CacheEnvSchema,
 });
 
-export const serverEnv = v.parse(envSchema, {
+export const apiEnv = v.parse(envSchema, {
   NODE_ENV: process.env.NODE_ENV,
   PORT: process.env.PORT,
   POSTGRES_HOST: process.env.POSTGRES_HOST,

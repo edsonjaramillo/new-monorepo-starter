@@ -7,7 +7,7 @@ RUN wget -qO- https://get.pnpm.io/install.sh | ENV="$HOME/.shrc" SHELL="$(which 
 RUN pnpm install turbo@2.4.1 --global
 WORKDIR /builder
 COPY . .
-RUN turbo prune server --docker
+RUN turbo prune api --docker
 
 FROM builder AS installer
 RUN apk update
@@ -18,14 +18,14 @@ COPY --from=builder /builder/out/json/ .
 RUN pnpm install
 
 COPY --from=builder /builder/out/full/ .
-RUN turbo run build --filter=server
+RUN turbo run build --filter=api
 
 FROM base AS runner
 WORKDIR /app
 
-# RUN addgroup --system --gid 1001 server
-# RUN adduser --system --uid 1001 server
-# USER server
+# RUN addgroup --system --gid 1001 api
+# RUN adduser --system --uid 1001 api
+# USER api
 COPY --from=installer /installer .
 
 CMD [ "sleep", "infinity" ]

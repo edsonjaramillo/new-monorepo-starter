@@ -1,21 +1,21 @@
 import { CacheClient } from '@repo/cache/client';
 import { type Database, createDBConnection } from '@repo/database/client';
 
-import { serverEnv } from './server.env';
+import { apiEnv } from './api.env';
 
 export const databaseConnection: Database = createDBConnection(
   {
-    host: serverEnv.POSTGRES_HOST,
-    port: serverEnv.POSTGRES_PORT,
-    user: serverEnv.POSTGRES_USER,
-    password: serverEnv.POSTGRES_PASSWORD,
-    database: serverEnv.POSTGRES_DATABASE,
+    host: apiEnv.POSTGRES_HOST,
+    port: apiEnv.POSTGRES_PORT,
+    user: apiEnv.POSTGRES_USER,
+    password: apiEnv.POSTGRES_PASSWORD,
+    database: apiEnv.POSTGRES_DATABASE,
   },
-  serverEnv.NODE_ENV,
+  apiEnv.NODE_ENV,
 );
 
 export const cacheConnection = new CacheClient({
   url: 'redis://localhost:6379',
-  debug: serverEnv.NODE_ENV === 'development',
+  debug: apiEnv.NODE_ENV === 'development',
   skipCache: false,
 });

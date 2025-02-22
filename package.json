@@ -2,9 +2,9 @@
   "name": "monorepo-starter",
   "private": true,
   "scripts": {
-    "build": "turbo build --cache=local:rw",
-    "build:packages": "turbo build --filter=@repo/cache --filter=@repo/database --filter=@repo/http --filter=@repo/logger --filter=@repo/ui --filter=@repo/validation --cache=local:rw",
-    "build:web": "turbo build --filter=web --cache=local:rw",
+    "build": "turbo build --cache=local:rw,remote:r",
+    "build:packages": "turbo build --filter=@repo/cache --filter=@repo/database --filter=@repo/http --filter=@repo/logger --filter=@repo/ui --filter=@repo/validation --cache=local:rw,remote:r",
+    "build:web": "turbo build --filter=web --cache=local:rw,remote:r",
     "check": "manypkg check",
     "clean": "turbo clean",
     "clean-cache": "rimraf .turbo && turbo clean-cache",
@@ -13,9 +13,9 @@
     "docker:dev:down": "docker compose --env-file ./docker/.env -f ./docker/docker-compose.dev.yml down",
     "docker:dev:up": "docker compose -f ./docker/docker-compose.dev.yml up -d",
     "fix": "manypkg fix",
-    "format": "turbo format --cache=local:rw",
-    "graph": "mkdir -p graphs && turbo build --filter=api --graph=graphs/api.jpg --cache=local:rw && turbo build --filter=web --graph=graphs/web.jpg --cache=local:rw",
-    "lint": "turbo lint --cache=local:rw",
+    "format": "turbo format --cache=local:rw,remote:r",
+    "graph": "mkdir -p graphs && turbo build --filter=api --graph=graphs/api.jpg --cache=local:rw,remote:r u&& turbo build --filter=web --graph=graphs/web.jpg --cache=local:rw,remote:r",
+    "lint": "turbo lint --cache=local:rw,remote:r",
     "seed": "turbo seed",
     "start": "turbo start",
     "start:api": "turbo start --filter=api",
@@ -32,7 +32,7 @@
     "turbo": "2.4.1",
     "typescript": "5.7.3"
   },
-  "packageManager": "pnpm@10.2.1",
+  "packageManager": "pnpm@10.4.1",
   "engines": {
     "node": ">=18"
   }

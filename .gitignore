@@ -6,6 +6,10 @@ node_modules
 
 # environment variables
 .env
+.secrets
 
 # graph
 graphs
+
+# local playground github action for act
+.github/workflows/local-playground.yml

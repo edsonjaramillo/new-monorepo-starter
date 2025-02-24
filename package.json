@@ -14,7 +14,7 @@
     "docker:dev:up": "docker compose -f ./docker/docker-compose.dev.yml up -d",
     "fix": "manypkg fix",
     "format": "turbo format --cache=local:rw,remote:r",
-    "graph": "mkdir -p graphs && turbo build --filter=api --graph=graphs/api.jpg --cache=local:rw,remote:r u&& turbo build --filter=web --graph=graphs/web.jpg --cache=local:rw,remote:r",
+    "graph": "mkdir -p graphs && turbo build --filter=api --graph=graphs/api.jpg --cache=local:rw,remote:r && turbo build --filter=web --graph=graphs/web.jpg --cache=local:rw,remote:r",
     "lint": "turbo lint --cache=local:rw,remote:r",
     "seed": "turbo seed",
     "start": "turbo start",

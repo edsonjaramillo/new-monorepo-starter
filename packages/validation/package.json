@@ -2,10 +2,7 @@
   "name": "@repo/validation",
   "type": "module",
   "exports": {
-    "./env": {
-      "types": "./dist/env.d.ts",
-      "import": "./dist/env.js"
-    },
+    "./env": "./dist/env.js",
     "./auth": {
       "types": "./dist/forms/auth.schema.d.ts",
       "import": "./dist/forms/auth.schema.js"

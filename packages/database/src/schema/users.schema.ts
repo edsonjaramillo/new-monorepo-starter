@@ -5,7 +5,6 @@ import { sessionsTable } from './sessions.schema';
 import { createdAt, id, updatedAt } from './shared';
 
 export const roles = ['Admin', 'Employee', 'User'] as const;
-export type UserRoles = (typeof roles)[number];
 export const rolesEnum = pgEnum('roles', roles);
 
 export const usersTable = pgTable(

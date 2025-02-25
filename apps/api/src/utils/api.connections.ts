@@ -15,7 +15,12 @@ export const databaseConnection: Database = createDBConnection(
 );
 
 export const cacheConnection = new CacheClient({
-  url: 'redis://localhost:6379',
+  connection: {
+    host: apiEnv.REDIS_HOST,
+    port: apiEnv.REDIS_PORT,
+    password: apiEnv.REDIS_PASSWORD,
+    database: apiEnv.REDIS_DATABASE,
+  },
   debug: apiEnv.NODE_ENV === 'development',
   skipCache: false,
 });

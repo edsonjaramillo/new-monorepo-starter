@@ -1,22 +1,34 @@
-import { Redis as Valkey } from 'iovalkey';
+import { Redis } from 'ioredis';
 
 import { Logger } from '@repo/logger';
 
 type Data = Record<string, unknown> | Array<Record<string, unknown>>;
 
 type CacheClientOptions = {
-  url: string;
+  connection: CacheConnection;
   debug: boolean;
   skipCache?: boolean;
 };
 
+type CacheConnection = {
+  host: string;
+  port: number;
+  password: string;
+  database: number;
+};
+
 export class CacheClient {
-  private readonly client: Valkey;
+  private readonly client: Redis;
   private readonly debugMode: boolean;
   private readonly skipCache: boolean;
 
   constructor(options: CacheClientOptions) {
-    this.client = new Valkey(options.url);
+    this.client = new Redis({
+      host: options.connection.host,
+      port: options.connection.port,
+      password: options.connection.password,
+      db: options.connection.database,
+    });
     this.debugMode = options.debug ?? false;
     this.skipCache = options.skipCache ?? false;
   }

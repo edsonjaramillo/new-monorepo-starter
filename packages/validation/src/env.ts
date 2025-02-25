@@ -16,6 +16,8 @@ export const PostgresEnvSchema = {
 };
 
 export const CacheEnvSchema = {
-  VALKEY_HOST: v.string(),
-  VALKEY_PORT: v.pipe(v.string(), v.regex(/^\d+$/), v.transform(Number)),
+  REDIS_HOST: v.string(),
+  REDIS_PORT: v.pipe(v.string(), v.regex(/^\d+$/), v.transform(Number)),
+  REDIS_PASSWORD: v.string(),
+  REDIS_DATABASE: v.pipe(v.string(), v.regex(/^\d+$/), v.transform(Number)),
 };

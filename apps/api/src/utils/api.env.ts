@@ -17,6 +17,8 @@ export const apiEnv = v.parse(envSchema, {
   POSTGRES_USER: process.env.POSTGRES_USER,
   POSTGRES_PASSWORD: process.env.POSTGRES_PASSWORD,
   POSTGRES_DATABASE: process.env.POSTGRES_DATABASE,
-  VALKEY_HOST: process.env.VALKEY_HOST,
-  VALKEY_PORT: process.env.VALKEY_PORT,
+  REDIS_HOST: process.env.REDIS_HOST,
+  REDIS_PASSWORD: process.env.REDIS_PASSWORD,
+  REDIS_PORT: process.env.REDIS_PORT,
+  REDIS_DATABASE: process.env.REDIS_DATABASE,
 });

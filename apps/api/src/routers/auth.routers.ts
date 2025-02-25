@@ -1,6 +1,6 @@
 import { sValidator } from '@hono/standard-validator';
 import { Hono } from 'hono';
-import { setCookie } from 'hono/cookie';
+import { deleteCookie, setCookie } from 'hono/cookie';
 import { uuidv7 } from 'uuidv7';
 
 import { JSend } from '@repo/http/JSend';
@@ -47,4 +47,17 @@ publicAuthRouter.post('/sign-in', sValidator('json', signinSchema), async (c) =>
 
   setCookie(c, 'session', session.id, cookieOptions(false, expiresAt));
   return c.json(JSend.success(session, 'Users fetched successfully'));
+});
+
+export const userAuthRouter = new Hono();
+
+userAuthRouter.get('/sign-out', async (c) => {
+  const session = c.get('session');
+  if (!session) {
+    return c.json(JSend.error('Invalid session'), 400);
+  }
+
+  await sessionsQueries.deleteSession(session.id);
+  deleteCookie(c, 'session');
+  return c.json(JSend.success(undefined, 'Successfully signed out'));
 });

@@ -8,7 +8,7 @@ const entry = ['src/index.ts'];
  */
 export default defineConfig((options) => {
   if (options.watch) {
-    return { ...devHonoConfig, entry, onSuccess: 'pnpm start' };
+    return { ...devHonoConfig, entry, onSuccess: 'pnpm start', ...options };
   }
-  return { ...prodHonoConfig, entry };
+  return { ...prodHonoConfig, entry, ...options };
 });

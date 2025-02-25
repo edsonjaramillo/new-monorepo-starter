@@ -45,6 +45,10 @@
     "seed": {
       "cache": false
     },
+    "pre-dev": {
+      "dependsOn": ["^pre-dev"],
+      "cache": true
+    },
     "start": {
       "cache": false
     },

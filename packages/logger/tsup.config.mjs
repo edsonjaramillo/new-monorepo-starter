@@ -6,7 +6,7 @@ const entry = ['src/logger.ts'];
 
 export default defineConfig((options) => {
   if (options.watch) {
-    return { ...devLibraryConfig, entry };
+    return { ...devLibraryConfig, entry, ...options };
   }
-  return { ...prodLibraryConfig, entry };
+  return { ...prodLibraryConfig, entry, ...options };
 });

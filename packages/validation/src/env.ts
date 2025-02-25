@@ -7,9 +7,21 @@ export const NodeEnvSchema = {
   NODE_ENV: v.picklist(NODE_ENV_VALUES),
 };
 
+const numberSchema = v.pipe(v.string(), v.regex(/^\d+$/), v.transform(Number));
+
+const booleanSchema = v.pipe(
+  v.string(),
+  v.regex(/^true|false$/),
+  v.transform((input) => input === 'true'),
+);
+
+export const CommonEnvSchema = {
+  DEBUG: booleanSchema,
+};
+
 export const PostgresEnvSchema = {
   POSTGRES_HOST: v.string(),
-  POSTGRES_PORT: v.pipe(v.string(), v.regex(/^\d+$/), v.transform(Number)),
+  POSTGRES_PORT: numberSchema,
   POSTGRES_USER: v.string(),
   POSTGRES_PASSWORD: v.string(),
   POSTGRES_DATABASE: v.string(),
@@ -17,7 +29,8 @@ export const PostgresEnvSchema = {
 
 export const CacheEnvSchema = {
   REDIS_HOST: v.string(),
-  REDIS_PORT: v.pipe(v.string(), v.regex(/^\d+$/), v.transform(Number)),
+  REDIS_PORT: numberSchema,
   REDIS_PASSWORD: v.string(),
-  REDIS_DATABASE: v.pipe(v.string(), v.regex(/^\d+$/), v.transform(Number)),
+  REDIS_DATABASE: numberSchema,
+  REDIS_SKIP_CACHE: booleanSchema,
 };

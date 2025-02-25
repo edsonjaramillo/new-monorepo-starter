@@ -21,6 +21,6 @@ export const cacheConnection = new CacheClient({
     password: apiEnv.REDIS_PASSWORD,
     database: apiEnv.REDIS_DATABASE,
   },
-  debug: apiEnv.NODE_ENV === 'development',
-  skipCache: false,
+  debug: apiEnv.DEBUG,
+  skipCache: apiEnv.REDIS_SKIP_CACHE,
 });

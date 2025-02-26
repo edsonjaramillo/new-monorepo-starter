@@ -7,6 +7,7 @@ export const prodLibraryConfig = {
   format: ['esm'],
   target: 'esnext',
   clean: true,
+  publicDir: 'public',
   dts: true,
   minify: true,
   treeshake: true,
@@ -18,7 +19,7 @@ export const prodLibraryConfig = {
  */
 export const devLibraryConfig = {
   ...prodLibraryConfig,
-  silent: true,
+  clean: false,
   sourcemap: true,
   minify: false,
   treeshake: false,

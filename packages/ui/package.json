@@ -3,6 +3,10 @@
   "version": "0.0.0",
   "license": "MIT",
   "exports": {
+    "./text": {
+      "types": "./dist/text.d.ts",
+      "import": "./dist/text.mjs"
+    },
     "./card": {
       "types": "./dist/card.d.ts",
       "import": "./dist/card.mjs"
@@ -42,7 +46,7 @@
     "prettier-plugin-packagejson": "2.5.8",
     "prettier-plugin-tailwindcss": "0.6.11",
     "rimraf": "6.0.1",
-    "tailwindcss": "4.0.6",
+    "tailwindcss": "4.0.9",
     "tsup": "8.3.6",
     "typescript": "5.7.3"
   }

@@ -6,6 +6,7 @@ export const prodHonoConfig = {
   outDir: 'dist',
   format: 'esm',
   clean: true,
+  publicDir: 'public',
   splitting: true,
   dts: false,
   sourcemap: false,
@@ -17,6 +18,7 @@ export const prodHonoConfig = {
  */
 export const devHonoConfig = {
   ...prodHonoConfig,
+  clean: false,
   sourcemap: true,
   minify: false,
   treeshake: false,

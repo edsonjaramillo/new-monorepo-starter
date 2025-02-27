@@ -107,9 +107,10 @@
   --color-secondary-pressed: var(--secondary-700);
 
   /* Grayscale */
-  --color-gray: var(--gray-500);
+  --color-gray: var(--gray-400);
   --color-black: var(--gray-950);
   --color-white: var(--gray-50);
+  --color-muted: var(--gray-300);
 
   /* Alert */
   --color-success: var(--success-400);
@@ -158,12 +159,13 @@
 
   --spacing-responsive: min(90%, var(--responsive-width));
   --spacing-half-responsive: min(90%, var(--half-responsive-width));
+  --spacing-form: 24rem;
   --spacing-split-form: min(90%, 27rem);
   --spacing-navigation: var(--navigation-height);
 
   /* Shadow */
   --shadow-*: initial;
-  --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-base: 0 1px 3px rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
 
   /* Rounded Corners */
   --radius-*: initial;

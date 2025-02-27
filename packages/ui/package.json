@@ -3,6 +3,14 @@
   "version": "0.0.0",
   "license": "MIT",
   "exports": {
+    "./form": {
+      "types": "./dist/form.d.ts",
+      "import": "./dist/form.mjs"
+    },
+    "./input": {
+      "types": "./dist/input.d.ts",
+      "import": "./dist/input.mjs"
+    },
     "./text": {
       "types": "./dist/text.d.ts",
       "import": "./dist/text.mjs"

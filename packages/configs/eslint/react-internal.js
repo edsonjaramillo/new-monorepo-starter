@@ -37,4 +37,9 @@ export const reactInternalConfig = [
       'react/react-in-jsx-scope': 'off',
     },
   },
+  {
+    rules: {
+      '@typescript-eslint/consistent-type-imports': 'warn',
+    },
+  },
 ];

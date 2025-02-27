@@ -27,6 +27,11 @@ export const baseConfig = [
     },
   },
   {
+    rules: {
+      '@typescript-eslint/consistent-type-imports': 'warn',
+    },
+  },
+  {
     ignores: ['dist/**'],
   },
 ];

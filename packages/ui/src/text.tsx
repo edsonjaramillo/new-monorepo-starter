@@ -18,6 +18,7 @@ export const textVariants = cva('antialiased', {
     textColor: {
       black: 'text-black',
       gray: 'text-gray',
+      muted: 'text-muted',
       white: 'text-white',
       primary: 'text-primary',
       secondary: 'text-secondary',
@@ -27,7 +28,7 @@ export const textVariants = cva('antialiased', {
       danger: 'text-danger',
     },
     seperator: {
-      true: 'border-gray border-b pb-2',
+      true: 'border-b border-gray pb-2',
     },
   },
   compoundVariants: [
@@ -147,8 +148,7 @@ export function Label({ className, children, size, textColor, seperator, ...prop
       seperator,
       size: size || 'sm',
       textColor,
-      className:
-        'font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70',
+      className: 'leading-none font-medium',
     }),
     className,
   );

@@ -1,18 +1,28 @@
+import { useFormContext } from 'react-hook-form';
+
 import { cn } from './lib/cn';
 import { Span } from './text';
 
-type InputProps = React.ComponentProps<'input'>;
-export function Input({ className, ...props }: InputProps) {
+type InputRequiredProps = {
+  field: string;
+  type: React.ComponentProps<'input'>['type'];
+};
+
+type InputProps = React.ComponentProps<'input'> & InputRequiredProps;
+export function Input({ type, field, required, className, ...props }: InputProps) {
+  const { register } = useFormContext();
   const style = cn(
     'h-9 w-full rounded-base border border-muted bg-transparent px-3 py-2 text-sm text-black shadow-base placeholder:text-gray focus-visible:ring-2 focus-visible:ring-info focus-visible:ring-offset-2 focus-visible:outline-0 disabled:cursor-not-allowed disabled:text-muted disabled:placeholder:text-muted',
     className,
   );
-  return <input className={style} {...props} />;
+  return <input type={type} className={style} {...register(field, { required })} {...props} />;
 }
 
-export function InputGroup({ children, ...props }: InputProps) {
+type InputGroupProps = React.ComponentProps<'div'>;
+export function InputGroup({ children, className, ...props }: InputGroupProps) {
+  const style = cn('grid w-full max-w-form items-center gap-2', className);
   return (
-    <div className="grid w-full max-w-form items-center gap-2" {...props}>
+    <div className={style} {...props}>
       {children}
     </div>
   );
@@ -23,6 +33,22 @@ export function InputDescription({ className, children, ...props }: InputDescrip
   return (
     <Span size="sm" textColor="gray" className={cn(className)} {...props}>
       {children}
+    </Span>
+  );
+}
+
+type InputErrorRequiredProps = { field: string };
+type InputErrorProps = React.ComponentProps<'span'> & InputErrorRequiredProps;
+export function InputError({ className, field, ...props }: InputErrorProps) {
+  const { formState } = useFormContext();
+  const { errors } = formState;
+  const error = errors?.[field];
+
+  if (!error) return undefined;
+
+  return (
+    <Span size="sm" textColor="danger" className={cn('font-semibold', className)} {...props}>
+      {error.message?.toString()}
     </Span>
   );
 }

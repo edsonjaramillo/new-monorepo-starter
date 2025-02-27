@@ -3,6 +3,10 @@
   "version": "0.0.0",
   "license": "MIT",
   "exports": {
+    "./button": {
+      "types": "./dist/button.d.ts",
+      "import": "./dist/button.mjs"
+    },
     "./form": {
       "types": "./dist/form.d.ts",
       "import": "./dist/form.mjs"
@@ -14,14 +18,6 @@
     "./text": {
       "types": "./dist/text.d.ts",
       "import": "./dist/text.mjs"
-    },
-    "./card": {
-      "types": "./dist/card.d.ts",
-      "import": "./dist/card.mjs"
-    },
-    "./button": {
-      "types": "./dist/button.d.ts",
-      "import": "./dist/button.mjs"
     },
     "./ui.css": "./dist/ui.css"
   },

@@ -4,7 +4,6 @@ import { devReactLibraryConfig, prodReactLibraryConfig } from '@repo/configs/tsu
 
 const entry = [
   'src/button.tsx',
-  'src/card.tsx',
   'src/form.tsx',
   'src/input.tsx',
   'src/lib/cn.ts',

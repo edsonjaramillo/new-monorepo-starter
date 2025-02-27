@@ -1,5 +1,5 @@
-import { usersTable } from '../schema/users.schema';
-import { ColumnsSelector } from './shared.columns';
+import type { usersTable } from '../schema/users.schema';
+import type { ColumnsSelector } from './shared.columns';
 
 export const USERS_COLUMNS = {
   id: true,

@@ -1,7 +1,7 @@
 import { getCookie } from 'hono/cookie';
 import { createMiddleware } from 'hono/factory';
 
-import { UserRoles } from '@repo/database/types';
+import type { UserRoles } from '@repo/database/types';
 import { JSend } from '@repo/http/JSend';
 import { Logger } from '@repo/logger';
 

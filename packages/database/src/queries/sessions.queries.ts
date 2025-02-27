@@ -1,13 +1,13 @@
 import { eq } from 'drizzle-orm';
 
-import { CacheClient } from '@repo/cache/client';
+import type { CacheClient } from '@repo/cache/client';
 
 import { SESSIONS_COLUMNS } from '../columns/sessions.columns';
 import { USERS_SESSION_COLUMNS } from '../columns/users.columns';
 import type { Database } from '../database.client';
 import { SessionsKeys } from '../keys/sessions.keys';
 import { sessionsTable } from '../schema/sessions.schema';
-import { SessionCreate, SessionUpdate, SessionWithUser } from '../types/sessions.types';
+import type { SessionCreate, SessionUpdate, SessionWithUser } from '../types/sessions.types';
 
 export class SessionsQueries {
   private readonly database: Database;

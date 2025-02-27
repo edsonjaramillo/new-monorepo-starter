@@ -1,12 +1,12 @@
 import { count, eq } from 'drizzle-orm';
 
-import { CacheClient } from '@repo/cache/client';
+import type { CacheClient } from '@repo/cache/client';
 
 import { USERS_COLUMNS, USERS_CREDENTIALS_COLUMNS } from '../columns/users.columns';
-import { Database } from '../database.client';
+import type { Database } from '../database.client';
 import { UsersKeys } from '../keys/users.keys';
 import { usersTable } from '../schema/users.schema';
-import { RowCount } from '../types/shared.types';
+import type { RowCount } from '../types/shared.types';
 import type { User, UserCreate, UserCredentials, UserUpdate } from '../types/users.types';
 
 export class UsersQueries {

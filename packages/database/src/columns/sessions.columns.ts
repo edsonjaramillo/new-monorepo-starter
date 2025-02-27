@@ -1,4 +1,4 @@
-import { sessionsTable } from '../schema/sessions.schema';
+import type { sessionsTable } from '../schema/sessions.schema';
 import type { ColumnsSelector } from './shared.columns';
 
 export const SESSIONS_COLUMNS = {

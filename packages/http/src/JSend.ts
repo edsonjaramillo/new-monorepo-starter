@@ -1,5 +1,7 @@
 import type { Pagination } from './paginate';
 
+export type ResponseStatus = 'success' | 'error' | 'warning' | 'info';
+
 interface JSendSuccessResponse<T> {
   status: 'success';
   data: T; // Data is required and of type T for success
@@ -44,16 +46,16 @@ export const JSend = {
     return { status: 'success', data, message };
   },
 
-  error(message: string): JSendErrorResponse {
-    return { status: 'error', message };
+  info<T>(data: T, message: string): JSendInfoResponse<T> {
+    return { status: 'info', data, message };
   },
 
   warning(message: string): JSendWarningResponse {
     return { status: 'warning', message };
   },
 
-  info<T>(data: T, message: string): JSendInfoResponse<T> {
-    return { status: 'info', data, message };
+  error(message: string): JSendErrorResponse {
+    return { status: 'error', message };
   },
 
   pagination<T>(data: T, pagination: Pagination, message: string): JSendPaginationResponse<T> {

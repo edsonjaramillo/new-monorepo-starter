@@ -1,6 +1,8 @@
 import { cva } from 'class-variance-authority';
 import { Toaster as SonnerToaster, toast as sonnerToast } from 'sonner';
 
+import type { ResponseStatus } from '@repo/http/JSend';
+
 import { cn } from './lib/cn';
 import { Span } from './text';
 
@@ -79,7 +81,7 @@ export function Toast(props: ToastProps) {
 
 interface ToastProps {
   id: string | number;
-  status: 'success' | 'error' | 'info' | 'warning';
+  status: ResponseStatus;
   title: string;
   description?: string;
 }
@@ -173,7 +175,7 @@ function ErrorIcon({ textColor }: IconProps) {
   );
 }
 
-function getIcon(status: ToastProps['status'], textColor: string) {
+function getIcon(status: ResponseStatus, textColor: string) {
   switch (status) {
     case 'success':
       return <SuccessIcon textColor={textColor} />;

@@ -105,6 +105,9 @@ importers:
       '@hookform/resolvers':
         specifier: 4.1.2
         version: 4.1.2(react-hook-form@7.54.2(react@19.0.0))
+      '@repo/http':
+        specifier: workspace:*
+        version: link:../../packages/http
       '@repo/ui':
         specifier: workspace:*
         version: link:../../packages/ui
@@ -387,6 +390,9 @@ importers:
 
   packages/ui:
     dependencies:
+      '@repo/http':
+        specifier: workspace:*
+        version: link:../http
       class-variance-authority:
         specifier: 0.7.1
         version: 0.7.1
@@ -445,6 +451,9 @@ importers:
 
   packages/validation:
     dependencies:
+      '@repo/http':
+        specifier: workspace:*
+        version: link:../http
       valibot:
         specifier: 1.0.0-rc.2
         version: 1.0.0-rc.2(typescript@5.7.3)

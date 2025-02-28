@@ -113,25 +113,25 @@
   --color-muted: var(--gray-300);
 
   /* Alert */
-  --color-success: var(--success-400);
+  --color-success: var(--success-500);
   --color-success-accent: var(--success-50);
-  --color-success-hover: var(--success-500);
-  --color-success-pressed: var(--success-600);
+  --color-success-hover: var(--success-600);
+  --color-success-pressed: var(--success-700);
 
-  --color-info: var(--info-400);
+  --color-info: var(--info-500);
   --color-info-accent: var(--info-50);
-  --color-info-hover: var(--info-500);
-  --color-info-pressed: var(--info-600);
+  --color-info-hover: var(--info-600);
+  --color-info-pressed: var(--info-700);
 
-  --color-warning: var(--warning-400);
+  --color-warning: var(--warning-500);
   --color-warning-accent: var(--warning-50);
-  --color-warning-hover: var(--warning-500);
-  --color-warning-pressed: var(--warning-600);
+  --color-warning-hover: var(--warning-600);
+  --color-warning-pressed: var(--warning-700);
 
-  --color-danger: var(--danger-400);
+  --color-danger: var(--danger-500);
   --color-danger-accent: var(--danger-50);
-  --color-danger-hover: var(--danger-500);
-  --color-danger-pressed: var(--danger-600);
+  --color-danger-hover: var(--danger-600);
+  --color-danger-pressed: var(--danger-700);
 
   --color-neutral: var(--gray-100);
   --color-neutral-accent: var(--gray-50);
@@ -160,12 +160,14 @@
   --spacing-responsive: min(90%, var(--responsive-width));
   --spacing-half-responsive: min(90%, var(--half-responsive-width));
   --spacing-form: 24rem;
+  --spacing-toast: 21rem;
   --spacing-split-form: min(90%, 27rem);
   --spacing-navigation: var(--navigation-height);
 
   /* Shadow */
   --shadow-*: initial;
   --shadow-base: 0 1px 3px rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --shadow-glow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
 
   /* Rounded Corners */
   --radius-*: initial;

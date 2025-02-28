@@ -8,21 +8,15 @@ interface JSendSuccessResponse<T> {
   message: string;
 }
 
+interface JSendInfoResponse<T> {
+  status: 'info';
+  data: T;
+  message: string;
+}
+
 interface JSendErrorResponse {
   status: 'error';
   data?: undefined; // Data is optional and can be of any type for error (for error details)
-  message: string;
-}
-
-interface JSendWarningResponse {
-  status: 'warning';
-  data?: undefined;
-  message: string;
-}
-
-interface JSendInfoResponse<T> {
-  status: 'info';
-  data?: T;
   message: string;
 }
 
@@ -36,9 +30,8 @@ interface JSendPaginationResponse<T> {
 // Define a union type for all possible JSend responses for broader type usage if needed
 export type JSendResponse<T> =
   | JSendSuccessResponse<T>
-  | JSendErrorResponse
-  | JSendWarningResponse
   | JSendInfoResponse<T>
+  | JSendErrorResponse
   | JSendPaginationResponse<T>;
 
 export const JSend = {
@@ -48,10 +41,6 @@ export const JSend = {
 
   info<T>(data: T, message: string): JSendInfoResponse<T> {
     return { status: 'info', data, message };
-  },
-
-  warning(message: string): JSendWarningResponse {
-    return { status: 'warning', message };
   },
 
   error(message: string): JSendErrorResponse {

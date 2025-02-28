@@ -1,6 +1,7 @@
 'use client';
 
 import { standardSchemaResolver } from '@hookform/resolvers/standard-schema';
+import { useRouter } from 'next/navigation';
 import { FormProvider, useForm } from 'react-hook-form';
 import type * as v from 'valibot';
 
@@ -11,27 +12,37 @@ import { Label } from '@repo/ui/text';
 import { toast } from '@repo/ui/toast';
 import { signupSchema } from '@repo/validation/auth';
 
-import { signUpAction } from '../../app/actions/auth.actions';
+import { $apiClientSide } from '../../app/web.connections';
 
 type SignUpFormData = v.InferOutput<typeof signupSchema>;
 
 export function SignUpForm() {
-  const methods = useForm({
-    resolver: standardSchemaResolver(signupSchema),
-  });
-  const { formState, handleSubmit } = methods;
-  const { isSubmitting } = formState;
+  const form = useForm({ resolver: standardSchemaResolver(signupSchema) });
+  const { formState } = form;
+  const router = useRouter();
 
   async function onSubmit(data: SignUpFormData) {
-    const formData = new FormData();
-    Object.entries(data).forEach(([k, v]) => formData.append(k, v));
-    const { status, message } = await signUpAction(formData);
-    toast({ status, title: message });
+    const response = await $apiClientSide.post('/auth/sign-up', data);
+
+    if (response.status === 'error') {
+      toast({ status: 'error', title: 'Something went wrong.' });
+      return;
+    }
+
+    if (response.status === 'info') {
+      toast({ status: 'info', title: response.message });
+      router.push('/auth/sign-in');
+      return;
+    }
+
+    toast({ status: response.status, title: response.message });
+    form.reset();
+    router.push('/');
   }
 
   return (
-    <FormProvider {...methods}>
-      <Form onSubmit={handleSubmit(onSubmit)}>
+    <FormProvider {...form}>
+      <Form onSubmit={form.handleSubmit(onSubmit)}>
         <InputGroup>
           <Label htmlFor="name">Name</Label>
           <Input field="name" placeholder="John Doe" type="text" required />
@@ -47,8 +58,12 @@ export function SignUpForm() {
           <Input field="password" placeholder="Password" type="password" required />
           <InputError field="password" />
         </InputGroup>
-        <Button type="submit" color="primary" className="ml-auto block" disabled={isSubmitting}>
-          {isSubmitting ? 'Signing up...' : 'Sign Up'}
+        <Button
+          type="submit"
+          color="primary"
+          className="ml-auto block"
+          disabled={formState.isSubmitting}>
+          {formState.isSubmitting ? 'Signing up...' : 'Sign Up'}
         </Button>
       </Form>
     </FormProvider>

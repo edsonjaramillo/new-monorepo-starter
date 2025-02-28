@@ -15,6 +15,11 @@ export const publicAuthRouter = new Hono();
 publicAuthRouter.post('/sign-up', sValidator('json', signupSchema), async (c) => {
   const body = c.req.valid('json');
 
+  const user = await usersQueries.getUserCredentials(body.email);
+  if (user) {
+    return c.json(JSend.info(undefined, 'User already exists. Please sign in.'));
+  }
+
   const password = await Password.hash(body.password);
 
   await usersQueries.createUser({ ...body, password });

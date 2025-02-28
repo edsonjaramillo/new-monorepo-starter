@@ -4,8 +4,8 @@
  */
 export const prodReactLibraryConfig = {
   outDir: 'dist',
-  format: ['esm'],
-  target: 'esnext',
+  format: 'esm',
+  target: 'es2022',
   clean: true,
   publicDir: 'public',
   dts: true,

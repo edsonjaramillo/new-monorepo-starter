@@ -5,6 +5,7 @@
 export const prodHonoConfig = {
   outDir: 'dist',
   format: 'esm',
+  target: 'es2022',
   clean: true,
   publicDir: 'public',
   splitting: true,

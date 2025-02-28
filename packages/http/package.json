@@ -2,6 +2,10 @@
   "name": "@repo/http",
   "type": "module",
   "exports": {
+    "./fetcher/client": {
+      "types": "./dist/fetcher/client.fetcher.d.ts",
+      "import": "./dist/fetcher/client.fetcher.js"
+    },
     "./JSend": {
       "types": "./dist/JSend.d.ts",
       "import": "./dist/JSend.js"

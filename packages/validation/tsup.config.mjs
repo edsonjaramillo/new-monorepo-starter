@@ -2,7 +2,7 @@ import { defineConfig } from 'tsup';
 
 import { devLibraryConfig, prodLibraryConfig } from '@repo/configs/tsup/library';
 
-const entry = ['src/env.ts', 'src/forms/auth.schema.ts'];
+const entry = ['src/env.ts', 'src/forms/auth.schema.ts', 'src/forms/form.state.ts'];
 
 export default defineConfig((options) => {
   if (options.watch) {

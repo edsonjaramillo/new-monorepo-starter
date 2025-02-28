@@ -3,6 +3,10 @@
   "type": "module",
   "exports": {
     "./env": "./dist/env.js",
+    "./form": {
+      "types": "./dist/forms/form.state.d.ts",
+      "import": "./dist/forms/form.state.js"
+    },
     "./auth": {
       "types": "./dist/forms/auth.schema.d.ts",
       "import": "./dist/forms/auth.schema.js"

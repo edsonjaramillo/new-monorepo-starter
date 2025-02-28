@@ -12,6 +12,18 @@ interface JSendErrorResponse {
   message: string;
 }
 
+interface JSendWarningResponse {
+  status: 'warning';
+  data?: undefined;
+  message: string;
+}
+
+interface JSendInfoResponse<T> {
+  status: 'info';
+  data?: T;
+  message: string;
+}
+
 interface JSendPaginationResponse<T> {
   status: 'success';
   data: T;
@@ -23,6 +35,8 @@ interface JSendPaginationResponse<T> {
 export type JSendResponse<T> =
   | JSendSuccessResponse<T>
   | JSendErrorResponse
+  | JSendWarningResponse
+  | JSendInfoResponse<T>
   | JSendPaginationResponse<T>;
 
 export const JSend = {
@@ -32,6 +46,14 @@ export const JSend = {
 
   error(message: string): JSendErrorResponse {
     return { status: 'error', message };
+  },
+
+  warning(message: string): JSendWarningResponse {
+    return { status: 'warning', message };
+  },
+
+  info<T>(data: T, message: string): JSendInfoResponse<T> {
+    return { status: 'info', data, message };
   },
 
   pagination<T>(data: T, pagination: Pagination, message: string): JSendPaginationResponse<T> {

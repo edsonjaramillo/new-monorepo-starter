@@ -15,22 +15,22 @@ export const buttonVariants = cva(
     variants: {
       color: {
         primary:
-          'bg-primary text-white hover:bg-primary-hover focus:bg-primary-hover active:bg-primary-pressed',
+          'bg-primary text-white not-disabled:hover:bg-primary-hover not-disabled:focus:bg-primary-hover not-disabled:active:bg-primary-pressed',
         secondary:
-          'bg-secondary text-white hover:bg-secondary-hover focus:bg-secondary-hover active:bg-secondary-pressed',
+          'bg-secondary text-white not-disabled:hover:bg-secondary-hover not-disabled:focus:bg-secondary-hover not-disabled:active:bg-secondary-pressed',
         success:
-          'bg-success text-white hover:bg-success-hover focus:bg-success-hover active:bg-success-pressed',
-        info: 'bg-info text-white hover:bg-info-hover focus:bg-info-hover active:bg-info-pressed',
+          'bg-success text-white not-disabled:hover:bg-success-hover not-disabled:focus:bg-success-hover not-disabled:active:bg-success-pressed',
+        info: 'bg-info text-white not-disabled:hover:bg-info-hover not-disabled:focus:bg-info-hover not-disabled:active:bg-info-pressed',
         danger:
-          'bg-danger text-white hover:bg-danger-hover focus:bg-danger-hover active:bg-danger-pressed',
+          'bg-danger text-white not-disabled:hover:bg-danger-hover not-disabled:focus:bg-danger-hover not-disabled:active:bg-danger-pressed',
         warning:
-          'bg-warning text-white hover:bg-warning-hover focus:bg-warning-hover active:bg-warning-pressed',
+          'bg-warning text-white not-disabled:hover:bg-warning-hover not-disabled:focus:bg-warning-hover not-disabled:active:bg-warning-pressed',
         neutral:
-          'bg-neutral text-black hover:bg-neutral-hover focus:bg-neutral-hover active:bg-neutral-pressed',
+          'bg-neutral text-black not-disabled:hover:bg-neutral-hover not-disabled:focus:bg-neutral-hover not-disabled:active:bg-neutral-pressed',
         none: 'bg-white text-black',
       },
       disabled: {
-        true: 'cursor-not-allowed bg-white text-gray',
+        true: 'cursor-not-allowed bg-muted text-black',
       },
       width: {
         fit: 'w-fit',

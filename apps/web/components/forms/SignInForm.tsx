@@ -11,19 +11,19 @@ import { Form } from '@repo/ui/form';
 import { Input, InputError, InputGroup } from '@repo/ui/input';
 import { Label } from '@repo/ui/text';
 import { toast } from '@repo/ui/toast';
-import { signUpSchema } from '@repo/validation/auth';
+import { signInSchema } from '@repo/validation/auth';
 
 import { $apiClientSide } from '../../app/web.connections';
 
-type SignUpFormData = v.InferOutput<typeof signUpSchema>;
+type SignInFormData = v.InferOutput<typeof signInSchema>;
 
-export function SignUpForm() {
-  const form = useForm({ resolver: standardSchemaResolver(signUpSchema) });
+export function SignInForm() {
+  const form = useForm({ resolver: standardSchemaResolver(signInSchema) });
   const { formState } = form;
   const router = useRouter();
 
-  async function onSubmit(formData: SignUpFormData) {
-    const response = await $apiClientSide.post<SignUpResponse>('/auth/sign-up', formData);
+  async function onSubmit(formData: SignInFormData) {
+    const response = await $apiClientSide.post<SignUpResponse>('/auth/sign-in', formData);
 
     if (response.status === 'error') {
       toast({ status: response.status, title: response.message });

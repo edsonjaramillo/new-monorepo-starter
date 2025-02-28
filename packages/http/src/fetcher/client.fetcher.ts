@@ -1,5 +1,3 @@
-import type { JSendResponse } from '../JSend';
-
 export class ClientSideFetcher {
   private baseUrl: string;
 
@@ -7,7 +5,7 @@ export class ClientSideFetcher {
     this.baseUrl = baseUrl;
   }
 
-  async get<T>(path: string): Promise<JSendResponse<T>> {
+  async get<T>(path: string): Promise<T> {
     try {
       const response = await fetch(this.baseUrl + path, {
         credentials: 'include',
@@ -18,11 +16,11 @@ export class ClientSideFetcher {
       return responseJson;
     } catch {
       window.location.href = '/service-unavailable';
-      return { status: 'error', data: undefined, message: 'Service Unavailable.' };
+      return undefined as unknown as T;
     }
   }
 
-  async post<T>(path: string, body: unknown): Promise<JSendResponse<T>> {
+  async post<T>(path: string, body: unknown): Promise<T> {
     try {
       const response = await fetch(this.baseUrl + path, {
         method: 'POST',
@@ -38,7 +36,7 @@ export class ClientSideFetcher {
       return responseJson;
     } catch {
       window.location.href = '/service-unavailable';
-      return { status: 'error', data: undefined, message: 'Service Unavailable.' };
+      return undefined as unknown as T;
     }
   }
 }

@@ -333,6 +333,9 @@ importers:
       '@repo/configs':
         specifier: workspace:*
         version: link:../configs
+      '@repo/database':
+        specifier: workspace:*
+        version: link:../database
       '@trivago/prettier-plugin-sort-imports':
         specifier: 5.2.2
         version: 5.2.2(prettier@3.5.2)
@@ -451,9 +454,6 @@ importers:
 
   packages/validation:
     dependencies:
-      '@repo/http':
-        specifier: workspace:*
-        version: link:../http
       valibot:
         specifier: 1.0.0-rc.2
         version: 1.0.0-rc.2(typescript@5.7.3)

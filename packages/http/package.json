@@ -2,6 +2,10 @@
   "name": "@repo/http",
   "type": "module",
   "exports": {
+    "./response/auth": {
+      "types": "./dist/response/auth.response.d.ts",
+      "import": "./dist/response/auth.response.js"
+    },
     "./fetcher/client": {
       "types": "./dist/fetcher/client.fetcher.d.ts",
       "import": "./dist/fetcher/client.fetcher.js"
@@ -27,6 +31,7 @@
   },
   "devDependencies": {
     "@repo/configs": "workspace:*",
+    "@repo/database": "workspace:*",
     "@trivago/prettier-plugin-sort-imports": "5.2.2",
     "@types/node": "22.13.5",
     "eslint": "9.21.0",

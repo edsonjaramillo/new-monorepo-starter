@@ -19,7 +19,6 @@
     "pre-dev": "tsup --sourcemap"
   },
   "dependencies": {
-    "@repo/http": "workspace:*",
     "valibot": "1.0.0-rc.2"
   },
   "devDependencies": {

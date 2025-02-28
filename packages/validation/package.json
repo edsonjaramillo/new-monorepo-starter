@@ -4,8 +4,8 @@
   "exports": {
     "./env": "./dist/env.js",
     "./auth": {
-      "types": "./dist/forms/auth.schema.d.ts",
-      "import": "./dist/forms/auth.schema.js"
+      "types": "./dist/forms/auth.validation.d.ts",
+      "import": "./dist/forms/auth.validation.js"
     }
   },
   "scripts": {

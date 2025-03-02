@@ -6,6 +6,7 @@ volumes:
 
 services:
   database:
+    container_name: database
     image: postgres:17.2-alpine
     ports:
       - '5432:5432'
@@ -15,8 +16,11 @@ services:
       - POSTGRES_DB=${POSTGRES_DB}
     volumes:
       - database_data:/var/lib/postgresql/data
+    depends_on:
+      - cache
     restart: unless-stopped
   cache:
+    container_name: cache
     image: redis:7.4.2-alpine
     ports:
       - '6379:6379'

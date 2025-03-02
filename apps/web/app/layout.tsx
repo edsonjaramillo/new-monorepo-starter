@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google';
 
 import { Toaster } from '@repo/ui/toast';
 
+import { SessionWatcher } from '../components/SessionWatcher';
 import './app.css';
 
 const inter = Inter({
@@ -22,8 +23,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Toaster />
         {children}
+        <Toaster />
+        <SessionWatcher />
       </body>
     </html>
   );

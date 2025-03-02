@@ -4,7 +4,12 @@ import { deleteCookie, setCookie } from 'hono/cookie';
 import { uuidv7 } from 'uuidv7';
 
 import { JSend } from '@repo/http/JSend';
-import type { SignInResponse, SignOutResponse, SignUpResponse } from '@repo/http/response/auth';
+import type {
+  AutoSignInResponse,
+  SignInResponse,
+  SignOutResponse,
+  SignUpResponse,
+} from '@repo/http/response/auth';
 import { signInSchema, signUpSchema } from '@repo/validation/auth';
 
 import { Password } from '../utils/Password';
@@ -69,4 +74,13 @@ userAuthRouter.get('/sign-out', async (c) => {
   await sessionsQueries.deleteSession(session.id);
   deleteCookie(c, 'session');
   return c.json<SignOutResponse>(JSend.success(undefined, 'Successfully signed out'));
+});
+
+userAuthRouter.get('/auto-sign-in', async (c) => {
+  const session = c.get('session');
+  if (!session) {
+    return c.json<AutoSignInResponse>(JSend.error('Invalid session'), 400);
+  }
+
+  return c.json<AutoSignInResponse>(JSend.success(session, 'Session refreshed successfully'));
 });

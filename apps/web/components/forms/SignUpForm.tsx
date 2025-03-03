@@ -1,11 +1,10 @@
 'use client';
 
 import { standardSchemaResolver } from '@hookform/resolvers/standard-schema';
-import { useRouter } from 'next/navigation';
+import { redirect } from 'next/navigation';
 import { FormProvider, useForm } from 'react-hook-form';
 import type * as v from 'valibot';
 
-import type { SignUpResponse } from '@repo/http/response/auth';
 import { Button } from '@repo/ui/button';
 import { Form } from '@repo/ui/form';
 import { Input, InputError, InputGroup } from '@repo/ui/input';
@@ -13,32 +12,33 @@ import { Label } from '@repo/ui/text';
 import { toast } from '@repo/ui/toast';
 import { signUpSchema } from '@repo/validation/auth';
 
-import { $apiClientSide } from '../../app/web.connections';
+import { signUpAction } from '../../actions/sign-up.actions';
 
 type SignUpFormData = v.InferOutput<typeof signUpSchema>;
 
 export function SignUpForm() {
   const form = useForm({ resolver: standardSchemaResolver(signUpSchema) });
   const { formState } = form;
-  const router = useRouter();
 
   async function onSubmit(formData: SignUpFormData) {
-    const response = await $apiClientSide.post<SignUpResponse>('/auth/sign-up', formData);
+    const fd = new FormData();
+    Object.entries(formData).forEach(([k, v]) => fd.append(k, v));
+
+    const response = await signUpAction(fd);
 
     if (response.status === 'error') {
       toast({ status: response.status, title: response.message });
       return;
     }
 
+    // handles if user already exists
     if (response.status === 'redirect') {
       toast({ status: 'info', title: response.message });
-      router.push(response.data.path);
-      return;
+      redirect(response.data.path);
     }
 
     toast({ status: 'success', title: response.message });
-    form.reset();
-    router.push('/');
+    redirect('/');
   }
 
   return (

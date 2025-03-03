@@ -1,3 +1,5 @@
+import { cookies } from 'next/headers';
+
 export class ServerSideFetcher {
   private baseUrl: string;
 
@@ -9,6 +11,7 @@ export class ServerSideFetcher {
     try {
       const response = await fetch(this.baseUrl + path, {
         credentials: 'include',
+        headers: { Cookie: cookies().toString() },
       }).then((res) => res.json());
 
       return response as T;

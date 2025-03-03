@@ -15,11 +15,12 @@ export async function signInAction(formData: FormData): Promise<SignInResponse> 
   }
 
   const cookieStore = await cookies();
-  const { session, options } = response.data;
+  const { session, autoSignInCookie, sessionCookie } = response.data;
 
-  const cookieOptions = { ...options, expires: new Date(options.expires) };
+  const sessionCookieOpts = { ...sessionCookie, expires: new Date(sessionCookie.expires) };
+  const autoSignInCookieOpts = { ...autoSignInCookie, expires: new Date(autoSignInCookie.expires) };
 
-  cookieStore.set('session', session.id, cookieOptions);
-
+  cookieStore.set('session', session.id, sessionCookieOpts);
+  cookieStore.set('auto-sign-in', 'true', autoSignInCookieOpts);
   return response;
 }

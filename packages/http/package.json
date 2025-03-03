@@ -37,6 +37,9 @@
     "lint": "eslint src --max-warnings 0",
     "pre-dev": "tsup --sourcemap"
   },
+  "dependencies": {
+    "next": "15.2.0"
+  },
   "devDependencies": {
     "@repo/configs": "workspace:*",
     "@repo/database": "workspace:*",

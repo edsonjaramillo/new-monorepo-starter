@@ -59,10 +59,12 @@ publicAuthRouter.post('/sign-in', sValidator('json', signInSchema), async (c) =>
     return c.json<SignInResponse>(JSend.error('Invalid session'), 400);
   }
 
-  const cookies = createCookie(false, expiresAt);
-  setCookie(c, 'session', session.id, cookies);
+  const sessionCookie = createCookie(true, expiresAt);
+  const autoSignInCookie = createCookie(false, expiresAt);
+  setCookie(c, 'session', session.id, sessionCookie);
+  setCookie(c, 'auto-sign-in', 'true', autoSignInCookie);
   return c.json<SignInResponse>(
-    JSend.success({ session, options: cookies }, 'User signed in successfully'),
+    JSend.success({ session, sessionCookie, autoSignInCookie }, 'User signed in successfully'),
   );
 });
 
@@ -76,6 +78,7 @@ userAuthRouter.get('/sign-out', async (c) => {
 
   await sessionsQueries.deleteSession(session.id);
   deleteCookie(c, 'session');
+  deleteCookie(c, 'auto-sign-in');
   return c.json<SignOutResponse>(JSend.success(undefined, 'Successfully signed out'));
 });
 

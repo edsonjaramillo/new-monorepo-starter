@@ -3,8 +3,6 @@ import Link from 'next/link';
 import { Button } from '@repo/ui/button';
 import { H1, H2, H3, H4, Label, Paragraph, Span } from '@repo/ui/text';
 
-import { SessionViewer } from '../components/SessionViewer';
-
 export default function Page() {
   return (
     <div className="mx-auto flex w-responsive flex-col gap-12 py-8">
@@ -44,7 +42,6 @@ export default function Page() {
         <Button type="button" disabled>
           Disabled
         </Button>
-        <SessionViewer />
       </div>
     </div>
   );

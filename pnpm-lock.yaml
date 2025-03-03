@@ -375,6 +375,10 @@ importers:
         version: 5.7.3
 
   packages/http:
+    dependencies:
+      next:
+        specifier: 15.2.0
+        version: 15.2.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
     devDependencies:
       '@repo/configs':
         specifier: workspace:*
@@ -439,6 +443,9 @@ importers:
 
   packages/ui:
     dependencies:
+      '@repo/context':
+        specifier: workspace:*
+        version: link:../context
       '@repo/http':
         specifier: workspace:*
         version: link:../http
@@ -448,6 +455,12 @@ importers:
       clsx:
         specifier: 2.1.1
         version: 2.1.1
+      js-cookie:
+        specifier: 3.0.5
+        version: 3.0.5
+      next:
+        specifier: 15.2.0
+        version: 15.2.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       react:
         specifier: 19.0.0
         version: 19.0.0
@@ -470,6 +483,9 @@ importers:
       '@trivago/prettier-plugin-sort-imports':
         specifier: 5.2.2
         version: 5.2.2(prettier@3.5.2)
+      '@types/js-cookie':
+        specifier: 3.0.6
+        version: 3.0.6
       '@types/react':
         specifier: 19.0.8
         version: 19.0.8

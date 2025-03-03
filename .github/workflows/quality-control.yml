@@ -39,3 +39,6 @@ jobs:
 
       - name: Lint code
         run: pnpm exec turbo lint --cache=remote:rw
+
+      - name: Check types
+        run: pnpm exec turbo check-types --cache=remote:rw

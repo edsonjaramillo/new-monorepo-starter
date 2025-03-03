@@ -37,8 +37,8 @@ jobs:
       - name: Check dependencies
         run: pnpm exec manypkg check
 
-      - name: Build packages
-        run: pnpm exec turbo pre-dev --cache=remote:rw
+      - name: Build pre-dev
+        run: pnpm exec turbo pre-dev --cache=remote:w
 
       - name: Lint code
         run: pnpm exec turbo lint --cache=remote:rw

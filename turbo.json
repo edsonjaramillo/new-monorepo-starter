@@ -26,6 +26,9 @@
     "clean": {
       "cache": false
     },
+    "check-types": {
+      "cache": true
+    },
     "clean-cache": {
       "cache": false
     },

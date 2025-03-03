@@ -17,6 +17,7 @@
   },
   "scripts": {
     "build": "tsup",
+    "check-types": "tsc --noEmit",
     "clean": "rimraf dist",
     "clean-cache": "rimraf .turbo",
     "clean-node-modules": "rimraf node_modules",

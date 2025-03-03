@@ -5,6 +5,7 @@
     "build": "turbo build --cache=local:rw,remote:r",
     "build:web": "turbo build --filter=web --cache=local:rw,remote:r",
     "check": "manypkg check",
+    "check-types": "turbo check-types --cache=local:rw,remote:r",
     "clean": "turbo clean",
     "clean-cache": "rimraf .turbo/cache && turbo clean-cache",
     "clean-node-modules": "turbo clean-node-modules",

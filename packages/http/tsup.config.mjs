@@ -3,8 +3,8 @@ import { defineConfig } from 'tsup';
 import { devLibraryConfig, prodLibraryConfig } from '@repo/configs/tsup/library';
 
 const entry = [
-  'src/JSend.ts',
   'src/cookies.type.ts',
+  'src/JSend.ts',
   'src/paginate.ts',
   'src/fetcher/client.fetcher.ts',
   'src/fetcher/server.fetcher.ts',

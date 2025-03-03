@@ -2,13 +2,13 @@
   "name": "@repo/database",
   "type": "module",
   "exports": {
-    "./queries": {
-      "types": "./dist/queries/index.d.ts",
-      "import": "./dist/queries/index.js"
-    },
     "./client": {
       "types": "./dist/database.client.d.ts",
       "import": "./dist/database.client.js"
+    },
+    "./queries": {
+      "types": "./dist/queries/index.d.ts",
+      "import": "./dist/queries/index.js"
     },
     "./types": {
       "types": "./dist/types/index.d.ts",

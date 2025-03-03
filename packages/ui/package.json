@@ -3,13 +3,13 @@
   "version": "0.0.0",
   "license": "MIT",
   "exports": {
+    "./cn": {
+      "types": "./dist/lib/cn.d.ts",
+      "import": "./dist/lib/cn.mjs"
+    },
     "./button": {
       "types": "./dist/button.d.ts",
       "import": "./dist/button.mjs"
-    },
-    "./avatar": {
-      "types": "./dist/next/avatar.d.ts",
-      "import": "./dist/next/avatar.mjs"
     },
     "./form": {
       "types": "./dist/form.d.ts",
@@ -26,6 +26,10 @@
     "./toast": {
       "types": "./dist/toast.d.ts",
       "import": "./dist/toast.mjs"
+    },
+    "./avatar": {
+      "types": "./dist/next/avatar.d.ts",
+      "import": "./dist/next/avatar.mjs"
     },
     "./ui.css": "./dist/ui.css"
   },

@@ -13,7 +13,7 @@ import type {
 import { signInSchema, signUpSchema } from '@repo/validation/auth';
 
 import { Password } from '../utils/Password';
-import { cookieOptions } from '../utils/cookies';
+import { createCookie } from '../utils/cookies';
 import { sessionsQueries, usersQueries } from '../utils/queries';
 
 export const publicAuthRouter = new Hono();
@@ -59,8 +59,11 @@ publicAuthRouter.post('/sign-in', sValidator('json', signInSchema), async (c) =>
     return c.json<SignInResponse>(JSend.error('Invalid session'), 400);
   }
 
-  setCookie(c, 'session', session.id, cookieOptions(false, expiresAt));
-  return c.json<SignInResponse>(JSend.success(session, 'User signed in successfully'));
+  const cookies = createCookie(false, expiresAt);
+  setCookie(c, 'session', session.id, cookies);
+  return c.json<SignInResponse>(
+    JSend.success({ session, options: cookies }, 'User signed in successfully'),
+  );
 });
 
 export const userAuthRouter = new Hono();

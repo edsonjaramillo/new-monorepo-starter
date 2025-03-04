@@ -38,10 +38,13 @@ jobs:
         run: pnpm exec manypkg check
 
       - name: Build build:package
-        run: pnpm exec turbo build:package --cache=remote:rw
-
-      - name: Lint code
-        run: pnpm exec turbo lint --cache=remote:rw
+        run: |
+          pnpm exec turbo build:package --cache=local:,remote:
 
       - name: Check types
-        run: pnpm exec turbo check-types --cache=remote:rw
+        run: |
+          pnpm exec turbo check-types --cache=local:,remote:
+
+      - name: Lint code
+        run: |
+          pnpm exec turbo lint --cache=local:,remote:

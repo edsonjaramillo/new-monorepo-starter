@@ -17,6 +17,7 @@
   },
   "scripts": {
     "build": "tsup",
+    "build:package": "tsup",
     "check-types": "tsc --noEmit",
     "clean": "rimraf dist",
     "clean-cache": "rimraf .turbo",
@@ -26,7 +27,6 @@
     "generate": "drizzle-kit generate",
     "lint": "eslint src --max-warnings 0",
     "migrate": "drizzle-kit migrate",
-    "pre-dev": "tsup --sourcemap",
     "push": "drizzle-kit push",
     "seed": "tsx src/seed/seed.main.ts",
     "studio": "drizzle-kit studio"

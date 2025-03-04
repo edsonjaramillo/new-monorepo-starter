@@ -46,17 +46,38 @@ export function SignUpForm() {
       <Form onSubmit={form.handleSubmit(onSubmit)}>
         <InputGroup>
           <Label htmlFor="name">Name</Label>
-          <Input field="name" placeholder="John Doe" type="text" required />
+          <Input
+            type="text"
+            id="name"
+            field="name"
+            placeholder="John Doe"
+            autoComplete="name"
+            required
+          />
           <InputError field="name" />
         </InputGroup>
         <InputGroup>
           <Label htmlFor="email">Email</Label>
-          <Input field="email" placeholder="john.doe@example.com" type="email" required />
+          <Input
+            type="email"
+            id="email"
+            field="email"
+            placeholder="john.doe@example.com"
+            autoComplete="email"
+            required
+          />
           <InputError field="email" />
         </InputGroup>
         <InputGroup>
           <Label htmlFor="password">Password</Label>
-          <Input field="password" placeholder="Password" type="password" required />
+          <Input
+            type="password"
+            id="password"
+            field="password"
+            placeholder="Password"
+            autoComplete="new-password"
+            required
+          />
           <InputError field="password" />
         </InputGroup>
         <Button

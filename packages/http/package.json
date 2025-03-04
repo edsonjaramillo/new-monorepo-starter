@@ -29,14 +29,14 @@
   },
   "scripts": {
     "build": "tsup",
+    "build:package": "tsup",
     "check-types": "tsc --noEmit",
     "clean": "rimraf dist",
     "clean-cache": "rimraf .turbo",
     "clean-node-modules": "rimraf node_modules",
     "dev": "tsup --watch",
     "format": "prettier --write --cache .",
-    "lint": "eslint src --max-warnings 0",
-    "pre-dev": "tsup --sourcemap"
+    "lint": "eslint src --max-warnings 0"
   },
   "dependencies": {
     "next": "15.2.0"

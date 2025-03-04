@@ -43,5 +43,5 @@ export function Avatar({ useSession, autoSignInAction }: AvatarProps) {
     );
   }
 
-  return <Span>{session.user.name.at(0)?.toUpperCase()}</Span>;
+  return <Span>{session.user.firstName.at(0)?.toUpperCase()}</Span>;
 }

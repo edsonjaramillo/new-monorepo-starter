@@ -1,11 +1,13 @@
 import * as v from 'valibot';
 
-const name = v.pipe(v.string(), v.minLength(1, 'Name is required'));
+const firstName = v.pipe(v.string(), v.minLength(1, 'First name is required'));
+const lastName = v.pipe(v.string(), v.minLength(1, 'Last name is required'));
 const email = v.pipe(v.string(), v.email('Valid email is required'));
 const password = v.pipe(v.string(), v.minLength(1, 'Password is required'));
 
 export const signUpSchema = v.object({
-  name,
+  firstName,
+  lastName,
   email,
   password,
 });

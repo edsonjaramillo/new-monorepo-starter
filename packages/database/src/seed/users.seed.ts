@@ -12,39 +12,48 @@ const password = 'asdf';
 
 const adminUsers = [
   {
-    name: 'John Doe',
+    firstName: 'John',
+    lastName: 'Doe',
   },
 ] as const;
 
 const regularUsers = [
   {
-    name: 'Tony Stark',
+    firstName: 'Tony',
+    lastName: 'Stark',
   },
   {
-    name: 'Steve Rogers',
+    firstName: 'Steve',
+    lastName: 'Rogers',
   },
   {
-    name: 'Natasha Romanoff',
+    firstName: 'Natasha',
+    lastName: 'Romanoff',
   },
   {
-    name: 'Clint Barton',
+    firstName: 'Clint',
+    lastName: 'Barton',
   },
   {
-    name: 'Wanda Maximoff',
+    firstName: 'Wanda',
+    lastName: 'Maximoff',
   },
   {
-    name: 'Thor Odinson',
+    firstName: 'Thor',
+    lastName: 'Odinson',
   },
   {
-    name: 'Bruce Wayne',
+    firstName: 'Bruce',
+    lastName: 'Wayne',
   },
   {
-    name: 'Clark Kent',
+    firstName: 'Clark',
+    lastName: 'Kent',
   },
 ] as const;
 
-function nameToEmail(name: string) {
-  return name.toLowerCase().replace(' ', '.') + '@example.com';
+function nameToEmail(firstName: string, lastName: string) {
+  return `${firstName.toLowerCase()}.${lastName.toLowerCase()}@example.com`;
 }
 
 export async function createUsers() {
@@ -52,8 +61,9 @@ export async function createUsers() {
   for (const user of adminUsers) {
     usersToCreate.push({
       id: uuidv7(),
-      name: user.name,
-      email: nameToEmail(user.name),
+      firstName: user.firstName,
+      lastName: user.lastName,
+      email: nameToEmail(user.firstName, user.lastName),
       role: 'Admin',
       password,
     });
@@ -62,8 +72,9 @@ export async function createUsers() {
   for (const user of regularUsers) {
     usersToCreate.push({
       id: uuidv7(),
-      name: user.name,
-      email: nameToEmail(user.name),
+      firstName: user.firstName,
+      lastName: user.lastName,
+      email: nameToEmail(user.firstName, user.lastName),
       role: 'User',
       password,
     });

@@ -47,10 +47,20 @@ export function InputGroup({ children, className, ...props }: InputGroupProps) {
   );
 }
 
+type InputColumnsProps = React.ComponentProps<'div'>;
+export function InputColumns({ children, className, ...props }: InputColumnsProps) {
+  const style = cn('grid grid-cols-2 gap-4', className);
+  return (
+    <div className={style} {...props}>
+      {children}
+    </div>
+  );
+}
+
 type InputDescriptionProps = React.ComponentProps<'span'>;
 export function InputDescription({ className, children, ...props }: InputDescriptionProps) {
   return (
-    <Span size="sm" textColor="gray" className={cn(className)} {...props}>
+    <Span size="sm" textColor="gray" className={cn(className, 'line-clamp-1')} {...props}>
       {children}
     </Span>
   );
@@ -66,7 +76,11 @@ export function InputError({ className, field, ...props }: InputErrorProps) {
   if (!error || !error.message) return undefined;
 
   return (
-    <Span size="sm" textColor="danger" className={cn('font-semibold', className)} {...props}>
+    <Span
+      size="sm"
+      textColor="danger"
+      className={cn('line-clamp-1 font-semibold', className)}
+      {...props}>
       {error.message.toString()}
     </Span>
   );

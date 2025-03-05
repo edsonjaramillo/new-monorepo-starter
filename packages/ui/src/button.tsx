@@ -10,7 +10,7 @@ type RequiredButtonProps = {
 export type ButtonProps = React.ComponentProps<'button'> & RequiredButtonProps & ButtonVariants;
 
 export const buttonVariants = cva(
-  'block h-9 cursor-pointer items-center justify-center gap-2 rounded-base px-4 py-2 text-sm font-medium whitespace-nowrap transition-colors duration-base focus-visible:ring-2 focus-visible:ring-info focus-visible:ring-offset-2 focus-visible:outline-none [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0',
+  'flex h-9 cursor-pointer items-center justify-center gap-2 rounded-base px-4 py-2 text-sm font-medium whitespace-nowrap transition-colors duration-base focus-visible:ring-2 focus-visible:ring-info focus-visible:ring-offset-2 focus-visible:outline-none [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0',
   {
     variants: {
       color: {

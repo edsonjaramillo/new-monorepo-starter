@@ -7,6 +7,7 @@ const entry = [
   'src/button.tsx',
   'src/form.tsx',
   'src/input.tsx',
+  'src/seperator.tsx',
   'src/text.tsx',
   'src/toast.tsx',
   'src/next/avatar.tsx',

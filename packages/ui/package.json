@@ -19,6 +19,10 @@
       "types": "./dist/input.d.ts",
       "import": "./dist/input.mjs"
     },
+    "./seperator": {
+      "types": "./dist/seperator.d.ts",
+      "import": "./dist/seperator.mjs"
+    },
     "./text": {
       "types": "./dist/text.d.ts",
       "import": "./dist/text.mjs"

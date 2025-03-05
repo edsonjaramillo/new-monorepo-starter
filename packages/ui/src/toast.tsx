@@ -25,10 +25,10 @@ export const toastVariants = cva('', {
       warning: 'bg-warning-accent',
     },
     textColor: {
-      success: 'text-success',
-      error: 'text-danger',
-      info: 'text-info',
-      warning: 'text-warning',
+      success: 'text-success-hover',
+      error: 'text-danger-hover',
+      info: 'text-info-hover',
+      warning: 'text-warning-hover',
     },
     ring: {
       success: 'inset-ring-success/5',
@@ -61,7 +61,7 @@ export function Toast(props: ToastProps) {
         ring,
         'group/toast relative min-w-toast cursor-pointer appearance-none rounded-base p-4',
       )}>
-      <div className="flex gap-2">
+      <div className="flex items-center gap-2">
         {getIcon(props.status, textColor)}
         <div className="flex flex-col gap-2">
           <Span size="xs" className={cn(textColor, 'text-left font-semibold')}>

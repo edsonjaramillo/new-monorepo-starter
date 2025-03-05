@@ -1,5 +1,3 @@
-import Link from 'next/link';
-
 import { H1, H2, H3, H4, Label, Paragraph, Span } from '@repo/ui/text';
 
 import { ToastButtons } from '../components/design/ToastButtons';
@@ -7,8 +5,6 @@ import { ToastButtons } from '../components/design/ToastButtons';
 export default function Page() {
   return (
     <div className="mx-auto flex w-responsive flex-col gap-12 py-8">
-      <Link href="/auth/sign-up">Sign Up</Link>
-      <Link href="/auth/sign-in">Sign In</Link>
       <div className="flex flex-col gap-2">
         <H1>Header 1</H1>
         <H2>Header 2</H2>

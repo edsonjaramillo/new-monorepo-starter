@@ -2,6 +2,10 @@
   "name": "@repo/context",
   "type": "module",
   "exports": {
+    "./auth-popup": {
+      "types": "./dist/auth-popup.context.d.ts",
+      "import": "./dist/auth-popup.context.js"
+    },
     "./session": {
       "types": "./dist/session.context.d.ts",
       "import": "./dist/session.context.js"

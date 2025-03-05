@@ -2,7 +2,7 @@ import { defineConfig } from 'tsup';
 
 import { devLibraryConfig, prodLibraryConfig } from '@repo/configs/tsup/library';
 
-const entry = ['src/session.context.ts'];
+const entry = ['src/session.context.ts', 'src/auth-popup.context.ts'];
 
 export default defineConfig((options) => {
   if (options.watch) {

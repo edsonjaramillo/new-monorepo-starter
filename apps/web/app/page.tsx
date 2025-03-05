@@ -1,7 +1,8 @@
 import Link from 'next/link';
 
-import { Button } from '@repo/ui/button';
 import { H1, H2, H3, H4, Label, Paragraph, Span } from '@repo/ui/text';
+
+import { ToastButtons } from '../components/design/ToastButtons';
 
 export default function Page() {
   return (
@@ -17,32 +18,7 @@ export default function Page() {
         <Label>Label</Label>
         <Paragraph>Paragraph</Paragraph>
       </div>
-      <div className="flex flex-wrap gap-2">
-        <Button type="button" color="primary">
-          Primary
-        </Button>
-        <Button type="button" color="secondary">
-          Secondary
-        </Button>
-        <Button type="button" color="success">
-          Success
-        </Button>
-        <Button type="button" color="info">
-          Info
-        </Button>
-        <Button type="button" color="danger">
-          Danger
-        </Button>
-        <Button type="button" color="warning">
-          Warning
-        </Button>
-        <Button type="button" color="neutral">
-          Neutral
-        </Button>
-        <Button type="button" disabled>
-          Disabled
-        </Button>
-      </div>
+      <ToastButtons />
     </div>
   );
 }

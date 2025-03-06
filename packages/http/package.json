@@ -14,13 +14,9 @@
       "types": "./dist/paginate.d.ts",
       "import": "./dist/paginate.js"
     },
-    "./fetcher/client": {
-      "types": "./dist/fetcher/client.fetcher.d.ts",
-      "import": "./dist/fetcher/client.fetcher.js"
-    },
-    "./fetcher/server": {
-      "types": "./dist/fetcher/server.fetcher.d.ts",
-      "import": "./dist/fetcher/server.fetcher.js"
+    "./fetcher": {
+      "types": "./dist/fetcher.d.ts",
+      "import": "./dist/fetcher.js"
     },
     "./response/auth": {
       "types": "./dist/response/auth.response.d.ts",

@@ -7,7 +7,7 @@
     "build": "vinxi build",
     "dev": "vinxi dev",
     "format": "prettier --write --cache .",
-    "lint": "eslint src --max-warnings 0",
+    "lint": "eslint app --max-warnings 0",
     "start": "vinxi start"
   },
   "dependencies": {

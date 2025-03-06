@@ -10,7 +10,7 @@ import { useAuthPopup, useSession } from '../../../web.context';
 import { AuthPopup } from './auth-popup';
 
 export function Avatar() {
-  const { session, signIn } = useSession();
+  const { session, setSession } = useSession();
   const [autoSignInEnabled, setAutoSignInEnabled] = useState<boolean>(false);
   const { data, isSuccess, isLoading } = useQuery(createAutoSignInOptions(autoSignInEnabled));
 
@@ -24,11 +24,11 @@ export function Avatar() {
     if (autoSignInEnabled) {
       if (isSuccess) {
         if (data.status === 'success') {
-          signIn(data.data);
+          setSession(data.data);
         }
       }
     }
-  }, [isSuccess, data, autoSignInEnabled, signIn]);
+  }, [isSuccess, data, autoSignInEnabled, setSession]);
 
   return (
     <div className="relative flex items-center">

@@ -12,7 +12,7 @@ import { useAuthPopup, useSession } from '../../../web.context';
 
 export function AuthPopup() {
   const { open, toggle } = useAuthPopup();
-  const { session } = useSession();
+  const { session, clearSession } = useSession();
 
   return (
     <div
@@ -62,8 +62,9 @@ export function AuthPopup() {
             color="danger"
             className={cn(buttonVariants({ color: 'danger', width: 'full' }))}
             onClick={() => {
-              signOut();
               toggle();
+              signOut();
+              clearSession();
             }}>
             Sign Out
           </Button>

@@ -17,7 +17,7 @@ type SignInFormData = v.InferOutput<typeof signInSchema>;
 export function SignInForm() {
   const form = useForm({ resolver: standardSchemaResolver(signInSchema) });
   const { formState } = form;
-  const { signIn } = useSession();
+  const { setSession } = useSession();
 
   async function onSubmit(formData: SignInFormData) {
     const response = await $api.post<SignInResponse>('/auth/sign-in', formData);
@@ -26,7 +26,7 @@ export function SignInForm() {
       return;
     }
 
-    signIn(response.data.session);
+    setSession(response.data.session);
   }
 
   return (

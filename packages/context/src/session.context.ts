@@ -6,17 +6,17 @@ export type SessionContext = ReturnType<typeof createSessionContext>;
 
 type State = { session: SessionWithUser | undefined };
 type Actions = {
-  signIn: (session: SessionWithUser) => void;
-  signOut: () => Promise<void>;
+  setSession: (session: SessionWithUser) => void;
+  clearSession: () => void;
 };
 
 export function createSessionContext() {
   return create<State & Actions>((set) => ({
     session: undefined,
-    signIn(session) {
+    setSession(session) {
       set(() => ({ session }));
     },
-    async signOut() {
+    clearSession() {
       set(() => ({ session: undefined }));
     },
   }));

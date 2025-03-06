@@ -1,12 +1,20 @@
 import { defineConfig } from 'tsup';
 
-import { devLibraryConfig, prodLibraryConfig } from '@repo/configs/tsup/library';
+import {
+  developmentTSupConfig,
+  prepareTSupConfig,
+  productionTSupConfig,
+} from '@repo/configs/tsup/configs';
 
 const entry = ['src/auth.query.ts'];
 
 export default defineConfig((options) => {
-  if (options.watch) {
-    return { ...devLibraryConfig, entry, ...options };
+  switch (options.env.CONFIG) {
+    case 'development':
+      return { entry, ...developmentTSupConfig };
+    case 'prepare':
+      return { entry, ...prepareTSupConfig };
+    case 'production':
+      return { entry, ...productionTSupConfig };
   }
-  return { ...prodLibraryConfig, entry, ...options };
 });

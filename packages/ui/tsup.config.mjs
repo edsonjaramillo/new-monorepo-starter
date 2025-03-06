@@ -1,6 +1,10 @@
 import { defineConfig } from 'tsup';
 
-import { devReactLibraryConfig, prodReactLibraryConfig } from '@repo/configs/tsup/react-library';
+import {
+  developmentTSupConfig,
+  prepareTSupConfig,
+  productionTSupConfig,
+} from '@repo/configs/tsup/configs';
 
 const entry = [
   'src/lib/cn.ts',
@@ -14,8 +18,12 @@ const entry = [
 ];
 
 export default defineConfig((options) => {
-  if (options.watch) {
-    return { ...devReactLibraryConfig, entry, ...options };
+  switch (options.env.CONFIG) {
+    case 'development':
+      return { entry, ...developmentTSupConfig };
+    case 'prepare':
+      return { entry, ...prepareTSupConfig };
+    case 'production':
+      return { entry, ...productionTSupConfig };
   }
-  return { ...prodReactLibraryConfig, entry, ...options };
 });

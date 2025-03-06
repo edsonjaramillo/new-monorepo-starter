@@ -1,0 +1,37 @@
+{
+  "name": "web",
+  "private": true,
+  "sideEffects": false,
+  "type": "module",
+  "scripts": {
+    "build": "vinxi build",
+    "dev": "vinxi dev",
+    "format": "prettier --write --cache .",
+    "lint": "eslint src --max-warnings 0",
+    "start": "vinxi start"
+  },
+  "dependencies": {
+    "@repo/ui": "workspace:*",
+    "@tanstack/react-router": "1.112.13",
+    "@tanstack/react-start": "1.112.14",
+    "@tanstack/router-devtools": "1.112.13",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "vinxi": "0.5.3"
+  },
+  "devDependencies": {
+    "@repo/configs": "workspace:*",
+    "@tailwindcss/vite": "4.0.10",
+    "@trivago/prettier-plugin-sort-imports": "5.2.2",
+    "@types/node": "22.13.5",
+    "@types/react": "19.0.8",
+    "@types/react-dom": "19.0.3",
+    "eslint": "9.21.0",
+    "prettier": "3.5.2",
+    "prettier-plugin-packagejson": "2.5.8",
+    "prettier-plugin-tailwindcss": "0.6.11",
+    "tailwindcss": "4.0.9",
+    "typescript": "5.7.3",
+    "vite-tsconfig-paths": "5.1.4"
+  }
+}

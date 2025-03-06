@@ -10,7 +10,6 @@ const entry = [
   'src/seperator.tsx',
   'src/text.tsx',
   'src/toast.tsx',
-  'src/next/avatar.tsx',
 ];
 
 export default defineConfig((options) => {

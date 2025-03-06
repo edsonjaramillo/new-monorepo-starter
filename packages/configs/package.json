@@ -17,9 +17,7 @@
     "./tsconfig/base": "./tsconfig/base.json",
     "./tsconfig/nextjs": "./tsconfig/nextjs.json",
     "./tsconfig/react-library": "./tsconfig/react-library.json",
-    "./tsup/hono": "./tsup/hono.mjs",
-    "./tsup/library": "./tsup/library.mjs",
-    "./tsup/react-library": "./tsup/react-library.mjs"
+    "./tsup/configs": "./tsup/configs.mjs"
   },
   "scripts": {
     "clean-node-modules": "rimraf node_modules"

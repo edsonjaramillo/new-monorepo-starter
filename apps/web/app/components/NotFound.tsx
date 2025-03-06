@@ -6,7 +6,7 @@ import { H1, Span } from '@repo/ui/text';
 type NotFoundProps = { children?: React.ReactNode };
 export function NotFound({ children }: NotFoundProps) {
   return (
-    <div className="h-[80vh] flex flex-col items-center justify-center gap-4">
+    <div className="flex h-[80vh] flex-col items-center justify-center gap-4">
       <H1 size="4xl" textColor="danger">
         404
       </H1>

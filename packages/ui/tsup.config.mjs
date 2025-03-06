@@ -8,6 +8,7 @@ const entry = [
   'src/form.tsx',
   'src/input.tsx',
   'src/seperator.tsx',
+  'src/skeleton.tsx',
   'src/text.tsx',
   'src/toast.tsx',
 ];

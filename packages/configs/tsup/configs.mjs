@@ -12,6 +12,7 @@ export const baseTSupConfig = {
  * @type {import("tsup").Options}
  */
 export const prepareTSupConfig = {
+  ...baseTSupConfig,
   clean: true,
   dts: true,
   sourcemap: true,
@@ -21,7 +22,8 @@ export const prepareTSupConfig = {
 /**
  * @type {import("tsup").Options}
  */
-export const productionTSupConfig = {
+  export const productionTSupConfig = {
+  ...baseTSupConfig,
   clean: true,
   minify: true,
   treeshake: true,
@@ -31,6 +33,7 @@ export const productionTSupConfig = {
  * @type {import("tsup").Options}
  */
 export const developmentTSupConfig = {
+  ...baseTSupConfig,
   watch: true,
   clean: false,
   dts: true,

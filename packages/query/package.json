@@ -2,9 +2,9 @@
   "name": "@repo/query",
   "type": "module",
   "exports": {
-    "./auto-sign-in": {
-      "types": "./dist/auto-sign-in.query.d.ts",
-      "import": "./dist/auto-sign-in.query.js"
+    "./auth": {
+      "types": "./dist/auth.query.d.ts",
+      "import": "./dist/auth.query.js"
     }
   },
   "scripts": {

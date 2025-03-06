@@ -3,10 +3,11 @@ import { queryOptions } from '@tanstack/react-query';
 import { $api } from '@repo/http/fetcher';
 import type { AutoSignInResponse } from '@repo/http/response/auth';
 
-export function createAutoSignInOptions() {
+export function createAutoSignInOptions(enabled: boolean) {
   return queryOptions({
     queryKey: [],
     queryFn: autoSignIn,
+    enabled,
   });
 }
 

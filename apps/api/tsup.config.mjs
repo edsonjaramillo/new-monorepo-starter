@@ -1,14 +1,20 @@
 import { defineConfig } from 'tsup';
 
-import { devHonoConfig, prodHonoConfig } from '@repo/configs/tsup/hono';
+import {
+  developmentTSupConfig,
+  prepareTSupConfig,
+  productionTSupConfig,
+} from '@repo/configs/tsup/configs';
 
 const entry = ['src/index.ts'];
-/**
- * @type {import('tsup').Options}
- */
+
 export default defineConfig((options) => {
-  if (options.watch) {
-    return { ...devHonoConfig, entry, onSuccess: 'pnpm start', ...options };
+  switch (options.env.CONFIG) {
+    case 'development':
+      return { entry, ...developmentTSupConfig };
+    case 'prepare':
+      return { entry, ...prepareTSupConfig };
+    case 'production':
+      return { entry, ...productionTSupConfig };
   }
-  return { ...prodHonoConfig, entry, ...options };
 });

@@ -1,4 +1,12 @@
-**/build
-**/public
-pnpm-lock.yaml
+# git
+**/.git
+**/.gitignore
+
+# modules
+**/node_modules
+
+# build
+**/dist
+
+# tanstack router
 routeTree.gen.ts

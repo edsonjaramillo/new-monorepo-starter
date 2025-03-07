@@ -28,5 +28,4 @@ export const apiEnv = v.parse(envSchema, {
   REDIS_PASSWORD: process.env.REDIS_PASSWORD,
   REDIS_PORT: process.env.REDIS_PORT,
   REDIS_DATABASE: process.env.REDIS_DATABASE,
-  REDIS_SKIP_CACHE: process.env.REDIS_SKIP_CACHE,
 });

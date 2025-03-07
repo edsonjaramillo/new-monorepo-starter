@@ -22,5 +22,4 @@ export const cacheConnection = new CacheClient({
     database: apiEnv.REDIS_DATABASE,
   },
   debug: apiEnv.DEBUG,
-  skipCache: apiEnv.REDIS_SKIP_CACHE,
 });

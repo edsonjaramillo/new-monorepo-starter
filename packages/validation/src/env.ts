@@ -32,5 +32,4 @@ export const CacheEnvSchema = {
   REDIS_PORT: numberSchema,
   REDIS_PASSWORD: v.string(),
   REDIS_DATABASE: numberSchema,
-  REDIS_SKIP_CACHE: booleanSchema,
 };

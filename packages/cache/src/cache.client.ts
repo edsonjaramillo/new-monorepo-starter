@@ -7,7 +7,6 @@ type Data = Record<string, unknown> | Array<Record<string, unknown>>;
 type CacheClientOptions = {
   connection: CacheConnection;
   debug: boolean;
-  skipCache?: boolean;
 };
 
 type CacheConnection = {
@@ -20,7 +19,6 @@ type CacheConnection = {
 export class CacheClient {
   private readonly client: Redis;
   private readonly debugMode: boolean;
-  private readonly skipCache: boolean;
 
   constructor(options: CacheClientOptions) {
     this.client = new Redis({
@@ -30,14 +28,9 @@ export class CacheClient {
       db: options.connection.database,
     });
     this.debugMode = options.debug ?? false;
-    this.skipCache = options.skipCache ?? false;
   }
 
   async get<T>(key: string) {
-    if (this.skipCache) {
-      return undefined;
-    }
-
     const value = await this.client.get(key);
     if (!value) {
       return undefined;
@@ -51,10 +44,6 @@ export class CacheClient {
   }
 
   async set(key: string, value: Data, expiration?: number) {
-    if (this.skipCache) {
-      return;
-    }
-
     if (this.debugMode) {
       Logger.log('CYAN', 'CACHE SET', key);
     }
@@ -63,10 +52,6 @@ export class CacheClient {
   }
 
   async delete(key: string) {
-    if (this.skipCache) {
-      return;
-    }
-
     await this.client.unlink(key);
     if (this.debugMode) {
       Logger.log('RED', 'CACHE DEL', key);
@@ -74,10 +59,6 @@ export class CacheClient {
   }
 
   async cleanPatterns(patterns: string[]) {
-    if (this.skipCache) {
-      return;
-    }
-
     const pipeline = this.client.pipeline();
 
     for (const pattern of patterns) {
@@ -100,10 +81,6 @@ export class CacheClient {
   }
 
   async flushAll() {
-    if (this.skipCache) {
-      return;
-    }
-
     await this.client.flushall();
   }
 }

@@ -37,9 +37,9 @@ jobs:
       - name: Check dependencies
         run: pnpm exec manypkg check
 
-      - name: Build build:package
+      - name: Build prep
         run: |
-          pnpm exec turbo build:package --cache=local:,remote:
+          pnpm exec turbo prep --cache=local:,remote:
 
       - name: Check types
         run: |

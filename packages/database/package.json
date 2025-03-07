@@ -17,7 +17,6 @@
   },
   "scripts": {
     "build": "tsup --env.CONFIG=production",
-    "build:package": "tsup --env.CONFIG=prepare",
     "check-types": "tsc --noEmit",
     "clean": "rimraf dist",
     "clean-cache": "rimraf .turbo",
@@ -27,6 +26,7 @@
     "generate": "drizzle-kit generate",
     "lint": "eslint src --max-warnings 0",
     "migrate": "drizzle-kit migrate",
+    "prep": "tsup --env.CONFIG=prepare",
     "push": "drizzle-kit push",
     "seed": "tsx src/seed/seed.main.ts",
     "studio": "drizzle-kit studio"

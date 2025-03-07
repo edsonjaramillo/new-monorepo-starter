@@ -25,14 +25,14 @@
   },
   "scripts": {
     "build": "tsup --env.CONFIG=production",
-    "build:package": "tsup --env.CONFIG=prepare",
     "check-types": "tsc --noEmit",
     "clean": "rimraf dist",
     "clean-cache": "rimraf .turbo",
     "clean-node-modules": "rimraf node_modules",
     "dev": "tsup --env.CONFIG=development",
     "format": "prettier --write --cache .",
-    "lint": "eslint src --max-warnings 0"
+    "lint": "eslint src --max-warnings 0",
+    "prep": "tsup --env.CONFIG=prepare"
   },
   "dependencies": {
     "next": "15.2.0"

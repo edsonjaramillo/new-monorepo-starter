@@ -39,12 +39,12 @@ jobs:
 
       - name: Build prep
         run: |
-          pnpm exec turbo prep --cache=local:,remote:
+          pnpm exec turbo prep --cache=local:,remote:rw
 
       - name: Check types
         run: |
-          pnpm exec turbo check-types --cache=local:,remote:
+          pnpm exec turbo check-types --cache=local:,remote:rw
 
       - name: Lint code
         run: |
-          pnpm exec turbo lint --cache=local:,remote:
+          pnpm exec turbo lint --cache=local:,remote:rw

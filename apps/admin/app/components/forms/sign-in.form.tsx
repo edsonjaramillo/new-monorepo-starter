@@ -26,7 +26,7 @@ export function SignInForm() {
       return;
     }
 
-    setSession(response.data.session);
+    setSession(response.payload.session);
   }
 
   return (

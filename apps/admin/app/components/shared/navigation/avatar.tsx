@@ -24,7 +24,7 @@ export function Avatar() {
     if (autoSignInEnabled) {
       if (isSuccess) {
         if (data.status === 'success') {
-          setSession(data.data);
+          setSession(data.payload);
         }
       }
     }

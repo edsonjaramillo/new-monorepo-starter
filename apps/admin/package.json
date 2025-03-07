@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "build": "vinxi build",
+    "check-types": "tsc --noEmit",
     "clean": "rimraf .output .vinxi",
     "dev": "vinxi dev",
     "format": "prettier --write --cache .",

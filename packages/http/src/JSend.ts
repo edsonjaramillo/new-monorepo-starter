@@ -8,43 +8,43 @@ type RedirectData = {
 
 export type JSendSuccess<T> = {
   status: 'success';
-  data: T; // Data is required and of type T for success
+  payload: T; // Data is required and of type T for success
   message: string;
 };
 
 export type JSendRedirect = {
   status: 'redirect';
-  data: RedirectData;
+  payload: RedirectData;
   message: string;
   redirect: string;
 };
 
 export type JSendInfo<T> = {
   status: 'info';
-  data: T;
+  payload: T;
   message: string;
 };
 
 export type JSendError = {
   status: 'error';
-  data?: undefined; // Data is optional and can be of any type for error (for error details)
+  payload?: undefined; // Data is optional and can be of any type for error (for error details)
   message: string;
 };
 
 export type JSendPagination<T> = {
   status: 'success';
-  data: T;
+  payload: T;
   pagination: Pagination;
   message: string;
 };
 
 export const JSend = {
-  success<T>(data: T, message: string): JSendSuccess<T> {
-    return { status: 'success', data, message };
+  success<T>(payload: T, message: string): JSendSuccess<T> {
+    return { status: 'success', payload, message };
   },
 
-  info<T>(data: T, message: string): JSendInfo<T> {
-    return { status: 'info', data, message };
+  info<T>(payload: T, message: string): JSendInfo<T> {
+    return { status: 'info', payload, message };
   },
 
   error(message: string): JSendError {
@@ -52,10 +52,10 @@ export const JSend = {
   },
 
   redirect(path: string, message: string): JSendRedirect {
-    return { status: 'redirect', data: { path }, message, redirect: path };
+    return { status: 'redirect', payload: { path }, message, redirect: path };
   },
 
-  pagination<T>(data: T, pagination: Pagination, message: string): JSendPagination<T> {
-    return { status: 'success', data, pagination, message };
+  pagination<T>(payload: T, pagination: Pagination, message: string): JSendPagination<T> {
+    return { status: 'success', payload, pagination, message };
   },
 };

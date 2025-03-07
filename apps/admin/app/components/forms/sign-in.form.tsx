@@ -10,7 +10,7 @@ import { Input, InputError, InputGroup } from '@repo/ui/input';
 import { Label } from '@repo/ui/text';
 import { signInSchema } from '@repo/validation/auth';
 
-import { useSession } from '../../web.context';
+import { useSession } from '../../admin.context';
 
 type SignInFormData = v.InferOutput<typeof signInSchema>;
 

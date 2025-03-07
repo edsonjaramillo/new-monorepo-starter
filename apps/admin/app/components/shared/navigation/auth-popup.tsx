@@ -8,7 +8,7 @@ import { Separator } from '@repo/ui/seperator';
 import { Span } from '@repo/ui/text';
 import { toast } from '@repo/ui/toast';
 
-import { useAuthPopup, useSession } from '../../../web.context';
+import { useAuthPopup, useSession } from '../../../admin.context';
 
 export function AuthPopup() {
   const { open, toggle } = useAuthPopup();

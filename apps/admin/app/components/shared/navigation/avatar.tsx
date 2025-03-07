@@ -6,7 +6,7 @@ import { createAutoSignInOptions } from '@repo/query/auth';
 import { Skeleton } from '@repo/ui/skeleton';
 import { Span } from '@repo/ui/text';
 
-import { useAuthPopup, useSession } from '../../../web.context';
+import { useAuthPopup, useSession } from '../../../admin.context';
 import { AuthPopup } from './auth-popup';
 
 export function Avatar() {

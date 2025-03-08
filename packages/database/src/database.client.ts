@@ -10,8 +10,10 @@ function maxPoolCountByEnviroment(env: NODE_ENV) {
     case 'development': {
       return 1;
     }
-
-    case 'production': {
+    case 'test': {
+      return 1;
+    }
+    default: {
       return undefined;
     }
   }

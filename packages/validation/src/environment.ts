@@ -1,6 +1,6 @@
 import * as v from 'valibot';
 
-export const NODE_ENV_VALUES = ['development', 'production'] as const;
+export const NODE_ENV_VALUES = ['development', 'test', 'production'] as const;
 export type NODE_ENV = (typeof NODE_ENV_VALUES)[number];
 
 export const NodeEnvSchema = {

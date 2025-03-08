@@ -6,7 +6,7 @@ import {
   productionTSupConfig,
 } from '@repo/configs/tsup/configs';
 
-const entry = ['src/env.ts', 'src/forms/auth.validation.ts'];
+const entry = ['src/environment.ts', 'src/forms/auth.validation.ts'];
 
 export default defineConfig((options) => {
   switch (options.env.CONFIG) {

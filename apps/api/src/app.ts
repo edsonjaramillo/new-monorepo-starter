@@ -1,5 +1,6 @@
 import { Hono } from 'hono';
 import { cors } from 'hono/cors';
+import { csrf } from 'hono/csrf';
 
 import { networkDelay } from './middleware/network-delay';
 import { sessionify } from './middleware/sessionify';
@@ -11,10 +12,15 @@ import { apiEnv } from './utils/api.env';
 
 const app = new Hono();
 
-// Middleware
+// Security
 app.use(cors({ origin: 'http://localhost:3000', credentials: true }));
+app.use(csrf({ origin: 'http://localhost:3000' }));
+
+// Middleware
 app.use('/admin/*', sessionify(['Admin']));
 app.use('/user/*', sessionify(['Admin', 'User']));
+
+// Development
 if (apiEnv.NODE_ENV === 'development') {
   app.use('*', networkDelay());
 }

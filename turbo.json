@@ -73,6 +73,10 @@
     },
     "studio": {
       "cache": false
+    },
+    "test": {
+      "outputs": ["coverage/**"],
+      "cache": true
     }
   }
 }

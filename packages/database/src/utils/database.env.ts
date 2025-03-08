@@ -1,7 +1,7 @@
 import 'dotenv/config';
 import * as v from 'valibot';
 
-import { NodeEnvSchema, PostgresEnvSchema } from '@repo/validation/env';
+import { NodeEnvSchema, PostgresEnvSchema } from '@repo/validation/environment';
 
 const databaseEnvSchema = v.object({
   ...NodeEnvSchema,

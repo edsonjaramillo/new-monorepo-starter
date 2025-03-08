@@ -5,7 +5,7 @@ import {
   CommonEnvSchema,
   NodeEnvSchema,
   PostgresEnvSchema,
-} from '@repo/validation/env';
+} from '@repo/validation/environment';
 
 const envSchema = v.object({
   PORT: v.pipe(v.string(), v.transform(Number)),

@@ -21,7 +21,8 @@
     "start": "turbo start",
     "start:admin": "turbo start --filter=admin",
     "start:api": "turbo start --filter=api",
-    "studio": "turbo studio"
+    "studio": "turbo studio",
+    "test": "turbo test --cache=local:rw,remote:r"
   },
   "devDependencies": {
     "@manypkg/cli": "0.23.0",

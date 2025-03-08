@@ -13,3 +13,6 @@ graphs
 
 # local playground github action for act
 .github/workflows/local-playground.yml
+
+# tests
+coverage

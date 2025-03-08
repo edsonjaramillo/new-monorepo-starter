@@ -7,7 +7,7 @@ import { cn } from './lib/cn';
 import { Span } from './text';
 
 export function Toaster() {
-  return <SonnerToaster position="top-right" richColors />;
+  return <SonnerToaster position="bottom-right" richColors />;
 }
 
 export function toast(toast: Omit<ToastProps, 'id'>) {

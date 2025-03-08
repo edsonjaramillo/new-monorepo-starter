@@ -1,4 +1,5 @@
 import { standardSchemaResolver } from '@hookform/resolvers/standard-schema';
+import { useNavigate } from '@tanstack/react-router';
 import { FormProvider, useForm } from 'react-hook-form';
 import type * as v from 'valibot';
 
@@ -8,6 +9,7 @@ import { Button } from '@repo/ui/button';
 import { Form } from '@repo/ui/form';
 import { Input, InputError, InputGroup } from '@repo/ui/input';
 import { Label } from '@repo/ui/text';
+import { toast } from '@repo/ui/toast';
 import { signInSchema } from '@repo/validation/auth';
 
 import { useSession } from '../../admin.context';
@@ -18,13 +20,18 @@ export function SignInForm() {
   const form = useForm({ resolver: standardSchemaResolver(signInSchema) });
   const { formState } = form;
   const { setSession } = useSession();
+  const navigate = useNavigate();
 
   async function onSubmit(formData: SignInFormData) {
     const response = await $api.post<SignInResponse>('/auth/sign-in', formData);
 
     if (response.status === 'error') {
+      toast({ status: 'error', title: response.message });
       return;
     }
+
+    toast({ status: 'success', title: 'Signed in successfully' });
+    navigate({ from: '/' });
 
     setSession(response.payload.session);
   }

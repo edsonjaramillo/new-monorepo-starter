@@ -10,3 +10,6 @@
 
 # tanstack router
 routeTree.gen.ts
+
+# test
+coverage

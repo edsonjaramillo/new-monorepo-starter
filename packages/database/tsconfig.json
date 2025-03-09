@@ -1,5 +1,5 @@
 {
-  "extends": "@repo/configs/tsconfig/base",
+  "extends": "@repo/configs/tsconfig/library",
   "include": ["src", "drizzle.config.ts"],
   "exclude": ["dist", "node_modules"]
 }

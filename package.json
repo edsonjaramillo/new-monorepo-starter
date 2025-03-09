@@ -1,6 +1,9 @@
 {
   "name": "monorepo-starter",
-  "private": true,
+  "version": "0.0.0",
+  "private": false,
+  "license": "MIT",
+  "type": "module",
   "scripts": {
     "build": "turbo build --cache=local:rw,remote:r",
     "build:admin": "turbo build --filter=admin --cache=local:rw,remote:r",

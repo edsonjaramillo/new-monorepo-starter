@@ -9,7 +9,7 @@ const tailwindStylesheetPath = resolve(__dirname, '../tailwind/theme.css');
 /**
  * @type {import("prettier").Config}
  */
-export const reactLibraryPrettierConfig = {
+export const reactInternalPrettierConfig = {
   printWidth: 100,
   singleQuote: true,
   semi: true,
@@ -18,8 +18,8 @@ export const reactLibraryPrettierConfig = {
   importOrderSeparation: true,
   importOrderSortSpecifiers: true,
   tailwindStylesheet: tailwindStylesheetPath,
-  tailwindAttributes: ['cn', 'cva'],
-  tailwindFunctions: ['cn', 'cva'],
+  tailwindAttributes: ['cn', 'cva', 'classNames'],
+  tailwindFunctions: ['cn', 'cva', 'classNames'],
   plugins: [
     'prettier-plugin-packagejson',
     '@trivago/prettier-plugin-sort-imports',

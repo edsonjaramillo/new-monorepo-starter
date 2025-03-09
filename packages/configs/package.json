@@ -4,19 +4,13 @@
   "private": true,
   "type": "module",
   "exports": {
-    "./eslint/base": "./eslint/base.js",
-    "./eslint/next": "./eslint/next.js",
+    "./eslint/library": "./eslint/library.js",
     "./eslint/react-internal": "./eslint/react-internal.js",
-    "./prettier/base": "./prettier/base.mjs",
-    "./prettier/import-order": "./prettier/import-order.mjs",
-    "./prettier/package-sort": "./prettier/package-sort.mjs",
-    "./prettier/tailwind-sort": "./prettier/tailwind-sort.mjs",
     "./prettier/library": "./prettier/library.mjs",
-    "./prettier/react-library": "./prettier/react-library.mjs",
+    "./prettier/react-internal": "./prettier/react-internal.mjs",
     "./tailwind/theme.css": "./tailwind/theme.css",
-    "./tsconfig/base": "./tsconfig/base.json",
-    "./tsconfig/nextjs": "./tsconfig/nextjs.json",
-    "./tsconfig/react-library": "./tsconfig/react-library.json",
+    "./tsconfig/library": "./tsconfig/library.json",
+    "./tsconfig/react-internal": "./tsconfig/react-internal.json",
     "./tsup/configs": "./tsup/configs.mjs"
   },
   "scripts": {

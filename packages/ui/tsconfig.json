@@ -1,5 +1,5 @@
 {
-  "extends": "@repo/configs/tsconfig/react-library",
+  "extends": "@repo/configs/tsconfig/react-internal",
   "include": ["src"],
   "exclude": ["dist", "node_modules"]
 }

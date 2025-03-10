@@ -51,7 +51,7 @@
     "dev": "tsup --env.CONFIG=development",
     "format": "prettier --write --cache .",
     "lint": "eslint src --max-warnings 0",
-    "prep": "tsup --env.CONFIG=prepare"
+    "prep": "tsup --env.CONFIG=prep"
   },
   "dependencies": {
     "@repo/context": "workspace:*",

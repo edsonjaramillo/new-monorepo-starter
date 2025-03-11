@@ -10,7 +10,7 @@
     "./prettier/library": "./prettier/library.mjs",
     "./prettier/react-library": "./prettier/react-library.mjs",
     "./tailwind/theme.css": "./tailwind/theme.css",
-    "./tsconfig/base": "./tsconfig/base.json",
+    "./tsconfig/library": "./tsconfig/library.json",
     "./tsconfig/react-library": "./tsconfig/react-library.json",
     "./tsup/configs": "./tsup/configs.mjs"
   },

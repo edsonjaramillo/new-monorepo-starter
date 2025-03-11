@@ -7,10 +7,6 @@
   "exports": {
     "./eslint/base": "./eslint/base.js",
     "./eslint/react-internal": "./eslint/react-internal.js",
-    "./prettier/base": "./prettier/base.mjs",
-    "./prettier/import-order": "./prettier/import-order.mjs",
-    "./prettier/package-sort": "./prettier/package-sort.mjs",
-    "./prettier/tailwind-sort": "./prettier/tailwind-sort.mjs",
     "./prettier/library": "./prettier/library.mjs",
     "./prettier/react-library": "./prettier/react-library.mjs",
     "./tailwind/theme.css": "./tailwind/theme.css",

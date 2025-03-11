@@ -6,7 +6,7 @@
   "type": "module",
   "exports": {
     "./eslint/library": "./eslint/library.js",
-    "./eslint/react-internal": "./eslint/react-internal.js",
+    "./eslint/react-library": "./eslint/react-library.js",
     "./prettier/library": "./prettier/library.mjs",
     "./prettier/react-library": "./prettier/react-library.mjs",
     "./tailwind/theme.css": "./tailwind/theme.css",

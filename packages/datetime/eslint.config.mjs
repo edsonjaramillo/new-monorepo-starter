@@ -1,4 +1,4 @@
-import { baseConfig } from '@repo/configs/eslint/base';
+import { libraryConfig } from '@repo/configs/eslint/library';
 
 /** @type {import("eslint").Linter.Config} */
-export default baseConfig;
+export default libraryConfig;

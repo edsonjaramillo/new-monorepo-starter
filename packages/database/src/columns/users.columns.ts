@@ -5,6 +5,7 @@ export const USERS_COLUMNS = {
   id: true,
   firstName: true,
   lastName: true,
+  birthday: true,
   email: true,
   role: true,
 } satisfies ColumnsSelector<typeof usersTable.$inferSelect>;

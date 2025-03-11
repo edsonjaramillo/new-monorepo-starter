@@ -17,3 +17,9 @@ adminUsersRouter.get('/', paginate(), async (c) => {
 
   return c.json(JSend.pagination(users, pagination, 'Users fetched successfully'));
 });
+
+adminUsersRouter.get('/birthday/:birthday', async (c) => {
+  const { birthday } = c.req.param();
+  const users = await usersQueries.getUsersByBirthday(birthday);
+  return c.json(JSend.success(users, 'Users fetched successfully'));
+});

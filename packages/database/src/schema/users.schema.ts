@@ -1,5 +1,5 @@
 import { relations } from 'drizzle-orm';
-import { pgEnum, pgTable, uniqueIndex, varchar } from 'drizzle-orm/pg-core';
+import { index, pgEnum, pgTable, uniqueIndex, varchar } from 'drizzle-orm/pg-core';
 
 import { sessionsTable } from './sessions.schema';
 import { createdAt, id, updatedAt } from './shared';
@@ -13,13 +13,14 @@ export const usersTable = pgTable(
     id,
     firstName: varchar({ length: 255 }).notNull(),
     lastName: varchar({ length: 255 }).notNull(),
+    birthday: varchar({ length: 5 }).notNull(),
     email: varchar({ length: 255 }).notNull().unique(),
     password: varchar({ length: 255 }).notNull(),
     role: rolesEnum().default('User').notNull(),
     createdAt,
     updatedAt,
   },
-  (table) => [uniqueIndex('email_idx').on(table.email)],
+  (table) => [uniqueIndex('email_idx').on(table.email), index('birthday_idx').on(table.birthday)],
 );
 
 export const usersRelations = relations(usersTable, ({ many }) => ({

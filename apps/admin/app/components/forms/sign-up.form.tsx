@@ -1,4 +1,5 @@
 import { standardSchemaResolver } from '@hookform/resolvers/standard-schema';
+import { useNavigate } from '@tanstack/react-router';
 import { FormProvider, useForm } from 'react-hook-form';
 import type * as v from 'valibot';
 
@@ -13,25 +14,30 @@ import { signUpSchema } from '@repo/validation/auth';
 
 type SignUpFormData = v.InferOutput<typeof signUpSchema>;
 
-async function onSubmit(formData: SignUpFormData) {
-  const response = await $api.post<SignUpResponse>('/auth/sign-up', formData);
-
-  if (response.status === 'error') {
-    toast({ status: response.status, title: response.message });
-    return;
-  }
-
-  // handles if user already exists
-  if (response.status === 'redirect') {
-    toast({ status: 'info', title: response.message });
-  }
-
-  toast({ status: 'success', title: response.message });
-}
-
 export function SignUpForm() {
+  const navigate = useNavigate();
+
   const form = useForm({ resolver: standardSchemaResolver(signUpSchema) });
   const { formState } = form;
+
+  async function onSubmit(formData: SignUpFormData) {
+    const response = await $api.post<SignUpResponse>('/auth/sign-up', formData);
+
+    if (response.status === 'error') {
+      toast({ status: response.status, title: response.message });
+      return;
+    }
+
+    // handles if user already exists
+    if (response.status === 'redirect') {
+      toast({ status: 'info', title: response.message });
+      navigate({ to: response.redirect });
+      return;
+    }
+
+    toast({ status: 'success', title: response.message });
+    form.reset();
+  }
 
   return (
     <FormProvider {...form}>
@@ -62,6 +68,18 @@ export function SignUpForm() {
             <InputError field="lastName" />
           </InputGroup>
         </InputColumns>
+        <InputGroup>
+          <Label htmlFor="birthday">Birthday</Label>
+          <Input
+            type="date"
+            id="birthday"
+            field="birthday"
+            placeholder="MM/DD/YYYY"
+            autoComplete="none"
+            required
+          />
+          <InputError field="birthday" />
+        </InputGroup>
         <InputGroup>
           <Label htmlFor="email">Email</Label>
           <Input

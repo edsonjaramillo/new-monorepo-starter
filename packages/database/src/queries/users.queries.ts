@@ -36,6 +36,23 @@ export class UsersQueries {
     return users;
   }
 
+  async getUsersByBirthday(birthday: string): Promise<User[]> {
+    const cachedBirthdayKey = UsersKeys.byBirthday(birthday);
+    const cachedBirthday = await this.cache.get<User[]>(cachedBirthdayKey);
+    if (cachedBirthday) {
+      return cachedBirthday;
+    }
+
+    const users = await this.database.query.usersTable.findMany({
+      where: eq(usersTable.birthday, birthday),
+      columns: USERS_COLUMNS,
+    });
+
+    await this.cache.set(cachedBirthdayKey, users);
+
+    return users;
+  }
+
   async getUserCounts(): Promise<RowCount> {
     const key = UsersKeys.count();
     const cachedCountSeasonRecords = await this.cache.get<RowCount>(key);

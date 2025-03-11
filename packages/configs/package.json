@@ -5,7 +5,7 @@
   "license": "MIT",
   "type": "module",
   "exports": {
-    "./eslint/base": "./eslint/base.js",
+    "./eslint/library": "./eslint/library.js",
     "./eslint/react-internal": "./eslint/react-internal.js",
     "./prettier/library": "./prettier/library.mjs",
     "./prettier/react-library": "./prettier/react-library.mjs",

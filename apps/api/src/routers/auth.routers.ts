@@ -24,14 +24,15 @@ publicAuthRouter.post('/sign-up', sValidator('json', signUpSchema), async (c) =>
   const user = await usersQueries.getUserCredentials(body.email);
   if (user) {
     return c.json<SignUpResponse>(
-      JSend.redirect('/auth/sign-in', 'User already exists. Please sign in.'),
+      JSend.redirect('/sign-in', 'User already exists. Please sign in.'),
       400,
     );
   }
 
+  const birthday = transformBirthday(body.birthday);
   const password = await Password.hash(body.password);
 
-  await usersQueries.createUser({ ...body, password });
+  await usersQueries.createUser({ ...body, password, birthday });
 
   return c.json<SignUpResponse>(JSend.success(undefined, 'User created successfully'));
 });
@@ -90,3 +91,10 @@ userAuthRouter.get('/auto-sign-in', async (c) => {
 
   return c.json<AutoSignInResponse>(JSend.success(session, 'Session refreshed successfully'));
 });
+
+function transformBirthday(value: string) {
+  const dateSplit = value.split('-');
+  const month = dateSplit.at(1);
+  const day = dateSplit.at(2);
+  return `${month}-${day}`;
+}

@@ -3,6 +3,10 @@ export const UsersKeys = {
     return `users:bulk:l:${limit}:o:${offset}`;
   },
 
+  byBirthday(birthday: string) {
+    return `users:birthday:${birthday}`;
+  },
+
   byId(id: string) {
     return `users:${id}`;
   },

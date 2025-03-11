@@ -6,7 +6,6 @@
   "type": "module",
   "exports": {
     "./eslint/base": "./eslint/base.js",
-    "./eslint/next": "./eslint/next.js",
     "./eslint/react-internal": "./eslint/react-internal.js",
     "./prettier/base": "./prettier/base.mjs",
     "./prettier/import-order": "./prettier/import-order.mjs",
@@ -16,7 +15,6 @@
     "./prettier/react-library": "./prettier/react-library.mjs",
     "./tailwind/theme.css": "./tailwind/theme.css",
     "./tsconfig/base": "./tsconfig/base.json",
-    "./tsconfig/nextjs": "./tsconfig/nextjs.json",
     "./tsconfig/react-library": "./tsconfig/react-library.json",
     "./tsup/configs": "./tsup/configs.mjs"
   },

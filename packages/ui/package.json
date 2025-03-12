@@ -7,35 +7,35 @@
   "exports": {
     "./cn": {
       "types": "./dist/lib/cn.d.ts",
-      "import": "./dist/lib/cn.mjs"
+      "import": "./dist/lib/cn.js"
     },
     "./button": {
       "types": "./dist/button.d.ts",
-      "import": "./dist/button.mjs"
+      "import": "./dist/button.js"
     },
     "./form": {
       "types": "./dist/form.d.ts",
-      "import": "./dist/form.mjs"
+      "import": "./dist/form.js"
     },
     "./input": {
       "types": "./dist/input.d.ts",
-      "import": "./dist/input.mjs"
+      "import": "./dist/input.js"
     },
     "./seperator": {
       "types": "./dist/seperator.d.ts",
-      "import": "./dist/seperator.mjs"
+      "import": "./dist/seperator.js"
     },
     "./skeleton": {
       "types": "./dist/skeleton.d.ts",
-      "import": "./dist/skeleton.mjs"
+      "import": "./dist/skeleton.js"
     },
     "./text": {
       "types": "./dist/text.d.ts",
-      "import": "./dist/text.mjs"
+      "import": "./dist/text.js"
     },
     "./toast": {
       "types": "./dist/toast.d.ts",
-      "import": "./dist/toast.mjs"
+      "import": "./dist/toast.js"
     },
     "./ui.css": "./dist/ui.css"
   },

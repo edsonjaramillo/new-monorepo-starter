@@ -19,6 +19,7 @@
     "@repo/context": "workspace:*",
     "@repo/http": "workspace:*",
     "@repo/query": "workspace:*",
+    "@repo/start-utils": "workspace:*",
     "@repo/ui": "workspace:*",
     "@repo/validation": "workspace:*",
     "@tanstack/react-query": "5.67.1",

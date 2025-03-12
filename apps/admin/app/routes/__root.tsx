@@ -2,8 +2,8 @@ import type { QueryClient } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { HeadContent, Outlet, Scripts, createRootRouteWithContext } from '@tanstack/react-router';
 import { TanStackRouterDevtools } from '@tanstack/router-devtools';
-import * as React from 'react';
 
+import { seo } from '@repo/start-utils/seo';
 import { Toaster } from '@repo/ui/toast';
 
 import { DefaultCatchBoundary } from '../components/DefaultCatchBoundary';
@@ -16,12 +16,25 @@ export const Route = createRootRouteWithContext<{
 }>()({
   head: () => ({
     meta: [
+      ...seo({
+        title: 'Admin',
+        description: 'Admin',
+        image: {
+          url: 'https://picsum.photos/id/237/1200/630',
+          width: 1200,
+          height: 630,
+        },
+      }),
       {
         charSet: 'utf-8',
       },
       {
         name: 'viewport',
         content: 'width=device-width, initial-scale=1',
+      },
+      {
+        name: 'theme-color',
+        content: '#f8860c',
       },
     ],
     links: [

@@ -47,6 +47,9 @@ importers:
       '@repo/query':
         specifier: workspace:*
         version: link:../../packages/query
+      '@repo/start-utils':
+        specifier: workspace:*
+        version: link:../../packages/start-utils
       '@repo/ui':
         specifier: workspace:*
         version: link:../../packages/ui
@@ -520,6 +523,43 @@ importers:
       '@types/node':
         specifier: 22.13.5
         version: 22.13.5
+      eslint:
+        specifier: 9.21.0
+        version: 9.21.0(jiti@2.4.2)
+      prettier:
+        specifier: 3.5.2
+        version: 3.5.2
+      prettier-plugin-packagejson:
+        specifier: 2.5.8
+        version: 2.5.8(prettier@3.5.2)
+      rimraf:
+        specifier: 6.0.1
+        version: 6.0.1
+      tsup:
+        specifier: 8.3.6
+        version: 8.3.6(jiti@2.4.2)(postcss@8.5.3)(tsx@4.19.2)(typescript@5.7.3)(yaml@2.7.0)
+      typescript:
+        specifier: 5.7.3
+        version: 5.7.3
+
+  packages/start-utils:
+    dependencies:
+      '@tanstack/react-router':
+        specifier: 1.112.17
+        version: 1.112.17(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+    devDependencies:
+      '@repo/configs':
+        specifier: workspace:*
+        version: link:../configs
+      '@trivago/prettier-plugin-sort-imports':
+        specifier: 5.2.2
+        version: 5.2.2(prettier@3.5.2)
+      '@types/node':
+        specifier: 22.13.5
+        version: 22.13.5
+      '@types/react':
+        specifier: 19.0.8
+        version: 19.0.8
       eslint:
         specifier: 9.21.0
         version: 9.21.0(jiti@2.4.2)

@@ -9,7 +9,10 @@
       "types": "./dist/forms/auth.validation.d.ts",
       "import": "./dist/forms/auth.validation.js"
     },
-    "./environment": "./dist/environment.js"
+    "./environment": {
+      "types": "./dist/environment.d.ts",
+      "import": "./dist/environment.js"
+    }
   },
   "scripts": {
     "build": "tsup --env.CONFIG=production",

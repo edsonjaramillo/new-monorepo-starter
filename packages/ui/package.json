@@ -21,6 +21,10 @@
       "types": "./dist/input.d.ts",
       "import": "./dist/input.js"
     },
+    "./logo": {
+      "types": "./dist/logo.d.ts",
+      "import": "./dist/logo.js"
+    },
     "./seperator": {
       "types": "./dist/seperator.d.ts",
       "import": "./dist/seperator.js"

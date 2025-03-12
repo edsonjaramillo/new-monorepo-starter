@@ -15,7 +15,6 @@ export const prepareTSupConfig = {
   ...baseTSupConfig,
   clean: true,
   dts: true,
-  sourcemap: true,
   treeshake: false,
 };
 
@@ -37,6 +36,5 @@ export const developmentTSupConfig = {
   watch: true,
   clean: false,
   dts: true,
-  sourcemap: true,
   treeshake: false,
 };

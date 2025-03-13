@@ -1,7 +1,5 @@
-import { relations } from 'drizzle-orm';
 import { index, pgEnum, pgTable, uniqueIndex, varchar } from 'drizzle-orm/pg-core';
 
-import { sessionsTable } from './sessions.schema';
 import { createdAt, id, updatedAt } from './shared';
 
 export const roles = ['Admin', 'Employee', 'User'] as const;
@@ -22,7 +20,3 @@ export const usersTable = pgTable(
   },
   (table) => [uniqueIndex('email_idx').on(table.email), index('birthday_idx').on(table.birthday)],
 );
-
-export const usersRelations = relations(usersTable, ({ many }) => ({
-  sessions: many(sessionsTable),
-}));

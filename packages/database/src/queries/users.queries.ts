@@ -2,12 +2,22 @@ import { count, eq } from 'drizzle-orm';
 
 import type { CacheClient } from '@repo/cache/client';
 
-import { USERS_COLUMNS, USERS_CREDENTIALS_COLUMNS } from '../columns/users.columns';
+import {
+  USERS_COLUMNS,
+  USERS_CREDENTIALS_COLUMNS,
+  USERS_SESSION_COLUMNS,
+} from '../columns/users.columns';
 import type { Database } from '../database.client';
 import { UsersKeys } from '../keys/users.keys';
 import { usersTable } from '../schema/users.schema';
 import type { RowCount } from '../types/shared.types';
-import type { User, UserCreate, UserCredentials, UserUpdate } from '../types/users.types';
+import type {
+  User,
+  UserCreate,
+  UserCredentials,
+  UserSession,
+  UserUpdate,
+} from '../types/users.types';
 
 export class UsersQueries {
   private readonly database: Database;
@@ -87,6 +97,27 @@ export class UsersQueries {
     }
 
     await this.cache.set(cachedUserKey, user);
+
+    return user;
+  }
+
+  async getUserSession(id: string): Promise<UserSession | undefined> {
+    const cachedUserSessionKey = UsersKeys.session(id);
+    const cachedUserSession = await this.cache.get<UserSession>(cachedUserSessionKey);
+    if (cachedUserSession) {
+      return cachedUserSession;
+    }
+
+    const user = await this.database.query.usersTable.findFirst({
+      where: eq(usersTable.id, id),
+      columns: USERS_SESSION_COLUMNS,
+    });
+
+    if (!user) {
+      return undefined;
+    }
+
+    await this.cache.set(cachedUserSessionKey, user);
 
     return user;
   }

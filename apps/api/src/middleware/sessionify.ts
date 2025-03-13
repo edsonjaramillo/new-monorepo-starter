@@ -6,14 +6,15 @@ import { JSend } from '@repo/http/JSend';
 import { Logger } from '@repo/logger';
 
 import { apiEnv } from '../utils/api.env';
-import { sessionsQueries } from '../utils/queries';
+import { jwt } from '../utils/jwt';
 
 const isDevelopment = apiEnv.NODE_ENV === 'development';
 
 export function sessionify(allowedRoles: UserRoles[]) {
   return createMiddleware(async (c, next) => {
-    const sessionId = getCookie(c, 'session');
-    if (!sessionId) {
+    const sessionToken = getCookie(c, 'session');
+
+    if (!sessionToken) {
       if (isDevelopment) {
         Logger.error('No session id in cookie');
       }
@@ -21,16 +22,9 @@ export function sessionify(allowedRoles: UserRoles[]) {
       return c.json(JSend.error('Unauthenticated'), 401);
     }
 
-    const session = await sessionsQueries.getSessionById(sessionId);
-    if (!session) {
-      if (isDevelopment) {
-        Logger.error('No session found');
-      }
+    const payload = await jwt.verify(sessionToken);
 
-      return c.json(JSend.error('Unauthenticated'), 401);
-    }
-
-    if (!allowedRoles.includes(session.user.role)) {
+    if (!allowedRoles.includes(payload.role)) {
       if (isDevelopment) {
         Logger.error('Unauthorized');
       }
@@ -38,7 +32,7 @@ export function sessionify(allowedRoles: UserRoles[]) {
       return c.json(JSend.error('Unauthorized'), 403);
     }
 
-    c.set('session', session);
+    c.set('session', payload);
     await next();
   });
 }

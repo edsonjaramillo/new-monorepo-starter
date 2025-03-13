@@ -21,6 +21,7 @@
     "@hono/standard-validator": "0.1.2",
     "@repo/cache": "workspace:*",
     "@repo/database": "workspace:*",
+    "@repo/datetime": "workspace:*",
     "@repo/http": "workspace:*",
     "@repo/logger": "workspace:*",
     "@repo/validation": "workspace:*",

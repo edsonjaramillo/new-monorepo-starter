@@ -153,6 +153,9 @@ importers:
       '@repo/database':
         specifier: workspace:*
         version: link:../../packages/database
+      '@repo/datetime':
+        specifier: workspace:*
+        version: link:../../packages/datetime
       '@repo/http':
         specifier: workspace:*
         version: link:../../packages/http

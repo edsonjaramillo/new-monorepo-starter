@@ -1,4 +1,3 @@
-import 'dotenv/config';
 import * as v from 'valibot';
 
 import { NodeEnvSchema, PostgresEnvSchema } from '@repo/validation/environment';

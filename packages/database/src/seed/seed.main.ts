@@ -1,3 +1,4 @@
+import 'dotenv/config';
 import { exit } from 'process';
 
 import { createUsers, resetUsers } from './users.seed';

@@ -1,9 +1,9 @@
-import type { SessionWithUser } from '@repo/database/types';
+import type { UserSession } from '@repo/database/types';
 import type { PaginationVariable } from '@repo/http/paginate';
 
 declare module 'hono' {
   interface ContextVariableMap {
-    session: SessionWithUser;
+    session: UserSession;
     pagination: PaginationVariable;
   }
 }

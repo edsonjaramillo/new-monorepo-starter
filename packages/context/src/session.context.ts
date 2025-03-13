@@ -1,12 +1,12 @@
 import { create } from 'zustand';
 
-import type { SessionWithUser } from '@repo/database/types';
+import type { UserSession } from '@repo/database/types';
 
 export type SessionContext = ReturnType<typeof createSessionContext>;
 
-type State = { session: SessionWithUser | undefined };
+type State = { session: UserSession | undefined };
 type Actions = {
-  setSession: (session: SessionWithUser) => void;
+  setSession: (session: UserSession) => void;
   clearSession: () => void;
 };
 

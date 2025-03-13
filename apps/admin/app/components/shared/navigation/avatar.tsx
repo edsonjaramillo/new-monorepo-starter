@@ -74,7 +74,7 @@ function UserIcon() {
       className="size-8 cursor-pointer rounded-full bg-secondary"
       onClick={() => toggle()}>
       <Span textColor="white" className="font-semibold">
-        {session?.user.firstName.charAt(0)}
+        {session?.firstName.charAt(0)}
       </Span>
     </button>
   );

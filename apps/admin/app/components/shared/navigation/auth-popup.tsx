@@ -24,10 +24,10 @@ export function AuthPopup() {
         {session && (
           <div className="flex flex-col">
             <Span className="font-semibold whitespace-nowrap" size="sm">
-              {session.user.firstName} {session.user.lastName}
+              {session.firstName} {session.lastName}
             </Span>
             <Span className="text-sm" size="sm">
-              {session.user.role}
+              {session.role}
             </Span>
             <Separator />
           </div>

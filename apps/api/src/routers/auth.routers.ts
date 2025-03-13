@@ -1,7 +1,6 @@
 import { sValidator } from '@hono/standard-validator';
 import { Hono } from 'hono';
 import { deleteCookie, setCookie } from 'hono/cookie';
-import { uuidv7 } from 'uuidv7';
 
 import { JSend } from '@repo/http/JSend';
 import type {
@@ -10,11 +9,13 @@ import type {
   SignOutResponse,
   SignUpResponse,
 } from '@repo/http/response/auth';
+import { Logger } from '@repo/logger';
 import { signInSchema, signUpSchema } from '@repo/validation/auth';
 
 import { Password } from '../utils/Password';
 import { createCookie } from '../utils/cookies';
-import { sessionsQueries, usersQueries } from '../utils/queries';
+import { jwt } from '../utils/jwt';
+import { usersQueries } from '../utils/queries';
 
 export const publicAuthRouter = new Hono();
 
@@ -42,31 +43,30 @@ publicAuthRouter.post('/sign-in', sValidator('json', signInSchema), async (c) =>
 
   const credentials = await usersQueries.getUserCredentials(body.email);
   if (!credentials) {
+    Logger.error('Credentials not found');
     return c.json<SignInResponse>(JSend.error('Invalid credentials'), 400);
   }
 
   const isVerified = await Password.verify(credentials.password, body.password);
   if (!isVerified) {
+    Logger.error('Password not verified');
     return c.json<SignInResponse>(JSend.error('Invalid credentials'), 400);
   }
 
-  const uuid = uuidv7();
-  // add 1 month to current date
-  const expiresAt = new Date(Date.now() + 30 * 24 * 60 * 60 * 1000);
-  await sessionsQueries.createSession({ id: uuid, userId: credentials.id, expiresAt });
-
-  const session = await sessionsQueries.getSessionById(uuid);
-  if (!session) {
-    return c.json<SignInResponse>(JSend.error('Invalid session'), 400);
+  const userSession = await usersQueries.getUserSession(credentials.id);
+  if (!userSession) {
+    Logger.error('User session not found');
+    return c.json<SignInResponse>(JSend.error('Invalid credentials'), 400);
   }
+
+  const expiresAt = new Date(Date.now() + 30 * 24 * 60 * 60 * 1000);
+  const token = await jwt.sign(userSession, expiresAt);
 
   const sessionCookie = createCookie(true, expiresAt);
   const autoSignInCookie = createCookie(false, expiresAt);
-  setCookie(c, 'session', session.id, sessionCookie);
+  setCookie(c, 'session', token, sessionCookie);
   setCookie(c, 'auto-sign-in', 'true', autoSignInCookie);
-  return c.json<SignInResponse>(
-    JSend.success({ session, sessionCookie, autoSignInCookie }, 'User signed in successfully'),
-  );
+  return c.json<SignInResponse>(JSend.success(userSession, 'User signed in successfully'));
 });
 
 export const userAuthRouter = new Hono();
@@ -77,7 +77,6 @@ userAuthRouter.get('/sign-out', async (c) => {
     return c.json<SignOutResponse>(JSend.error('Not signed in.'), 401);
   }
 
-  await sessionsQueries.deleteSession(session.id);
   deleteCookie(c, 'session');
   deleteCookie(c, 'auto-sign-in');
   return c.json<SignOutResponse>(JSend.success(undefined, 'Successfully signed out'));

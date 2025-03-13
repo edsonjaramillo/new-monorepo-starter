@@ -9,6 +9,7 @@ import {
 
 const envSchema = v.object({
   PORT: v.pipe(v.string(), v.transform(Number)),
+  JWT_SECRET: v.string(),
   ...NodeEnvSchema,
   ...CommonEnvSchema,
   ...PostgresEnvSchema,
@@ -28,4 +29,5 @@ export const apiEnv = v.parse(envSchema, {
   REDIS_PASSWORD: process.env.REDIS_PASSWORD,
   REDIS_PORT: process.env.REDIS_PORT,
   REDIS_DATABASE: process.env.REDIS_DATABASE,
+  JWT_SECRET: process.env.JWT_SECRET,
 });

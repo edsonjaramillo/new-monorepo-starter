@@ -19,6 +19,10 @@ export const UsersKeys = {
     return `users:${email}:credentials`;
   },
 
+  session(id: string) {
+    return `users:${id}:session`;
+  },
+
   onCreate() {
     return ['users:bulk:*', 'users:count'];
   },

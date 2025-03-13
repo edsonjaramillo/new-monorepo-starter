@@ -14,7 +14,6 @@ jobs:
       TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
       TURBO_TEAM: ${{ vars.TURBO_TEAM }}
       NODE_VERSION: ${{ vars.NODE_VERSION }}
-      PNPM_VERSION: ${{ vars.PNPM_VERSION }}
 
     steps:
       - name: Checkout code
@@ -22,8 +21,6 @@ jobs:
 
       - name: Install pnpm
         uses: pnpm/action-setup@v4
-        with:
-          version: ${{ env.PNPM_VERSION }}
 
       - name: Use Node.js ${{ env.NODE_VERSION }}
         uses: actions/setup-node@v4

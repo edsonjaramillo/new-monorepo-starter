@@ -36,6 +36,7 @@ export function SignUpForm() {
     }
 
     toast({ status: 'success', title: response.message });
+    navigate({ to: '/' });
     form.reset();
   }
 

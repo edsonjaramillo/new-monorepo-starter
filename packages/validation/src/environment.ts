@@ -33,3 +33,10 @@ export const CacheEnvSchema = {
   REDIS_PASSWORD: v.string(),
   REDIS_DATABASE: numberSchema,
 };
+
+export const JwtEnvSchema = {
+  JWT_SECRET: v.string(),
+  JWT_ISSUER: v.string(),
+  JWT_SUBJECT: v.string(),
+  JWT_ALGORITHM: v.string(),
+};

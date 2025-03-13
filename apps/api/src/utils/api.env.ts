@@ -3,15 +3,16 @@ import * as v from 'valibot';
 import {
   CacheEnvSchema,
   CommonEnvSchema,
+  JwtEnvSchema,
   NodeEnvSchema,
   PostgresEnvSchema,
 } from '@repo/validation/environment';
 
 const envSchema = v.object({
   PORT: v.pipe(v.string(), v.transform(Number)),
-  JWT_SECRET: v.string(),
   ...NodeEnvSchema,
   ...CommonEnvSchema,
+  ...JwtEnvSchema,
   ...PostgresEnvSchema,
   ...CacheEnvSchema,
 });
@@ -30,4 +31,7 @@ export const apiEnv = v.parse(envSchema, {
   REDIS_PORT: process.env.REDIS_PORT,
   REDIS_DATABASE: process.env.REDIS_DATABASE,
   JWT_SECRET: process.env.JWT_SECRET,
+  JWT_ISSUER: process.env.JWT_ISSUER,
+  JWT_SUBJECT: process.env.JWT_SUBJECT,
+  JWT_ALGORITHM: process.env.JWT_ALGORITHM,
 });

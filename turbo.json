@@ -18,7 +18,10 @@
         "REDIS_PASSWORD",
         "REDIS_PORT",
         "REDIS_DATABASE",
-        "JWT_SECRET"
+        "JWT_SECRET",
+        "JWT_ISSUER",
+        "JWT_SUBJECT",
+        "JWT_ALGORITHM"
       ],
       "inputs": ["$TURBO_DEFAULT$", ".env*"],
       "outputs": ["dist/**", ".output/**", ".vinxi/**"]
@@ -39,7 +42,10 @@
         "REDIS_PASSWORD",
         "REDIS_PORT",
         "REDIS_DATABASE",
-        "JWT_SECRET"
+        "JWT_SECRET",
+        "JWT_ISSUER",
+        "JWT_SUBJECT",
+        "JWT_ALGORITHM"
       ],
       "cache": true,
       "inputs": ["$TURBO_DEFAULT$", ".env*"],

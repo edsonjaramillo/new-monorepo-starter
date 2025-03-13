@@ -31,9 +31,9 @@ export function SignInForm() {
     }
 
     toast({ status: 'success', title: 'Signed in successfully' });
-    navigate({ from: '/' });
+    navigate({ to: '/' });
 
-    setSession(response.payload.session);
+    setSession(response.payload);
   }
 
   return (

@@ -6,11 +6,11 @@ const isProduction = apiEnv.NODE_ENV === 'production';
 
 export function createCookie(httpOnly: boolean, expires: Date) {
   return {
-    ...(isProduction && { domain: '.example.com' }),
+    domain: isProduction ? '.example.com' : 'localhost',
     httpOnly,
     expires,
     path: '/',
     secure: isProduction,
-    sameSite: isProduction ? 'none' : 'lax',
+    sameSite: 'strict',
   } satisfies CookieOptions;
 }

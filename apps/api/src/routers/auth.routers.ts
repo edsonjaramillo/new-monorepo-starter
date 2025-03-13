@@ -2,6 +2,7 @@ import { sValidator } from '@hono/standard-validator';
 import { Hono } from 'hono';
 import { deleteCookie, setCookie } from 'hono/cookie';
 
+import { Datetime } from '@repo/datetime';
 import { JSend } from '@repo/http/JSend';
 import type {
   AutoSignInResponse,
@@ -59,7 +60,7 @@ publicAuthRouter.post('/sign-in', sValidator('json', signInSchema), async (c) =>
     return c.json<SignInResponse>(JSend.error('Invalid credentials'), 400);
   }
 
-  const expiresAt = new Date(Date.now() + 30 * 24 * 60 * 60 * 1000);
+  const expiresAt = Datetime().add(30, 'days').toDate();
   const token = await jwt.sign(userSession, expiresAt);
 
   const sessionCookie = createCookie(true, expiresAt);

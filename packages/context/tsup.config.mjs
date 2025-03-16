@@ -6,7 +6,7 @@ import {
   productionTSupConfig,
 } from '@repo/configs/tsup/configs';
 
-const entry = ['src/session.context.ts', 'src/auth-popup.context.ts'];
+const entry = ['src/auth-popup.context.ts', 'src/menu.context.ts', 'src/session.context.ts'];
 
 export default defineConfig((options) => {
   switch (options.env.CONFIG) {

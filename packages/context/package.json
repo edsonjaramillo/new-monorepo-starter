@@ -9,6 +9,10 @@
       "types": "./dist/auth-popup.context.d.ts",
       "import": "./dist/auth-popup.context.js"
     },
+    "./menu": {
+      "types": "./dist/menu.context.d.ts",
+      "import": "./dist/menu.context.js"
+    },
     "./session": {
       "types": "./dist/session.context.d.ts",
       "import": "./dist/session.context.js"

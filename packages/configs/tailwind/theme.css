@@ -175,7 +175,7 @@
 
   /* Blur */
   --blur-*: initial;
-  --blur: 84px;
+  --blur-base: 6px;
 
   /* Transition */
   --transition-duration*: initial;

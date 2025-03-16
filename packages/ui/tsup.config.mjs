@@ -16,6 +16,7 @@ const entry = [
   'src/skeleton.tsx',
   'src/text.tsx',
   'src/toast.tsx',
+  'src/blur-background.tsx',
 ];
 
 export default defineConfig((options) => {

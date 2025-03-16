@@ -13,6 +13,10 @@
       "types": "./dist/button.d.ts",
       "import": "./dist/button.js"
     },
+    "./blur-background": {
+      "types": "./dist/blur-background.d.ts",
+      "import": "./dist/blur-background.js"
+    },
     "./form": {
       "types": "./dist/form.d.ts",
       "import": "./dist/form.js"

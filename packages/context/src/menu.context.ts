@@ -2,20 +2,24 @@ import { create } from 'zustand';
 
 export type MenuContext = ReturnType<typeof createMenuContext>;
 
-type State = { open: boolean };
+type State = { isOpen: boolean };
 type Actions = {
-  setOpen: (open: boolean) => void;
+  open: () => void;
+  close: () => void;
   toggle: () => void;
 };
 
 export function createMenuContext() {
   return create<State & Actions>((set) => ({
-    open: false,
-    setOpen(open) {
-      set(() => ({ open }));
+    isOpen: false,
+    open() {
+      set(() => ({ isOpen: true }));
+    },
+    close() {
+      set(() => ({ isOpen: false }));
     },
     toggle() {
-      set((state) => ({ open: !state.open }));
+      set((state) => ({ isOpen: !state.isOpen }));
     },
   }));
 }

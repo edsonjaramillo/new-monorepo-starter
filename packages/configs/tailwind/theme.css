@@ -110,7 +110,7 @@
   --color-gray: var(--gray-400);
   --color-black: var(--gray-950);
   --color-white: var(--gray-50);
-  --color-muted: var(--gray-300);
+  --color-muted: var(--gray-200);
 
   /* Alert */
   --color-success: var(--success-500);
@@ -132,11 +132,6 @@
   --color-danger-accent: var(--danger-50);
   --color-danger-hover: var(--danger-600);
   --color-danger-pressed: var(--danger-700);
-
-  --color-neutral: var(--gray-100);
-  --color-neutral-accent: var(--gray-50);
-  --color-neutral-hover: var(--gray-200);
-  --color-neutral-pressed: var(--gray-300);
 
   /* fonts */
   --font-*: initial;

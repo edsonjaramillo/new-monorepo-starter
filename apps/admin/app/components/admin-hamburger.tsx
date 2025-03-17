@@ -1,12 +1,12 @@
 import { useAdminNavigationMenu } from '../admin.context';
 
 export function AdminHamburger() {
-  const { setOpen } = useAdminNavigationMenu();
+  const { open } = useAdminNavigationMenu();
   return (
     <button
       type="button"
       className="flex cursor-pointer items-center justify-center"
-      onClick={() => setOpen(true)}>
+      onClick={open}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"

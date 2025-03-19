@@ -7,7 +7,7 @@
   "exports": {
     "./client": {
       "types": "./dist/cache.client.d.ts",
-      "import": "./dist/cache.client.js"
+      "import": "./dist/cache.client.mjs"
     }
   },
   "scripts": {

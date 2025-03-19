@@ -7,15 +7,15 @@
   "exports": {
     "./auth-popup": {
       "types": "./dist/auth-popup.context.d.ts",
-      "import": "./dist/auth-popup.context.js"
+      "import": "./dist/auth-popup.context.mjs"
     },
     "./menu": {
       "types": "./dist/menu.context.d.ts",
-      "import": "./dist/menu.context.js"
+      "import": "./dist/menu.context.mjs"
     },
     "./session": {
       "types": "./dist/session.context.d.ts",
-      "import": "./dist/session.context.js"
+      "import": "./dist/session.context.mjs"
     }
   },
   "scripts": {

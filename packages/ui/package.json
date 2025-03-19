@@ -7,47 +7,47 @@
   "exports": {
     "./cn": {
       "types": "./dist/lib/cn.d.ts",
-      "import": "./dist/lib/cn.js"
+      "import": "./dist/lib/cn.mjs"
     },
     "./accordion": {
       "types": "./dist/accordion.d.ts",
-      "import": "./dist/accordion.js"
+      "import": "./dist/accordion.mjs"
     },
     "./button": {
       "types": "./dist/button.d.ts",
-      "import": "./dist/button.js"
+      "import": "./dist/button.mjs"
     },
     "./blur-background": {
       "types": "./dist/blur-background.d.ts",
-      "import": "./dist/blur-background.js"
+      "import": "./dist/blur-background.mjs"
     },
     "./form": {
       "types": "./dist/form.d.ts",
-      "import": "./dist/form.js"
+      "import": "./dist/form.mjs"
     },
     "./input": {
       "types": "./dist/input.d.ts",
-      "import": "./dist/input.js"
+      "import": "./dist/input.mjs"
     },
     "./logo": {
       "types": "./dist/logo.d.ts",
-      "import": "./dist/logo.js"
+      "import": "./dist/logo.mjs"
     },
     "./seperator": {
       "types": "./dist/seperator.d.ts",
-      "import": "./dist/seperator.js"
+      "import": "./dist/seperator.mjs"
     },
     "./skeleton": {
       "types": "./dist/skeleton.d.ts",
-      "import": "./dist/skeleton.js"
+      "import": "./dist/skeleton.mjs"
     },
     "./text": {
       "types": "./dist/text.d.ts",
-      "import": "./dist/text.js"
+      "import": "./dist/text.mjs"
     },
     "./toast": {
       "types": "./dist/toast.d.ts",
-      "import": "./dist/toast.js"
+      "import": "./dist/toast.mjs"
     },
     "./ui.css": "./dist/ui.css"
   },

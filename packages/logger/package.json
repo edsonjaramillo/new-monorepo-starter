@@ -7,7 +7,7 @@
   "exports": {
     ".": {
       "types": "./dist/logger.d.ts",
-      "import": "./dist/logger.js"
+      "import": "./dist/logger.mjs"
     }
   },
   "scripts": {

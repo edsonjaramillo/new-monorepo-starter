@@ -8,6 +8,7 @@ import {
 
 const entry = [
   'src/lib/cn.ts',
+  'src/accordion.tsx',
   'src/button.tsx',
   'src/form.tsx',
   'src/input.tsx',

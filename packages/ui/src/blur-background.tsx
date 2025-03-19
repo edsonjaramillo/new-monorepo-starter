@@ -23,7 +23,6 @@ export function BlurBackground({
   return (
     <button
       type="button"
-      aria-hidden={!active}
       aria-label={ariaLabel}
       aria-expanded={active}
       onClick={onClick}

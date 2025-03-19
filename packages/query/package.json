@@ -7,7 +7,7 @@
   "exports": {
     "./auth": {
       "types": "./dist/auth.query.d.ts",
-      "import": "./dist/auth.query.js"
+      "import": "./dist/auth.query.mjs"
     }
   },
   "scripts": {

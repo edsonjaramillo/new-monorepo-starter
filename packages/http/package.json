@@ -7,23 +7,23 @@
   "exports": {
     "./cookies": {
       "types": "./dist/cookies.type.d.ts",
-      "import": "./dist/cookies.type.js"
+      "import": "./dist/cookies.type.mjs"
     },
     "./JSend": {
       "types": "./dist/JSend.d.ts",
-      "import": "./dist/JSend.js"
+      "import": "./dist/JSend.mjs"
     },
     "./paginate": {
       "types": "./dist/paginate.d.ts",
-      "import": "./dist/paginate.js"
+      "import": "./dist/paginate.mjs"
     },
     "./fetcher": {
       "types": "./dist/fetcher.d.ts",
-      "import": "./dist/fetcher.js"
+      "import": "./dist/fetcher.mjs"
     },
     "./response/auth": {
       "types": "./dist/response/auth.response.d.ts",
-      "import": "./dist/response/auth.response.js"
+      "import": "./dist/response/auth.response.mjs"
     }
   },
   "scripts": {

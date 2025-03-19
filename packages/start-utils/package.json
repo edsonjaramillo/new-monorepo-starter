@@ -7,7 +7,7 @@
   "exports": {
     "./seo": {
       "types": "./dist/seo.d.ts",
-      "import": "./dist/seo.js"
+      "import": "./dist/seo.mjs"
     }
   },
   "scripts": {

@@ -7,9 +7,12 @@
   "exports": {
     "./auth": {
       "types": "./dist/forms/auth.validation.d.ts",
-      "import": "./dist/forms/auth.validation.js"
+      "import": "./dist/forms/auth.validation.mjs"
     },
-    "./environment": "./dist/environment.js"
+    "./environment": {
+      "types": "./dist/environment.d.ts",
+      "import": "./dist/environment.mjs"
+    }
   },
   "scripts": {
     "build": "tsup --env.CONFIG=production",

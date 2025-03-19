@@ -7,15 +7,15 @@
   "exports": {
     "./client": {
       "types": "./dist/database.client.d.ts",
-      "import": "./dist/database.client.js"
+      "import": "./dist/database.client.mjs"
     },
     "./queries": {
       "types": "./dist/queries/index.d.ts",
-      "import": "./dist/queries/index.js"
+      "import": "./dist/queries/index.mjs"
     },
     "./types": {
       "types": "./dist/types/index.d.ts",
-      "import": "./dist/types/index.js"
+      "import": "./dist/types/index.mjs"
     }
   },
   "scripts": {

@@ -6,6 +6,7 @@ export const baseTSupConfig = {
   format: 'esm',
   target: 'es2022',
   publicDir: 'public',
+  outExtension: () => ({ js: '.mjs' }),
 };
 
 /**
@@ -21,7 +22,7 @@ export const prepareTSupConfig = {
 /**
  * @type {import("tsup").Options}
  */
-  export const productionTSupConfig = {
+export const productionTSupConfig = {
   ...baseTSupConfig,
   clean: true,
   minify: true,

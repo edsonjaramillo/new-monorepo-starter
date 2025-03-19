@@ -25,8 +25,6 @@ export const buttonVariants = cva(
           'bg-danger text-white not-disabled:hover:bg-danger-hover not-disabled:focus:bg-danger-hover not-disabled:active:bg-danger-pressed',
         warning:
           'bg-warning text-white not-disabled:hover:bg-warning-hover not-disabled:focus:bg-warning-hover not-disabled:active:bg-warning-pressed',
-        neutral:
-          'bg-neutral text-black not-disabled:hover:bg-neutral-hover not-disabled:focus:bg-neutral-hover not-disabled:active:bg-neutral-pressed',
         none: 'bg-white text-black',
       },
       disabled: {

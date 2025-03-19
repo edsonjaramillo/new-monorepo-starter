@@ -6,12 +6,7 @@ import {
   productionTSupConfig,
 } from '@repo/configs/tsup/configs';
 
-const entry = [
-  'src/database.client.ts',
-  'src/queries/index.ts',
-  'src/types/index.ts',
-  'src/seed/seed.main.ts',
-];
+const entry = ['src/database.client.ts', 'src/queries/index.ts', 'src/types/index.ts'];
 
 export default defineConfig((options) => {
   switch (options.env.CONFIG) {

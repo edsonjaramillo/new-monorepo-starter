@@ -9,6 +9,10 @@
       "types": "./dist/lib/cn.d.ts",
       "import": "./dist/lib/cn.js"
     },
+    "./accordion": {
+      "types": "./dist/accordion.d.ts",
+      "import": "./dist/accordion.js"
+    },
     "./button": {
       "types": "./dist/button.d.ts",
       "import": "./dist/button.js"

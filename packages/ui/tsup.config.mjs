@@ -23,10 +23,10 @@ const entry = [
 export default defineConfig((options) => {
   switch (options.env.CONFIG) {
     case 'development':
-      return { entry, ...developmentTSupConfig };
+      return { entry, ...developmentTSupConfig, external: ['react'] };
     case 'prepare':
-      return { entry, ...prepareTSupConfig };
+      return { entry, ...prepareTSupConfig, external: ['react'] };
     case 'production':
-      return { entry, ...productionTSupConfig };
+      return { entry, ...productionTSupConfig, external: ['react'] };
   }
 });

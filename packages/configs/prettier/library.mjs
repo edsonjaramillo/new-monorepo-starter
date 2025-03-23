@@ -6,5 +6,4 @@ export const libraryPrettierConfig = {
   singleQuote: true,
   semi: true,
   bracketSameLine: true,
-  plugins: ['@trivago/prettier-plugin-sort-imports'],
 };

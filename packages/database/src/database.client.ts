@@ -1,9 +1,7 @@
+import * as schema from './schema';
+import type { NODE_ENV } from '@repo/validation/environment';
 import { drizzle } from 'drizzle-orm/postgres-js';
 import postgres from 'postgres';
-
-import type { NODE_ENV } from '@repo/validation/environment';
-
-import * as schema from './schema';
 
 function maxPoolCountByEnviroment(env: NODE_ENV) {
   switch (env) {

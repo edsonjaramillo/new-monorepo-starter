@@ -1,8 +1,7 @@
-import { uuidv7 } from 'uuidv7';
-
 import { usersTable } from '../schema';
 import type { UserCreate } from '../types';
 import { seedConnection } from './seed.connection';
+import { uuidv7 } from 'uuidv7';
 
 export async function resetUsers() {
   await seedConnection.delete(usersTable);

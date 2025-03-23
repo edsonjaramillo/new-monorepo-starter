@@ -1,8 +1,6 @@
-import { SignJWT, jwtVerify } from 'jose';
-
-import type { UserSession } from '@repo/database/types';
-
 import { apiEnv } from './api.env';
+import type { UserSession } from '@repo/database/types';
+import { SignJWT, jwtVerify } from 'jose';
 
 class JWT {
   private readonly jwtSecret: Uint8Array;

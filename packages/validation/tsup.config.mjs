@@ -1,10 +1,9 @@
-import { defineConfig } from 'tsup';
-
 import {
   developmentTSupConfig,
   prepareTSupConfig,
   productionTSupConfig,
 } from '@repo/configs/tsup/configs';
+import { defineConfig } from 'tsup';
 
 const entry = ['src/environment.ts', 'src/forms/auth.validation.ts'];
 

@@ -1,6 +1,5 @@
-import { create } from 'zustand';
-
 import type { UserSession } from '@repo/database/types';
+import { create } from 'zustand';
 
 export type SessionContext = ReturnType<typeof createSessionContext>;
 

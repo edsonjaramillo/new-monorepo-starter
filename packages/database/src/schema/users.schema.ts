@@ -1,6 +1,5 @@
-import { index, pgEnum, pgTable, uniqueIndex, varchar } from 'drizzle-orm/pg-core';
-
 import { createdAt, id, updatedAt } from './shared';
+import { index, pgEnum, pgTable, uniqueIndex, varchar } from 'drizzle-orm/pg-core';
 
 export const roles = ['Admin', 'Employee', 'User'] as const;
 export const rolesEnum = pgEnum('roles', roles);

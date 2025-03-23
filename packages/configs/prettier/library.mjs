@@ -6,8 +6,5 @@ export const libraryPrettierConfig = {
   singleQuote: true,
   semi: true,
   bracketSameLine: true,
-  importOrder: ['^@repo', '^\\.'],
-  importOrderSeparation: true,
-  importOrderSortSpecifiers: true,
-  plugins: ['prettier-plugin-packagejson', '@trivago/prettier-plugin-sort-imports'],
+  plugins: ['@trivago/prettier-plugin-sort-imports'],
 };

@@ -1,5 +1,3 @@
-import * as v from 'valibot';
-
 import {
   CacheEnvSchema,
   CommonEnvSchema,
@@ -7,6 +5,7 @@ import {
   NodeEnvSchema,
   PostgresEnvSchema,
 } from '@repo/validation/environment';
+import * as v from 'valibot';
 
 const envSchema = v.object({
   PORT: v.pipe(v.string(), v.transform(Number)),

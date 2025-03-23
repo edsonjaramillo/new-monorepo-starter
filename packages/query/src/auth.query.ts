@@ -1,7 +1,6 @@
-import { queryOptions } from '@tanstack/react-query';
-
 import { $api } from '@repo/http/fetcher';
 import type { AutoSignInResponse } from '@repo/http/response/auth';
+import { queryOptions } from '@tanstack/react-query';
 
 export function createAutoSignInOptions(enabled: boolean) {
   return queryOptions({

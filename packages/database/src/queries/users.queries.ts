@@ -1,7 +1,3 @@
-import { count, eq } from 'drizzle-orm';
-
-import type { CacheClient } from '@repo/cache/client';
-
 import {
   USERS_COLUMNS,
   USERS_CREDENTIALS_COLUMNS,
@@ -18,6 +14,8 @@ import type {
   UserSession,
   UserUpdate,
 } from '../types/users.types';
+import type { CacheClient } from '@repo/cache/client';
+import { count, eq } from 'drizzle-orm';
 
 export class UsersQueries {
   private readonly database: Database;

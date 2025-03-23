@@ -1,7 +1,6 @@
+import { createUsers, resetUsers } from './users.seed';
 import 'dotenv/config';
 import { exit } from 'process';
-
-import { createUsers, resetUsers } from './users.seed';
 
 async function main() {
   await resetUsers();

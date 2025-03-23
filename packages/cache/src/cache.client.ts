@@ -1,6 +1,5 @@
-import { Redis } from 'ioredis';
-
 import { Logger } from '@repo/logger';
+import { Redis } from 'ioredis';
 
 type Data = Record<string, unknown> | Array<Record<string, unknown>>;
 

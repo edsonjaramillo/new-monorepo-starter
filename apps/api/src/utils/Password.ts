@@ -1,6 +1,5 @@
-import { hash, verify } from 'argon2';
-
 import { apiEnv } from './api.env';
+import { hash, verify } from 'argon2';
 
 const isProduction = apiEnv.NODE_ENV === 'production';
 

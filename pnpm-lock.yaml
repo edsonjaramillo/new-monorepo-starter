@@ -236,9 +236,6 @@ importers:
       '@repo/configs':
         specifier: workspace:*
         version: link:../configs
-      '@trivago/prettier-plugin-sort-imports':
-        specifier: 5.2.2
-        version: 5.2.2(prettier@3.5.2)
       '@types/node':
         specifier: 22.13.5
         version: 22.13.5
@@ -248,9 +245,6 @@ importers:
       prettier:
         specifier: 3.5.2
         version: 3.5.2
-      prettier-plugin-packagejson:
-        specifier: 2.5.8
-        version: 2.5.8(prettier@3.5.2)
       rimraf:
         specifier: 6.0.1
         version: 6.0.1
@@ -269,9 +263,6 @@ importers:
       '@next/eslint-plugin-next':
         specifier: 15.1.6
         version: 15.1.6
-      '@trivago/prettier-plugin-sort-imports':
-        specifier: 5.2.2
-        version: 5.2.2(prettier@3.5.2)
       eslint:
         specifier: 9.21.0
         version: 9.21.0(jiti@2.4.2)
@@ -296,9 +287,6 @@ importers:
       prettier:
         specifier: 3.5.2
         version: 3.5.2
-      prettier-plugin-packagejson:
-        specifier: 2.5.8
-        version: 2.5.8(prettier@3.5.2)
       rimraf:
         specifier: 6.0.1
         version: 6.0.1
@@ -327,9 +315,6 @@ importers:
       '@repo/configs':
         specifier: workspace:*
         version: link:../configs
-      '@trivago/prettier-plugin-sort-imports':
-        specifier: 5.2.2
-        version: 5.2.2(prettier@3.5.2)
       '@types/node':
         specifier: 22.13.5
         version: 22.13.5
@@ -339,9 +324,6 @@ importers:
       prettier:
         specifier: 3.5.2
         version: 3.5.2
-      prettier-plugin-packagejson:
-        specifier: 2.5.8
-        version: 2.5.8(prettier@3.5.2)
       rimraf:
         specifier: 6.0.1
         version: 6.0.1
@@ -379,9 +361,6 @@ importers:
       '@repo/configs':
         specifier: workspace:*
         version: link:../configs
-      '@trivago/prettier-plugin-sort-imports':
-        specifier: 5.2.2
-        version: 5.2.2(prettier@3.5.2)
       '@types/node':
         specifier: 22.13.5
         version: 22.13.5
@@ -394,9 +373,6 @@ importers:
       prettier:
         specifier: 3.5.2
         version: 3.5.2
-      prettier-plugin-packagejson:
-        specifier: 2.5.8
-        version: 2.5.8(prettier@3.5.2)
       rimraf:
         specifier: 6.0.1
         version: 6.0.1
@@ -419,9 +395,6 @@ importers:
       '@repo/configs':
         specifier: workspace:*
         version: link:../configs
-      '@trivago/prettier-plugin-sort-imports':
-        specifier: 5.2.2
-        version: 5.2.2(prettier@3.5.2)
       '@types/node':
         specifier: 22.13.5
         version: 22.13.5
@@ -431,9 +404,6 @@ importers:
       prettier:
         specifier: 3.5.2
         version: 3.5.2
-      prettier-plugin-packagejson:
-        specifier: 2.5.8
-        version: 2.5.8(prettier@3.5.2)
       rimraf:
         specifier: 6.0.1
         version: 6.0.1
@@ -456,9 +426,6 @@ importers:
       '@repo/database':
         specifier: workspace:*
         version: link:../database
-      '@trivago/prettier-plugin-sort-imports':
-        specifier: 5.2.2
-        version: 5.2.2(prettier@3.5.2)
       '@types/node':
         specifier: 22.13.5
         version: 22.13.5
@@ -468,9 +435,6 @@ importers:
       prettier:
         specifier: 3.5.2
         version: 3.5.2
-      prettier-plugin-packagejson:
-        specifier: 2.5.8
-        version: 2.5.8(prettier@3.5.2)
       rimraf:
         specifier: 6.0.1
         version: 6.0.1
@@ -486,9 +450,6 @@ importers:
       '@repo/configs':
         specifier: workspace:*
         version: link:../configs
-      '@trivago/prettier-plugin-sort-imports':
-        specifier: 5.2.2
-        version: 5.2.2(prettier@3.5.2)
       '@types/node':
         specifier: 22.13.5
         version: 22.13.5
@@ -498,9 +459,6 @@ importers:
       prettier:
         specifier: 3.5.2
         version: 3.5.2
-      prettier-plugin-packagejson:
-        specifier: 2.5.8
-        version: 2.5.8(prettier@3.5.2)
       rimraf:
         specifier: 6.0.1
         version: 6.0.1
@@ -523,9 +481,6 @@ importers:
       '@repo/configs':
         specifier: workspace:*
         version: link:../configs
-      '@trivago/prettier-plugin-sort-imports':
-        specifier: 5.2.2
-        version: 5.2.2(prettier@3.5.2)
       '@types/node':
         specifier: 22.13.5
         version: 22.13.5
@@ -535,9 +490,6 @@ importers:
       prettier:
         specifier: 3.5.2
         version: 3.5.2
-      prettier-plugin-packagejson:
-        specifier: 2.5.8
-        version: 2.5.8(prettier@3.5.2)
       rimraf:
         specifier: 6.0.1
         version: 6.0.1
@@ -557,9 +509,6 @@ importers:
       '@repo/configs':
         specifier: workspace:*
         version: link:../configs
-      '@trivago/prettier-plugin-sort-imports':
-        specifier: 5.2.2
-        version: 5.2.2(prettier@3.5.2)
       '@types/node':
         specifier: 22.13.5
         version: 22.13.5
@@ -572,9 +521,6 @@ importers:
       prettier:
         specifier: 3.5.2
         version: 3.5.2
-      prettier-plugin-packagejson:
-        specifier: 2.5.8
-        version: 2.5.8(prettier@3.5.2)
       rimraf:
         specifier: 6.0.1
         version: 6.0.1
@@ -618,9 +564,6 @@ importers:
       '@tailwindcss/postcss':
         specifier: 4.0.6
         version: 4.0.6
-      '@trivago/prettier-plugin-sort-imports':
-        specifier: 5.2.2
-        version: 5.2.2(prettier@3.5.2)
       '@types/js-cookie':
         specifier: 3.0.6
         version: 3.0.6
@@ -633,9 +576,6 @@ importers:
       prettier:
         specifier: 3.5.2
         version: 3.5.2
-      prettier-plugin-packagejson:
-        specifier: 2.5.8
-        version: 2.5.8(prettier@3.5.2)
       prettier-plugin-tailwindcss:
         specifier: 0.6.11
         version: 0.6.11(@trivago/prettier-plugin-sort-imports@5.2.2(prettier@3.5.2))(prettier@3.5.2)
@@ -661,9 +601,6 @@ importers:
       '@repo/configs':
         specifier: workspace:*
         version: link:../configs
-      '@trivago/prettier-plugin-sort-imports':
-        specifier: 5.2.2
-        version: 5.2.2(prettier@3.5.2)
       '@types/node':
         specifier: 22.13.5
         version: 22.13.5
@@ -673,9 +610,6 @@ importers:
       prettier:
         specifier: 3.5.2
         version: 3.5.2
-      prettier-plugin-packagejson:
-        specifier: 2.5.8
-        version: 2.5.8(prettier@3.5.2)
       rimraf:
         specifier: 6.0.1
         version: 6.0.1

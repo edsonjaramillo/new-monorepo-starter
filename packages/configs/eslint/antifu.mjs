@@ -6,9 +6,9 @@ import turboPlugin from 'eslint-plugin-turbo';
  * @type {import('@antfu/eslint-config').Rules}
  */
 const BASE_RULES = {
-  "node/prefer-global/process": 'off',
-  "style/eol-last": 'off',
-}
+  'node/prefer-global/process': 'off',
+  'style/eol-last': 'off',
+};
 
 /**
  * @type {import('@antfu/eslint-config').OptionsConfig}
@@ -61,4 +61,4 @@ export const TURBO_PLUGIN = {
   rules: {
     'turbo/no-undeclared-env-vars': 'warn',
   },
-}
+};

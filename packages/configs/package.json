@@ -6,8 +6,6 @@
   "license": "MIT",
   "exports": {
     "./eslint/antifu": "./eslint/antifu.mjs",
-    "./eslint/library": "./eslint/library.js",
-    "./eslint/react-library": "./eslint/react-library.js",
     "./prettier/library": "./prettier/library.mjs",
     "./prettier/react-library": "./prettier/react-library.mjs",
     "./tailwind/theme.css": "./tailwind/theme.css",
@@ -16,7 +14,9 @@
     "./tsup/configs": "./tsup/configs.mjs"
   },
   "scripts": {
-    "clean-node-modules": "rimraf node_modules"
+    "clean-node-modules": "rimraf node_modules",
+    "lint:fix": "eslint . --fix",
+    "lint": "eslint . --max-warnings 0"
   },
   "devDependencies": {
     "@antfu/eslint-config": "4.11.0",

@@ -55,6 +55,7 @@
       "cache": false
     },
     "check-types": {
+      "dependsOn": ["^prep"],
       "cache": true
     },
     "clean-cache": {

@@ -1,10 +1,10 @@
-import { apiEnv } from '../utils/api.env';
-import { jwt } from '../utils/jwt';
 import type { UserRoles } from '@repo/database/types';
 import { JSend } from '@repo/http/JSend';
 import { Logger } from '@repo/logger';
 import { getCookie } from 'hono/cookie';
 import { createMiddleware } from 'hono/factory';
+import { apiEnv } from '../utils/api.env';
+import { jwt } from '../utils/jwt';
 
 const isDevelopment = apiEnv.NODE_ENV === 'development';
 

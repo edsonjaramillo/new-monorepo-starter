@@ -12,7 +12,7 @@ const numberSchema = v.pipe(v.string(), v.regex(/^\d+$/), v.transform(Number));
 const booleanSchema = v.pipe(
   v.string(),
   v.regex(/^true|false$/),
-  v.transform((input) => input === 'true'),
+  v.transform(input => input === 'true'),
 );
 
 export const CommonEnvSchema = {

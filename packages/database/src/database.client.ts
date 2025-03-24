@@ -1,9 +1,9 @@
-import * as schema from './schema';
 import type { NODE_ENV } from '@repo/validation/environment';
 import { drizzle } from 'drizzle-orm/postgres-js';
 import postgres from 'postgres';
+import * as schema from './schema';
 
-function maxPoolCountByEnviroment(env: NODE_ENV) {
+function maxPoolCountByEnviroment(env: NODE_ENV): number | undefined {
   switch (env) {
     case 'development': {
       return 1;
@@ -19,15 +19,15 @@ function maxPoolCountByEnviroment(env: NODE_ENV) {
 
 export type Database = ReturnType<typeof drizzle<typeof schema>>;
 
-type DatabaseConnection = {
+interface DatabaseConnection {
   host: string;
   port: number;
   user: string;
   password: string;
   database: string;
-};
+}
 
-export function createDBConnection(connectionOptions: DatabaseConnection, env: NODE_ENV) {
+export function createDBConnection(connectionOptions: DatabaseConnection, env: NODE_ENV): Database {
   const connection = postgres({ ...connectionOptions, max: maxPoolCountByEnviroment(env) });
   return drizzle(connection, { schema, casing: 'snake_case' });
 }

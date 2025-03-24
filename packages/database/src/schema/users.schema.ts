@@ -1,5 +1,5 @@
-import { createdAt, id, updatedAt } from './shared';
 import { index, pgEnum, pgTable, uniqueIndex, varchar } from 'drizzle-orm/pg-core';
+import { createdAt, id, updatedAt } from './shared';
 
 export const roles = ['Admin', 'Employee', 'User'] as const;
 export const rolesEnum = pgEnum('roles', roles);
@@ -17,5 +17,5 @@ export const usersTable = pgTable(
     createdAt,
     updatedAt,
   },
-  (table) => [uniqueIndex('email_idx').on(table.email), index('birthday_idx').on(table.birthday)],
+  table => [uniqueIndex('email_idx').on(table.email), index('birthday_idx').on(table.birthday)],
 );

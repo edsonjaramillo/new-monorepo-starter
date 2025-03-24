@@ -1,4 +1,4 @@
-export type CookieOptions = {
+export interface CookieOptions {
   domain?: string;
   expires: Date;
   httpOnly: boolean;
@@ -6,4 +6,4 @@ export type CookieOptions = {
   secure: boolean;
   sameSite: 'lax' | 'strict' | 'none';
   priority?: 'low' | 'medium' | 'high';
-};
+}

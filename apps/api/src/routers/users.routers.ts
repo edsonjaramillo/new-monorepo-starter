@@ -1,8 +1,8 @@
-import { paginate } from '../middleware/paginate';
-import { usersQueries } from '../utils/queries';
 import { JSend } from '@repo/http/JSend';
 import { paginationMetadata } from '@repo/http/paginate';
 import { Hono } from 'hono';
+import { paginate } from '../middleware/paginate';
+import { usersQueries } from '../utils/queries';
 
 export const adminUsersRouter = new Hono();
 

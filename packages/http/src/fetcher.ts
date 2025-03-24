@@ -14,7 +14,8 @@ class Fetcher {
       const responseJson = await response.json();
 
       return responseJson;
-    } catch {
+    }
+    catch {
       return undefined as unknown as T;
     }
   }
@@ -33,7 +34,8 @@ class Fetcher {
       const responseJson = await response.json();
 
       return responseJson;
-    } catch {
+    }
+    catch {
       return undefined as unknown as T;
     }
   }

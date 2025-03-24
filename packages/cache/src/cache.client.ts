@@ -3,17 +3,17 @@ import { Redis } from 'ioredis';
 
 type Data = Record<string, unknown> | Array<Record<string, unknown>>;
 
-type CacheClientOptions = {
+interface CacheClientOptions {
   connection: CacheConnection;
   debug: boolean;
-};
+}
 
-type CacheConnection = {
+interface CacheConnection {
   host: string;
   port: number;
   password: string;
   database: number;
-};
+}
 
 export class CacheClient {
   private readonly client: Redis;
@@ -29,7 +29,7 @@ export class CacheClient {
     this.debugMode = options.debug ?? false;
   }
 
-  async get<T>(key: string) {
+  async get<T>(key: string): Promise<T | undefined> {
     const value = await this.client.get(key);
     if (!value) {
       return undefined;
@@ -42,7 +42,7 @@ export class CacheClient {
     return JSON.parse(value) as T;
   }
 
-  async set(key: string, value: Data, expiration?: number) {
+  async set(key: string, value: Data, expiration?: number): Promise<void> {
     if (this.debugMode) {
       Logger.log('CYAN', 'CACHE SET', key);
     }
@@ -50,14 +50,14 @@ export class CacheClient {
     await this.client.set(key, JSON.stringify(value), 'EX', expiration ?? 600);
   }
 
-  async delete(key: string) {
+  async delete(key: string): Promise<void> {
     await this.client.unlink(key);
     if (this.debugMode) {
       Logger.log('RED', 'CACHE DEL', key);
     }
   }
 
-  async cleanPatterns(patterns: string[]) {
+  async cleanPatterns(patterns: string[]): Promise<void> {
     const pipeline = this.client.pipeline();
 
     for (const pattern of patterns) {
@@ -79,7 +79,7 @@ export class CacheClient {
     await pipeline.exec();
   }
 
-  async flushAll() {
+  async flushAll(): Promise<void> {
     await this.client.flushall();
   }
 }

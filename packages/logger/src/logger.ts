@@ -19,14 +19,17 @@ type LogMessageContent = Array<string | Record<string, unknown>>;
 
 export const Logger = {
   log(color: ColorsText, category: string, ...message: LogMessageContent) {
+    // eslint-disable-next-line no-console
     console.log(YELLOW, timestamp(), colorsText[color], `[${category}]`, RESET, ...message);
   },
 
   success(...message: LogMessageContent) {
+    // eslint-disable-next-line no-console
     console.log(YELLOW, timestamp(), GREEN, '[SUCCESS]', RESET, ...message);
   },
 
   info(...message: LogMessageContent) {
+    // eslint-disable-next-line no-console
     console.info(YELLOW, timestamp(), BLUE, '[INFO]', RESET, ...message);
   },
 
@@ -39,11 +42,12 @@ export const Logger = {
   },
 
   debug(...message: LogMessageContent) {
+    // eslint-disable-next-line no-console
     console.debug(YELLOW, timestamp(), CYAN, '[DEBUG]', RESET, ...message);
   },
 };
 
-function timestamp() {
+function timestamp(): string {
   return new Date().toLocaleTimeString('en-US', {
     hour: '2-digit',
     minute: '2-digit',

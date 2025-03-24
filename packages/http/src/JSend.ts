@@ -2,41 +2,41 @@ import type { Pagination } from './paginate';
 
 export type ResponseStatus = 'success' | 'error' | 'warning' | 'info';
 
-type RedirectData = {
+interface RedirectData {
   path: string;
-};
+}
 
-export type JSendSuccess<T> = {
+export interface JSendSuccess<T> {
   status: 'success';
   payload: T; // Data is required and of type T for success
   message: string;
-};
+}
 
-export type JSendRedirect = {
+export interface JSendRedirect {
   status: 'redirect';
   payload: RedirectData;
   message: string;
   redirect: string;
-};
+}
 
-export type JSendInfo<T> = {
+export interface JSendInfo<T> {
   status: 'info';
   payload: T;
   message: string;
-};
+}
 
-export type JSendError = {
+export interface JSendError {
   status: 'error';
   payload?: undefined; // Data is optional and can be of any type for error (for error details)
   message: string;
-};
+}
 
-export type JSendPagination<T> = {
+export interface JSendPagination<T> {
   status: 'success';
   payload: T;
   pagination: Pagination;
   message: string;
-};
+}
 
 export const JSend = {
   success<T>(payload: T, message: string): JSendSuccess<T> {

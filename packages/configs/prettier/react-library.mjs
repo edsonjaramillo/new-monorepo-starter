@@ -10,6 +10,7 @@ const tailwindStylesheetPath = resolve(__dirname, '../tailwind/theme.css');
  */
 export const reactLibraryPrettierConfig = {
   printWidth: 100,
+  quoteProps: 'preserve',
   singleQuote: true,
   semi: true,
   bracketSameLine: true,

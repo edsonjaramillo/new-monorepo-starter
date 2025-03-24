@@ -1,4 +1,17 @@
-import { reactLibraryConfig } from '@repo/configs/eslint/react-library';
+import { antfu } from '@antfu/eslint-config';
 
-/** @type {import("eslint").Linter.Config} */
-export default reactLibraryConfig;
+export default antfu({
+  type: 'lib',
+  typescript: true,
+  react: true,
+  stylistic: {
+    semi: true,
+    quotes: 'single',
+    overrides: {
+      'style/max-len': ['error', { code: 100, ignoreStrings: true }],
+    },
+  },
+  rules: {
+    'react-refresh/only-export-components': 'off',
+  },
+});

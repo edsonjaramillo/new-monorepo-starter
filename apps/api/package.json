@@ -11,7 +11,7 @@
     "clean-cache": "rimraf .turbo",
     "clean-node-modules": "rimraf node_modules",
     "dev": "tsup --env.CONFIG=development",
-    "lint": "eslint src --max-warnings 0",
+    "lint": "eslint . --max-warnings 0",
     "lint:fix": "eslint . --fix",
     "start": "node dist/index.js",
     "test": "vitest run"

@@ -26,7 +26,7 @@
     "clean-node-modules": "rimraf node_modules",
     "dev": "tsup --env.CONFIG=development",
     "generate": "drizzle-kit generate",
-    "lint": "eslint src --max-warnings 0",
+    "lint": "eslint . --max-warnings 0",
     "lint:fix": "eslint . --fix",
     "migrate": "drizzle-kit migrate",
     "prep": "tsup --env.CONFIG=prepare",

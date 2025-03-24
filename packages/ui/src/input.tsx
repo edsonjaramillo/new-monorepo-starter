@@ -1,25 +1,25 @@
+import type { JSX } from 'react';
 import { useFormContext } from 'react-hook-form';
-
 import { cn } from './lib/cn';
 import { Span } from './text';
 
-type InputRequiredProps = {
+interface InputRequiredProps {
   id: string;
   type: React.ComponentProps<'input'>['type'];
   field: string;
   autoComplete: React.ComponentProps<'input'>['autoComplete'];
-};
+}
 
 type InputProps = React.ComponentProps<'input'> & InputRequiredProps;
 export function Input({
-  id,
-  type,
-  field,
   autoComplete,
-  required,
   className,
+  field,
+  id,
+  required,
+  type,
   ...props
-}: InputProps) {
+}: InputProps): JSX.Element {
   const { register } = useFormContext();
   const style = cn(
     'h-9 w-full rounded-base border border-muted bg-transparent px-3 py-2 text-sm text-black shadow-base placeholder:text-gray focus-visible:ring-2 focus-visible:ring-info focus-visible:ring-offset-2 focus-visible:outline-0 disabled:cursor-not-allowed disabled:text-muted disabled:placeholder:text-muted',
@@ -27,10 +27,10 @@ export function Input({
   );
   return (
     <input
-      id={id}
-      type={type}
       autoComplete={autoComplete}
       className={style}
+      id={id}
+      type={type}
       {...register(field, { required })}
       {...props}
     />
@@ -38,7 +38,7 @@ export function Input({
 }
 
 type InputGroupProps = React.ComponentProps<'div'>;
-export function InputGroup({ children, className, ...props }: InputGroupProps) {
+export function InputGroup({ children, className, ...props }: InputGroupProps): JSX.Element {
   const style = cn('grid w-full max-w-form items-center gap-2', className);
   return (
     <div className={style} {...props}>
@@ -48,7 +48,7 @@ export function InputGroup({ children, className, ...props }: InputGroupProps) {
 }
 
 type InputColumnsProps = React.ComponentProps<'div'>;
-export function InputColumns({ children, className, ...props }: InputColumnsProps) {
+export function InputColumns({ children, className, ...props }: InputColumnsProps): JSX.Element {
   const style = cn('grid grid-cols-2 gap-4', className);
   return (
     <div className={style} {...props}>
@@ -58,29 +58,42 @@ export function InputColumns({ children, className, ...props }: InputColumnsProp
 }
 
 type InputDescriptionProps = React.ComponentProps<'span'>;
-export function InputDescription({ className, children, ...props }: InputDescriptionProps) {
+export function InputDescription({
+  className,
+  children,
+  ...props
+}: InputDescriptionProps): JSX.Element {
   return (
-    <Span size="sm" textColor="gray" className={cn(className, 'line-clamp-1')} {...props}>
+    <Span className={cn(className, 'line-clamp-1')} size="sm" textColor="gray" {...props}>
       {children}
     </Span>
   );
 }
 
-type InputErrorRequiredProps = { field: string };
+interface InputErrorRequiredProps {
+  field: string;
+}
 type InputErrorProps = React.ComponentProps<'span'> & InputErrorRequiredProps;
-export function InputError({ className, field, ...props }: InputErrorProps) {
+export function InputError({
+  className,
+  field,
+  ...props
+}: InputErrorProps): JSX.Element | undefined {
   const { formState } = useFormContext();
   const { errors } = formState;
   const error = errors?.[field];
 
-  if (!error || !error.message) return undefined;
+  if (!error || !error.message) {
+    return undefined;
+  }
 
   return (
     <Span
+      className={cn('line-clamp-1 font-semibold', className)}
       size="sm"
       textColor="danger"
-      className={cn('line-clamp-1 font-semibold', className)}
-      {...props}>
+      {...props}
+    >
       {error.message.toString()}
     </Span>
   );

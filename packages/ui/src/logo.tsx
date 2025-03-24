@@ -1,40 +1,42 @@
+import type { JSX } from 'react';
 import { cn } from './lib/cn';
 
 type LogoProps = React.ComponentProps<'svg'>;
 
-export function Logo({ className, ...props }: LogoProps) {
+export function Logo({ className, ...props }: LogoProps): JSX.Element {
   const style = cn('h-6', className);
   return (
     <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 256 318"
-      preserveAspectRatio="xMidYMid"
       className={style}
-      {...props}>
+      preserveAspectRatio="xMidYMid"
+      viewBox="0 0 256 318"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
       <defs>
-        <linearGradient x1="123.779%" y1="0%" x2="123.779%" y2="698.962%" id="a">
-          <stop stopColor="#1E90FF" offset="0%" />
-          <stop stopColor="#FF1E56" offset="100%" />
+        <linearGradient id="a" x1="123.779%" x2="123.779%" y1="0%" y2="698.962%">
+          <stop offset="0%" stopColor="#1E90FF" />
+          <stop offset="100%" stopColor="#FF1E56" />
         </linearGradient>
-        <linearGradient x1="11.486%" y1="-2.194%" x2="11.486%" y2="512.398%" id="b">
-          <stop stopColor="#1E90FF" offset="0%" />
-          <stop stopColor="#FF1E56" offset="100%" />
+        <linearGradient id="b" x1="11.486%" x2="11.486%" y1="-2.194%" y2="512.398%">
+          <stop offset="0%" stopColor="#1E90FF" />
+          <stop offset="100%" stopColor="#FF1E56" />
         </linearGradient>
-        <linearGradient x1="-153.743%" y1="-62.263%" x2="-153.743%" y2="278.479%" id="c">
-          <stop stopColor="#1E90FF" offset="0%" />
-          <stop stopColor="#FF1E56" offset="100%" />
+        <linearGradient id="c" x1="-153.743%" x2="-153.743%" y1="-62.263%" y2="278.479%">
+          <stop offset="0%" stopColor="#1E90FF" />
+          <stop offset="100%" stopColor="#FF1E56" />
         </linearGradient>
-        <linearGradient x1="-153.743%" y1="-178.48%" x2="-153.743%" y2="162.264%" id="d">
-          <stop stopColor="#1E90FF" offset="0%" />
-          <stop stopColor="#FF1E56" offset="100%" />
+        <linearGradient id="d" x1="-153.743%" x2="-153.743%" y1="-178.48%" y2="162.264%">
+          <stop offset="0%" stopColor="#1E90FF" />
+          <stop offset="100%" stopColor="#FF1E56" />
         </linearGradient>
-        <linearGradient x1="11.486%" y1="-412.397%" x2="11.486%" y2="102.194%" id="e">
-          <stop stopColor="#1E90FF" offset="0%" />
-          <stop stopColor="#FF1E56" offset="100%" />
+        <linearGradient id="e" x1="11.486%" x2="11.486%" y1="-412.397%" y2="102.194%">
+          <stop offset="0%" stopColor="#1E90FF" />
+          <stop offset="100%" stopColor="#FF1E56" />
         </linearGradient>
-        <linearGradient x1="123.779%" y1="-598.961%" x2="123.779%" y2="100%" id="f">
-          <stop stopColor="#1E90FF" offset="0%" />
-          <stop stopColor="#FF1E56" offset="100%" />
+        <linearGradient id="f" x1="123.779%" x2="123.779%" y1="-598.961%" y2="100%">
+          <stop offset="0%" stopColor="#1E90FF" />
+          <stop offset="100%" stopColor="#FF1E56" />
         </linearGradient>
       </defs>
       <path

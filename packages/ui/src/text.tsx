@@ -1,16 +1,17 @@
-import { type VariantProps, cva } from 'class-variance-authority';
-
+import type { VariantProps } from 'class-variance-authority';
+import type { JSX } from 'react';
+import { cva } from 'class-variance-authority';
 import { cn } from './lib/cn';
 
 type TextVariants = VariantProps<typeof textVariants>;
 export const textVariants = cva('antialiased', {
   variants: {
     size: {
-      xs: 'text-xs',
-      sm: 'text-sm',
-      base: 'text-base',
-      lg: 'text-lg',
-      xl: 'text-xl',
+      'xs': 'text-xs',
+      'sm': 'text-sm',
+      'base': 'text-base',
+      'lg': 'text-lg',
+      'xl': 'text-xl',
       '2xl': 'text-2xl',
       '3xl': 'text-3xl',
       '4xl': 'text-4xl',
@@ -45,7 +46,14 @@ export const textVariants = cva('antialiased', {
 });
 
 type Header1Props = React.ComponentProps<'h1'> & TextVariants;
-export function H1({ className, children, size, textColor, seperator, ...props }: Header1Props) {
+export function H1({
+  className,
+  children,
+  size,
+  textColor,
+  seperator,
+  ...props
+}: Header1Props): JSX.Element {
   const style = cn(
     textVariants({
       seperator,
@@ -63,7 +71,14 @@ export function H1({ className, children, size, textColor, seperator, ...props }
 }
 
 type Header2Props = React.ComponentProps<'h2'> & TextVariants;
-export function H2({ className, children, size, textColor, seperator, ...props }: Header2Props) {
+export function H2({
+  className,
+  children,
+  size,
+  textColor,
+  seperator,
+  ...props
+}: Header2Props): JSX.Element {
   const style = cn(
     textVariants({
       seperator,
@@ -81,7 +96,14 @@ export function H2({ className, children, size, textColor, seperator, ...props }
 }
 
 type Header3Props = React.ComponentProps<'h3'> & TextVariants;
-export function H3({ className, children, size, textColor, seperator, ...props }: Header3Props) {
+export function H3({
+  className,
+  children,
+  size,
+  textColor,
+  seperator,
+  ...props
+}: Header3Props): JSX.Element {
   const style = cn(
     textVariants({
       seperator,
@@ -99,7 +121,14 @@ export function H3({ className, children, size, textColor, seperator, ...props }
 }
 
 type Header4Props = React.ComponentProps<'h4'> & TextVariants;
-export function H4({ className, children, size, textColor, seperator, ...props }: Header4Props) {
+export function H4({
+  className,
+  children,
+  size,
+  textColor,
+  seperator,
+  ...props
+}: Header4Props): JSX.Element {
   const style = cn(
     textVariants({
       seperator,
@@ -124,7 +153,7 @@ export function Paragraph({
   textColor,
   seperator,
   ...props
-}: ParagraphProps) {
+}: ParagraphProps): JSX.Element {
   const style = cn(
     textVariants({
       seperator,
@@ -142,7 +171,14 @@ export function Paragraph({
 }
 
 type LabelProps = React.ComponentProps<'label'> & TextVariants;
-export function Label({ className, children, size, textColor, seperator, ...props }: LabelProps) {
+export function Label({
+  className,
+  children,
+  size,
+  textColor,
+  seperator,
+  ...props
+}: LabelProps): JSX.Element {
   const style = cn(
     textVariants({
       seperator,
@@ -160,7 +196,14 @@ export function Label({ className, children, size, textColor, seperator, ...prop
 }
 
 type SpanProps = React.ComponentProps<'span'> & TextVariants;
-export function Span({ className, children, size, textColor, seperator, ...props }: SpanProps) {
+export function Span({
+  className,
+  children,
+  size,
+  textColor,
+  seperator,
+  ...props
+}: SpanProps): JSX.Element {
   const style = cn(textVariants({ textColor, size, seperator }), className);
   return (
     <span className={style} {...props}>

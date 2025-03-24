@@ -1,5 +1,5 @@
-import { apiEnv } from './api.env';
 import { hash, verify } from 'argon2';
+import { apiEnv } from './api.env';
 
 const isProduction = apiEnv.NODE_ENV === 'production';
 
@@ -11,6 +11,7 @@ export class Password {
 
     return password;
   }
+
   static async verify(hash: string, password: string): Promise<boolean> {
     if (isProduction) {
       return verify(hash, password);

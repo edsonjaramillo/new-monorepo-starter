@@ -1,9 +1,9 @@
-import { usersTable } from '../schema';
 import type { UserCreate } from '../types';
-import { seedConnection } from './seed.connection';
 import { uuidv7 } from 'uuidv7';
+import { usersTable } from '../schema';
+import { seedConnection } from './seed.connection';
 
-export async function resetUsers() {
+export async function resetUsers(): Promise<void> {
   await seedConnection.delete(usersTable);
 }
 
@@ -51,11 +51,11 @@ const regularUsers = [
   },
 ] as const;
 
-function nameToEmail(firstName: string, lastName: string) {
+function nameToEmail(firstName: string, lastName: string): string {
   return `${firstName.toLowerCase()}.${lastName.toLowerCase()}@example.com`;
 }
 
-export async function createUsers() {
+export async function createUsers(): Promise<void> {
   const usersToCreate: UserCreate[] = [];
   for (const user of adminUsers) {
     usersToCreate.push({
@@ -82,5 +82,4 @@ export async function createUsers() {
   }
 
   await seedConnection.insert(usersTable).values(usersToCreate);
-  return;
 }

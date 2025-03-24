@@ -1,11 +1,5 @@
-import {
-  USERS_COLUMNS,
-  USERS_CREDENTIALS_COLUMNS,
-  USERS_SESSION_COLUMNS,
-} from '../columns/users.columns';
+import type { CacheClient } from '@repo/cache/client';
 import type { Database } from '../database.client';
-import { UsersKeys } from '../keys/users.keys';
-import { usersTable } from '../schema/users.schema';
 import type { RowCount } from '../types/shared.types';
 import type {
   User,
@@ -14,8 +8,14 @@ import type {
   UserSession,
   UserUpdate,
 } from '../types/users.types';
-import type { CacheClient } from '@repo/cache/client';
 import { count, eq } from 'drizzle-orm';
+import {
+  USERS_COLUMNS,
+  USERS_CREDENTIALS_COLUMNS,
+  USERS_SESSION_COLUMNS,
+} from '../columns/users.columns';
+import { UsersKeys } from '../keys/users.keys';
+import { usersTable } from '../schema/users.schema';
 
 export class UsersQueries {
   private readonly database: Database;
@@ -141,12 +141,12 @@ export class UsersQueries {
     return user as UserCredentials;
   }
 
-  async createUser(user: UserCreate) {
+  async createUser(user: UserCreate): Promise<void> {
     await this.cache.cleanPatterns(UsersKeys.onCreate());
     await this.database.insert(usersTable).values(user);
   }
 
-  async updateUser(id: string, email: string, user: UserUpdate) {
+  async updateUser(id: string, email: string, user: UserUpdate): Promise<void> {
     await this.cache.cleanPatterns(UsersKeys.onUpdate(id, email));
     await this.database.update(usersTable).set(user).where(eq(usersTable.id, id));
   }

@@ -1,4 +1,4 @@
-type SEOProps = {
+interface SEOProps {
   title?: string;
   description?: string;
   ogType?: 'website' | 'article' | 'product' | 'profile';
@@ -7,7 +7,7 @@ type SEOProps = {
     width: number;
     height: number;
   };
-};
+}
 
 type SEOTags = React.ComponentProps<'meta'>;
 

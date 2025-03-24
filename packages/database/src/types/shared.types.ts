@@ -1,3 +1,3 @@
-export type RowCount = {
+export interface RowCount {
   amountOfRows: number;
-};
+}

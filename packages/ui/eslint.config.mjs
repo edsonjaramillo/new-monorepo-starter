@@ -1,17 +1,10 @@
 import { antfu } from '@antfu/eslint-config';
+import { REACT_OPTIONS, TURBO_PLUGIN } from '@repo/configs/eslint/antifu';
 
-export default antfu({
-  type: 'lib',
-  typescript: true,
-  react: true,
-  stylistic: {
-    semi: true,
-    quotes: 'single',
-    overrides: {
-      'style/max-len': ['error', { code: 100, ignoreStrings: true }],
-    },
+export default antfu(
+  {
+    type: 'lib',
+    ...REACT_OPTIONS,
   },
-  rules: {
-    'react-refresh/only-export-components': 'off',
-  },
-});
+  TURBO_PLUGIN,
+);

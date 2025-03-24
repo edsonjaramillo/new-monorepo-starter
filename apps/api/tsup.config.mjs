@@ -6,7 +6,7 @@ import {
 import { defineConfig } from 'tsup';
 
 const entry = ['src/index.ts'];
-const onSuccess = 'node dist/index.js';
+const onSuccess = 'node dist/index.mjs';
 
 export default defineConfig((options) => {
   switch (options.env.CONFIG) {

@@ -7,6 +7,7 @@ import turboPlugin from 'eslint-plugin-turbo';
  */
 const BASE_RULES = {
   "node/prefer-global/process": 'off',
+  "style/eol-last": 'off',
 }
 
 /**

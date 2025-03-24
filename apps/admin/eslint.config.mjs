@@ -1,4 +1,10 @@
-import { reactLibraryConfig } from '@repo/configs/eslint/react-library';
+import { antfu } from '@antfu/eslint-config';
+import { REACT_OPTIONS, TURBO_PLUGIN } from '@repo/configs/eslint/antifu';
 
-/** @type {import("eslint").Linter.Config} */
-export default reactLibraryConfig;
+export default antfu(
+  {
+    type: 'app',
+    ...REACT_OPTIONS,
+  },
+  TURBO_PLUGIN,
+);

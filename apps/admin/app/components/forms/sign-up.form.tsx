@@ -1,16 +1,15 @@
-import { standardSchemaResolver } from '@hookform/resolvers/standard-schema';
-import { useNavigate } from '@tanstack/react-router';
-import { FormProvider, useForm } from 'react-hook-form';
-import type * as v from 'valibot';
-
-import { $api } from '@repo/http/fetcher';
 import type { SignUpResponse } from '@repo/http/response/auth';
+import type * as v from 'valibot';
+import { standardSchemaResolver } from '@hookform/resolvers/standard-schema';
+import { $api } from '@repo/http/fetcher';
 import { Button } from '@repo/ui/button';
 import { Form } from '@repo/ui/form';
 import { Input, InputColumns, InputError, InputGroup } from '@repo/ui/input';
 import { Label } from '@repo/ui/text';
 import { toast } from '@repo/ui/toast';
 import { signUpSchema } from '@repo/validation/auth';
+import { useNavigate } from '@tanstack/react-router';
+import { FormProvider, useForm } from 'react-hook-form';
 
 type SignUpFormData = v.InferOutput<typeof signUpSchema>;
 
@@ -109,7 +108,8 @@ export function SignUpForm() {
           type="submit"
           color="primary"
           className="ml-auto block"
-          disabled={formState.isSubmitting}>
+          disabled={formState.isSubmitting}
+        >
           {formState.isSubmitting ? 'Signing up...' : 'Sign Up'}
         </Button>
       </Form>

@@ -1,14 +1,13 @@
-import { ErrorComponent, rootRouteId, useMatch, useRouter } from '@tanstack/react-router';
 import type { ErrorComponentProps } from '@tanstack/react-router';
-
 import { Button } from '@repo/ui/button';
 import { H1, H2 } from '@repo/ui/text';
+import { ErrorComponent, rootRouteId, useMatch, useRouter } from '@tanstack/react-router';
 
 export function DefaultCatchBoundary({ error }: ErrorComponentProps) {
   const router = useRouter();
   const isRoot = useMatch({
     strict: false,
-    select: (state) => state.id === rootRouteId,
+    select: state => state.id === rootRouteId,
   });
 
   console.error('DefaultCatchBoundary Error:', error);

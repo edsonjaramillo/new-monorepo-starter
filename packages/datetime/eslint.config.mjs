@@ -1,4 +1,10 @@
-import { libraryConfig } from '@repo/configs/eslint/library';
+import { antfu } from '@antfu/eslint-config';
+import { BASE_OPTIONS, TURBO_PLUGIN } from '@repo/configs/eslint/antifu';
 
-/** @type {import("eslint").Linter.Config} */
-export default libraryConfig;
+export default antfu(
+  {
+    type: 'lib',
+    ...BASE_OPTIONS,
+  },
+  TURBO_PLUGIN,
+);

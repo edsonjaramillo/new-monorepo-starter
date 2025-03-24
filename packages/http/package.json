@@ -1,9 +1,9 @@
 {
   "name": "@repo/http",
+  "type": "module",
   "version": "0.0.0",
   "private": true,
   "license": "MIT",
-  "type": "module",
   "exports": {
     "./cookies": {
       "types": "./dist/cookies.type.d.ts",
@@ -35,12 +35,14 @@
     "dev": "tsup --env.CONFIG=development",
     "format": "prettier --write --cache .",
     "lint": "eslint src --max-warnings 0",
+    "lint:fix": "eslint src --fix",
     "prep": "tsup --env.CONFIG=prepare"
   },
   "dependencies": {
     "next": "15.2.0"
   },
   "devDependencies": {
+    "@antfu/eslint-config": "4.11.0",
     "@repo/configs": "workspace:*",
     "@repo/database": "workspace:*",
     "@types/node": "22.13.5",

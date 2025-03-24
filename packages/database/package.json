@@ -27,7 +27,7 @@
     "dev": "tsup --env.CONFIG=development",
     "generate": "drizzle-kit generate",
     "lint": "eslint src --max-warnings 0",
-    "lint:fix": "eslint src --fix",
+    "lint:fix": "eslint . --fix",
     "migrate": "drizzle-kit migrate",
     "prep": "tsup --env.CONFIG=prepare",
     "push": "drizzle-kit push",

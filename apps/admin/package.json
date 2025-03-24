@@ -10,8 +10,8 @@
     "check-types": "tsc --noEmit",
     "clean": "rimraf .output .vinxi",
     "dev": "vinxi dev",
-    "format": "prettier --write --cache .",
     "lint": "eslint app --max-warnings 0",
+    "lint:fix": "eslint app --fix",
     "start": "vinxi start"
   },
   "dependencies": {
@@ -44,7 +44,6 @@
     "@types/react": "19.0.8",
     "@types/react-dom": "19.0.3",
     "eslint": "9.21.0",
-    "prettier": "3.5.2",
     "prettier-plugin-tailwindcss": "0.6.11",
     "rimraf": "6.0.1",
     "tailwindcss": "4.0.13",

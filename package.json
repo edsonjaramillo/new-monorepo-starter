@@ -19,6 +19,7 @@
     "format": "turbo format --cache=local:rw,remote:r",
     "graph": "mkdir -p graphs && turbo build --filter=api --graph=graphs/api.jpg --cache=local:rw,remote:r && turbo build --filter=admin --graph=graphs/admin.jpg --cache=local:rw,remote:r",
     "lint": "turbo lint --cache=local:rw,remote:r",
+    "lint:fix": "turbo lint:fix --cache=local:rw,remote:r",
     "prep": "turbo prep --cache=local:rw",
     "seed": "turbo seed",
     "start": "turbo start",

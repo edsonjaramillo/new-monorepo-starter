@@ -61,7 +61,6 @@
     "clean-cache": "rimraf .turbo",
     "clean-node-modules": "rimraf node_modules",
     "dev": "tsup --env.CONFIG=development",
-    "format": "prettier --write --cache .",
     "lint": "eslint src --max-warnings 0",
     "lint:fix": "eslint src --fix",
     "prep": "tsup --env.CONFIG=prepare"
@@ -83,7 +82,6 @@
     "@types/js-cookie": "3.0.6",
     "@types/react": "19.0.8",
     "eslint": "9.21.0",
-    "prettier": "3.5.2",
     "prettier-plugin-tailwindcss": "0.6.11",
     "rimraf": "6.0.1",
     "tailwindcss": "4.0.13",

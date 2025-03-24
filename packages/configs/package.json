@@ -1,9 +1,9 @@
 {
   "name": "@repo/configs",
+  "type": "module",
   "version": "0.0.0",
   "private": true,
   "license": "MIT",
-  "type": "module",
   "exports": {
     "./eslint/antifu": "./eslint/antifu.mjs",
     "./eslint/library": "./eslint/library.js",
@@ -19,9 +19,9 @@
     "clean-node-modules": "rimraf node_modules"
   },
   "devDependencies": {
+    "@antfu/eslint-config": "4.11.0",
     "@eslint/js": "9.19.0",
     "@next/eslint-plugin-next": "15.1.6",
-    "@antfu/eslint-config": "4.11.0",
     "eslint": "9.21.0",
     "eslint-config-prettier": "10.0.1",
     "eslint-plugin-only-warn": "1.1.0",

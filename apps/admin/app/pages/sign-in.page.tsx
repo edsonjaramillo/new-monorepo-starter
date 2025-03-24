@@ -1,9 +1,7 @@
+import { toast } from '@repo/ui/toast';
 import { useNavigate } from '@tanstack/react-router';
 import Cookies from 'js-cookie';
 import { useEffect } from 'react';
-
-import { toast } from '@repo/ui/toast';
-
 import { SignInForm } from '../components/forms/sign-in.form';
 
 export function SignInPage() {

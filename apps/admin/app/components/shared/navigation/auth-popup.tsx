@@ -1,14 +1,12 @@
-import { Link } from '@tanstack/react-router';
-
-import { $api } from '@repo/http/fetcher';
 import type { SignOutResponse } from '@repo/http/response/auth';
+import { $api } from '@repo/http/fetcher';
 import { BlurBackground } from '@repo/ui/blur-background';
 import { Button, buttonVariants } from '@repo/ui/button';
 import { cn } from '@repo/ui/cn';
 import { Separator } from '@repo/ui/seperator';
 import { Span } from '@repo/ui/text';
 import { toast } from '@repo/ui/toast';
-
+import { Link } from '@tanstack/react-router';
 import { useAuthPopup, useSession } from '../../../admin.context';
 
 export function AuthPopup() {
@@ -21,12 +19,15 @@ export function AuthPopup() {
         className={cn(
           'pointer-events-none absolute top-8 right-8 z-modal w-36 rounded-base bg-white p-2 opacity-0 shadow-base transition-opacity duration-base',
           open && 'pointer-events-auto opacity-100',
-        )}>
+        )}
+      >
         <div>
           {session && (
             <div className="flex flex-col">
               <Span className="font-semibold whitespace-nowrap" size="sm">
-                {session.firstName} {session.lastName}
+                {session.firstName}
+                {' '}
+                {session.lastName}
               </Span>
               <Span className="text-sm" size="sm">
                 {session.role}
@@ -47,13 +48,15 @@ export function AuthPopup() {
               <Link
                 to="/sign-in"
                 className={cn(buttonVariants({ color: 'info', width: 'full' }))}
-                onClick={() => toggle()}>
+                onClick={toggle}
+              >
                 Sign In
               </Link>
               <Link
                 to="/sign-up"
                 className={cn(buttonVariants({ color: 'success', width: 'full' }))}
-                onClick={() => toggle()}>
+                onClick={toggle}
+              >
                 Sign Up
               </Link>
             </div>
@@ -67,13 +70,14 @@ export function AuthPopup() {
                 toggle();
                 signOut();
                 clearSession();
-              }}>
+              }}
+            >
               Sign Out
             </Button>
           )}
         </div>
       </div>
-      <BlurBackground active={open} ariaLabel="Close auth popup" onClick={() => toggle()} />
+      <BlurBackground active={open} ariaLabel="Close auth popup" onClick={toggle} />
     </>
   );
 }
@@ -81,5 +85,4 @@ export function AuthPopup() {
 async function signOut() {
   const { status, message } = await $api.get<SignOutResponse>('/user/auth/sign-out');
   toast({ status, title: message });
-  return;
 }

@@ -1,17 +1,15 @@
-import { standardSchemaResolver } from '@hookform/resolvers/standard-schema';
-import { useNavigate } from '@tanstack/react-router';
-import { FormProvider, useForm } from 'react-hook-form';
-import type * as v from 'valibot';
-
-import { $api } from '@repo/http/fetcher';
 import type { SignInResponse } from '@repo/http/response/auth';
+import type * as v from 'valibot';
+import { standardSchemaResolver } from '@hookform/resolvers/standard-schema';
+import { $api } from '@repo/http/fetcher';
 import { Button } from '@repo/ui/button';
 import { Form } from '@repo/ui/form';
 import { Input, InputError, InputGroup } from '@repo/ui/input';
 import { Label } from '@repo/ui/text';
 import { toast } from '@repo/ui/toast';
 import { signInSchema } from '@repo/validation/auth';
-
+import { useNavigate } from '@tanstack/react-router';
+import { FormProvider, useForm } from 'react-hook-form';
 import { useSession } from '../../admin.context';
 
 type SignInFormData = v.InferOutput<typeof signInSchema>;
@@ -67,7 +65,8 @@ export function SignInForm() {
           type="submit"
           color="primary"
           className="ml-auto block"
-          disabled={formState.isSubmitting}>
+          disabled={formState.isSubmitting}
+        >
           {formState.isSubmitting ? 'Signing in...' : 'Sign In'}
         </Button>
       </Form>

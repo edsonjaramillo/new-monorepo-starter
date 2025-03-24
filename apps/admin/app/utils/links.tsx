@@ -1,8 +1,8 @@
-export type NavigationLink = {
+export interface NavigationLink {
   label: string;
   href: string;
   icon: React.ReactNode;
-};
+}
 
 export const navigationLinks: NavigationLink[] = [
   {
@@ -27,7 +27,8 @@ function BaseIcon({ children, ...props }: BaseIconProps) {
       strokeWidth={1.5}
       stroke="currentColor"
       className="size-5 transition-colors duration-base group-hover/nav-link:text-primary"
-      {...props}>
+      {...props}
+    >
       {children}
     </svg>
   );

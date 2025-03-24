@@ -1,9 +1,9 @@
 {
   "name": "@repo/ui",
+  "type": "module",
   "version": "0.0.0",
   "private": true,
   "license": "MIT",
-  "type": "module",
   "exports": {
     "./cn": {
       "types": "./dist/lib/cn.d.ts",
@@ -76,11 +76,13 @@
     "tailwind-merge": "3.0.1"
   },
   "devDependencies": {
+    "@antfu/eslint-config": "4.11.0",
     "@repo/configs": "workspace:*",
     "@tailwindcss/postcss": "4.0.6",
     "@types/js-cookie": "3.0.6",
     "@types/react": "19.0.8",
     "eslint": "9.21.0",
+    "eslint-plugin-format": "^1.0.1",
     "prettier": "3.5.2",
     "prettier-plugin-tailwindcss": "0.6.11",
     "rimraf": "6.0.1",

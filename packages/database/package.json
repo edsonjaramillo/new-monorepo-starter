@@ -1,9 +1,9 @@
 {
   "name": "@repo/database",
+  "type": "module",
   "version": "0.0.0",
   "private": true,
   "license": "MIT",
-  "type": "module",
   "exports": {
     "./client": {
       "types": "./dist/database.client.d.ts",
@@ -28,6 +28,7 @@
     "format": "prettier --write --cache .",
     "generate": "drizzle-kit generate",
     "lint": "eslint src --max-warnings 0",
+    "lint:fix": "eslint src --fix",
     "migrate": "drizzle-kit migrate",
     "prep": "tsup --env.CONFIG=prepare",
     "push": "drizzle-kit push",
@@ -44,6 +45,7 @@
     "valibot": "1.0.0-rc.3"
   },
   "devDependencies": {
+    "@antfu/eslint-config": "4.11.0",
     "@repo/configs": "workspace:*",
     "@types/node": "22.13.5",
     "drizzle-kit": "0.30.4",

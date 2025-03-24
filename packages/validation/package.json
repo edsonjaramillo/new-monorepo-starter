@@ -1,9 +1,9 @@
 {
   "name": "@repo/validation",
+  "type": "module",
   "version": "0.0.0",
   "private": true,
   "license": "MIT",
-  "type": "module",
   "exports": {
     "./auth": {
       "types": "./dist/forms/auth.validation.d.ts",
@@ -23,12 +23,14 @@
     "dev": "tsup --env.CONFIG=development",
     "format": "prettier --write --cache .",
     "lint": "eslint src --max-warnings 0",
+    "lint:fix": "eslint src --fix",
     "prep": "tsup --env.CONFIG=prepare"
   },
   "dependencies": {
     "valibot": "1.0.0-rc.3"
   },
   "devDependencies": {
+    "@antfu/eslint-config": "4.11.0",
     "@repo/configs": "workspace:*",
     "@types/node": "22.13.5",
     "eslint": "9.21.0",

@@ -175,6 +175,9 @@ importers:
         specifier: 1.0.0-rc.3
         version: 1.0.0-rc.3(typescript@5.7.3)
     devDependencies:
+      '@antfu/eslint-config':
+        specifier: 4.11.0
+        version: 4.11.0(@typescript-eslint/utils@8.27.0(eslint@9.21.0(jiti@2.4.2))(typescript@5.7.3))(@vue/compiler-sfc@3.5.13)(eslint-plugin-format@1.0.1(eslint@9.21.0(jiti@2.4.2)))(eslint-plugin-react-hooks@5.2.0(eslint@9.21.0(jiti@2.4.2)))(eslint@9.21.0(jiti@2.4.2))(typescript@5.7.3)(vitest@3.0.8(@types/debug@4.1.12)(@types/node@22.13.5)(jiti@2.4.2)(lightningcss@1.29.1)(terser@5.39.0)(tsx@4.19.2)(yaml@2.7.0))
       '@repo/configs':
         specifier: workspace:*
         version: link:../../packages/configs
@@ -218,6 +221,9 @@ importers:
         specifier: 5.5.0
         version: 5.5.0
     devDependencies:
+      '@antfu/eslint-config':
+        specifier: 4.11.0
+        version: 4.11.0(@typescript-eslint/utils@8.27.0(eslint@9.21.0(jiti@2.4.2))(typescript@5.7.3))(@vue/compiler-sfc@3.5.13)(eslint-plugin-format@1.0.1(eslint@9.21.0(jiti@2.4.2)))(eslint-plugin-react-hooks@5.2.0(eslint@9.21.0(jiti@2.4.2)))(eslint@9.21.0(jiti@2.4.2))(typescript@5.7.3)(vitest@3.0.8(@types/debug@4.1.12)(@types/node@22.13.5)(jiti@2.4.2)(lightningcss@1.29.1)(terser@5.39.0)(tsx@4.19.2)(yaml@2.7.0))
       '@repo/configs':
         specifier: workspace:*
         version: link:../configs
@@ -300,6 +306,9 @@ importers:
         specifier: 5.0.3
         version: 5.0.3(@types/react@19.0.8)(react@19.0.0)(use-sync-external-store@1.4.0(react@19.0.0))
     devDependencies:
+      '@antfu/eslint-config':
+        specifier: 4.11.0
+        version: 4.11.0(@typescript-eslint/utils@8.27.0(eslint@9.21.0(jiti@2.4.2))(typescript@5.7.3))(@vue/compiler-sfc@3.5.13)(eslint-plugin-format@1.0.1(eslint@9.21.0(jiti@2.4.2)))(eslint-plugin-react-hooks@5.2.0(eslint@9.21.0(jiti@2.4.2)))(eslint@9.21.0(jiti@2.4.2))(typescript@5.7.3)(vitest@3.0.8(@types/debug@4.1.12)(@types/node@22.13.5)(jiti@2.4.2)(lightningcss@1.29.1)(terser@5.39.0)(tsx@4.19.2)(yaml@2.7.0))
       '@repo/configs':
         specifier: workspace:*
         version: link:../configs
@@ -346,6 +355,9 @@ importers:
         specifier: 1.0.0-rc.3
         version: 1.0.0-rc.3(typescript@5.7.3)
     devDependencies:
+      '@antfu/eslint-config':
+        specifier: 4.11.0
+        version: 4.11.0(@typescript-eslint/utils@8.27.0(eslint@9.21.0(jiti@2.4.2))(typescript@5.7.3))(@vue/compiler-sfc@3.5.13)(eslint-plugin-format@1.0.1(eslint@9.21.0(jiti@2.4.2)))(eslint-plugin-react-hooks@5.2.0(eslint@9.21.0(jiti@2.4.2)))(eslint@9.21.0(jiti@2.4.2))(typescript@5.7.3)(vitest@3.0.8(@types/debug@4.1.12)(@types/node@22.13.5)(jiti@2.4.2)(lightningcss@1.29.1)(terser@5.39.0)(tsx@4.19.2)(yaml@2.7.0))
       '@repo/configs':
         specifier: workspace:*
         version: link:../configs
@@ -380,6 +392,9 @@ importers:
         specifier: 1.11.13
         version: 1.11.13
     devDependencies:
+      '@antfu/eslint-config':
+        specifier: 4.11.0
+        version: 4.11.0(@typescript-eslint/utils@8.27.0(eslint@9.21.0(jiti@2.4.2))(typescript@5.7.3))(@vue/compiler-sfc@3.5.13)(eslint-plugin-format@1.0.1(eslint@9.21.0(jiti@2.4.2)))(eslint-plugin-react-hooks@5.2.0(eslint@9.21.0(jiti@2.4.2)))(eslint@9.21.0(jiti@2.4.2))(typescript@5.7.3)(vitest@3.0.8(@types/debug@4.1.12)(@types/node@22.13.5)(jiti@2.4.2)(lightningcss@1.29.1)(terser@5.39.0)(tsx@4.19.2)(yaml@2.7.0))
       '@repo/configs':
         specifier: workspace:*
         version: link:../configs
@@ -408,6 +423,9 @@ importers:
         specifier: 15.2.0
         version: 15.2.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
     devDependencies:
+      '@antfu/eslint-config':
+        specifier: 4.11.0
+        version: 4.11.0(@typescript-eslint/utils@8.27.0(eslint@9.21.0(jiti@2.4.2))(typescript@5.7.3))(@vue/compiler-sfc@3.5.13)(eslint-plugin-format@1.0.1(eslint@9.21.0(jiti@2.4.2)))(eslint-plugin-react-hooks@5.2.0(eslint@9.21.0(jiti@2.4.2)))(eslint@9.21.0(jiti@2.4.2))(typescript@5.7.3)(vitest@3.0.8(@types/debug@4.1.12)(@types/node@22.13.5)(jiti@2.4.2)(lightningcss@1.29.1)(terser@5.39.0)(tsx@4.19.2)(yaml@2.7.0))
       '@repo/configs':
         specifier: workspace:*
         version: link:../configs
@@ -435,6 +453,9 @@ importers:
 
   packages/logger:
     devDependencies:
+      '@antfu/eslint-config':
+        specifier: 4.11.0
+        version: 4.11.0(@typescript-eslint/utils@8.27.0(eslint@9.21.0(jiti@2.4.2))(typescript@5.7.3))(@vue/compiler-sfc@3.5.13)(eslint-plugin-format@1.0.1(eslint@9.21.0(jiti@2.4.2)))(eslint-plugin-react-hooks@5.2.0(eslint@9.21.0(jiti@2.4.2)))(eslint@9.21.0(jiti@2.4.2))(typescript@5.7.3)(vitest@3.0.8(@types/debug@4.1.12)(@types/node@22.13.5)(jiti@2.4.2)(lightningcss@1.29.1)(terser@5.39.0)(tsx@4.19.2)(yaml@2.7.0))
       '@repo/configs':
         specifier: workspace:*
         version: link:../configs
@@ -466,6 +487,9 @@ importers:
         specifier: 5.67.1
         version: 5.67.1(react@19.0.0)
     devDependencies:
+      '@antfu/eslint-config':
+        specifier: 4.11.0
+        version: 4.11.0(@typescript-eslint/utils@8.27.0(eslint@9.21.0(jiti@2.4.2))(typescript@5.7.3))(@vue/compiler-sfc@3.5.13)(eslint-plugin-format@1.0.1(eslint@9.21.0(jiti@2.4.2)))(eslint-plugin-react-hooks@5.2.0(eslint@9.21.0(jiti@2.4.2)))(eslint@9.21.0(jiti@2.4.2))(typescript@5.7.3)(vitest@3.0.8(@types/debug@4.1.12)(@types/node@22.13.5)(jiti@2.4.2)(lightningcss@1.29.1)(terser@5.39.0)(tsx@4.19.2)(yaml@2.7.0))
       '@repo/configs':
         specifier: workspace:*
         version: link:../configs
@@ -494,6 +518,9 @@ importers:
         specifier: 1.112.17
         version: 1.112.17(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
     devDependencies:
+      '@antfu/eslint-config':
+        specifier: 4.11.0
+        version: 4.11.0(@typescript-eslint/utils@8.27.0(eslint@9.21.0(jiti@2.4.2))(typescript@5.7.3))(@vue/compiler-sfc@3.5.13)(eslint-plugin-format@1.0.1(eslint@9.21.0(jiti@2.4.2)))(eslint-plugin-react-hooks@5.2.0(eslint@9.21.0(jiti@2.4.2)))(eslint@9.21.0(jiti@2.4.2))(typescript@5.7.3)(vitest@3.0.8(@types/debug@4.1.12)(@types/node@22.13.5)(jiti@2.4.2)(lightningcss@1.29.1)(terser@5.39.0)(tsx@4.19.2)(yaml@2.7.0))
       '@repo/configs':
         specifier: workspace:*
         version: link:../configs
@@ -589,6 +616,9 @@ importers:
         specifier: 1.0.0-rc.3
         version: 1.0.0-rc.3(typescript@5.7.3)
     devDependencies:
+      '@antfu/eslint-config':
+        specifier: 4.11.0
+        version: 4.11.0(@typescript-eslint/utils@8.27.0(eslint@9.21.0(jiti@2.4.2))(typescript@5.7.3))(@vue/compiler-sfc@3.5.13)(eslint-plugin-format@1.0.1(eslint@9.21.0(jiti@2.4.2)))(eslint-plugin-react-hooks@5.2.0(eslint@9.21.0(jiti@2.4.2)))(eslint@9.21.0(jiti@2.4.2))(typescript@5.7.3)(vitest@3.0.8(@types/debug@4.1.12)(@types/node@22.13.5)(jiti@2.4.2)(lightningcss@1.29.1)(terser@5.39.0)(tsx@4.19.2)(yaml@2.7.0))
       '@repo/configs':
         specifier: workspace:*
         version: link:../configs

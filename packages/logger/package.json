@@ -1,9 +1,9 @@
 {
   "name": "@repo/logger",
+  "type": "module",
   "version": "0.0.0",
   "private": true,
   "license": "MIT",
-  "type": "module",
   "exports": {
     ".": {
       "types": "./dist/logger.d.ts",
@@ -19,9 +19,11 @@
     "dev": "tsup --env.CONFIG=development",
     "format": "prettier --write --cache .",
     "lint": "eslint src --max-warnings 0",
+    "lint:fix": "eslint src --fix",
     "prep": "tsup --env.CONFIG=prepare"
   },
   "devDependencies": {
+    "@antfu/eslint-config": "4.11.0",
     "@repo/configs": "workspace:*",
     "@types/node": "22.13.5",
     "eslint": "9.21.0",

@@ -1,3 +1,4 @@
+import type { JSX } from 'react';
 import { cn } from './lib/cn';
 
 export type BlurBackgroundProps = React.ComponentProps<'button'> & {
@@ -13,7 +14,7 @@ export function BlurBackground({
   onClick,
   className,
   ...props
-}: BlurBackgroundProps) {
+}: BlurBackgroundProps): JSX.Element {
   const style = cn(
     'fixed top-0 left-0 h-full w-full transition-all duration-base',
     active ? 'cursor-pointer backdrop-blur-base' : 'pointer-events-none backdrop-blur-none',
@@ -22,11 +23,11 @@ export function BlurBackground({
 
   return (
     <button
-      type="button"
-      aria-label={ariaLabel}
       aria-expanded={active}
-      onClick={onClick}
+      aria-label={ariaLabel}
       className={style}
+      onClick={onClick}
+      type="button"
       {...props}
     />
   );

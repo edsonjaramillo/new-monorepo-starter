@@ -1,11 +1,12 @@
-import { type VariantProps, cva } from 'class-variance-authority';
-
+import type { VariantProps } from 'class-variance-authority';
+import type { JSX } from 'react';
+import { cva } from 'class-variance-authority';
 import { cn } from './lib/cn';
 
 type ButtonVariants = VariantProps<typeof buttonVariants>;
-type RequiredButtonProps = {
+interface RequiredButtonProps {
   type: React.ComponentProps<'button'>['type'];
-};
+}
 
 export type ButtonProps = React.ComponentProps<'button'> & RequiredButtonProps & ButtonVariants;
 
@@ -39,10 +40,18 @@ export const buttonVariants = cva(
   },
 );
 
-export function Button({ className, children, color, disabled, width, ...props }: ButtonProps) {
+export function Button({
+  type,
+  className,
+  children,
+  color,
+  disabled,
+  width,
+  ...props
+}: ButtonProps): JSX.Element {
   const style = buttonVariants({ color, disabled, width });
   return (
-    <button className={cn(style, className)} disabled={disabled} {...props}>
+    <button className={cn(style, className)} disabled={disabled} type={type} {...props}>
       {children}
     </button>
   );

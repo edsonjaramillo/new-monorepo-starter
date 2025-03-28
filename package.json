@@ -19,7 +19,7 @@
     "lint:fix": "turbo lint:fix",
     "manypkg:check": "manypkg check",
     "manypkg:fix": "manypkg fix",
-    "prep": "turbo prep --cache=local:rw",
+    "prep": "turbo prep",
     "prepare": "husky",
     "seed": "turbo seed",
     "start": "turbo start",

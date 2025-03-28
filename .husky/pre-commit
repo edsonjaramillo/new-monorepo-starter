@@ -1,2 +1,3 @@
+pnpm manypkg:check
 pnpm lint
 pnpm check-types

@@ -12,7 +12,7 @@ interface AccordionContextType {
 
 const AccordionContext = createContext<AccordionContextType>({
   isOpen: false,
-  setIsOpen: () => { },
+  setIsOpen: () => {},
   headerRef: null,
   contentRef: null,
 });

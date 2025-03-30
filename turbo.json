@@ -75,7 +75,7 @@
       "cache": true
     },
     "lint:fix": {
-      "cache": false
+      "cache": true
     },
     "seed": {
       "cache": false

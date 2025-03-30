@@ -2,7 +2,9 @@ import { buttonVariants } from '@repo/ui/button';
 import { H1, Span } from '@repo/ui/text';
 import { Link } from '@tanstack/react-router';
 
-interface NotFoundProps { children?: React.ReactNode }
+interface NotFoundProps {
+  children?: React.ReactNode;
+}
 export function NotFound({ children }: NotFoundProps) {
   return (
     <div className="flex h-[80vh] flex-col items-center justify-center gap-4">

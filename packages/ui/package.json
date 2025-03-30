@@ -57,12 +57,13 @@
   "scripts": {
     "build": "tsup --env.CONFIG=production",
     "check-types": "tsc --noEmit",
-    "clean": "rimraf dist",
     "clean-cache": "rimraf .turbo",
     "clean-node-modules": "rimraf node_modules",
+    "clean": "rimraf dist",
     "dev": "tsup --env.CONFIG=development",
-    "lint": "eslint . --max-warnings 0",
+    "format": "prettier --write . && eslint . --fix",
     "lint:fix": "eslint . --fix",
+    "lint": "eslint . --max-warnings 0",
     "prep": "tsup --env.CONFIG=prepare"
   },
   "dependencies": {
@@ -82,6 +83,7 @@
     "@types/js-cookie": "3.0.6",
     "@types/react": "19.0.8",
     "eslint": "9.21.0",
+    "prettier": "3.5.3",
     "prettier-plugin-tailwindcss": "0.6.11",
     "rimraf": "6.0.1",
     "tailwindcss": "4.0.13",

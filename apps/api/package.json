@@ -11,7 +11,7 @@
     "clean-cache": "rimraf .turbo",
     "clean-node-modules": "rimraf node_modules",
     "dev": "tsup --env.CONFIG=development",
-    "format": "prettier --write . && eslint . --fix",
+    "format": "prettier --write . --cache && eslint . --fix",
     "lint": "eslint . --max-warnings 0",
     "lint:fix": "eslint . --fix",
     "start": "node dist/index.js",

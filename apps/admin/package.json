@@ -10,7 +10,7 @@
     "check-types": "tsc --noEmit",
     "clean": "rimraf .output .vinxi",
     "dev": "vinxi dev",
-    "format": "prettier --write . && eslint . --fix",
+    "format": "prettier --write . --cache && eslint . --fix",
     "lint": "eslint . --max-warnings 0",
     "lint:fix": "eslint . --fix",
     "start": "vinxi start"

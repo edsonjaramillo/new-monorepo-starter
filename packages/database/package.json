@@ -25,7 +25,7 @@
     "clean-cache": "rimraf .turbo",
     "clean-node-modules": "rimraf node_modules",
     "dev": "tsup --env.CONFIG=development",
-    "format": "prettier --write . && eslint . --fix",
+    "format": "prettier --write . --cache && eslint . --fix",
     "generate": "drizzle-kit generate",
     "lint": "eslint . --max-warnings 0",
     "lint:fix": "eslint . --fix",

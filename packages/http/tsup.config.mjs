@@ -7,6 +7,7 @@ import { defineConfig } from 'tsup';
 
 const entry = [
   'src/response/auth.response.ts',
+  'src/response/health.response.ts',
   'src/cookies.type.ts',
   'src/fetcher.ts',
   'src/JSend.ts',

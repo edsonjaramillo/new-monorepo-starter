@@ -1,3 +1,3 @@
-import { reactLibraryPrettierConfig } from '@repo/configs/prettier/react-library';
+import { reactLibraryPrettierConfig } from '@repo/configs/prettier';
 
 export default reactLibraryPrettierConfig;

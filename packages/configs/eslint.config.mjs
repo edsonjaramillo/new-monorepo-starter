@@ -1,5 +1,5 @@
 import { antfu } from '@antfu/eslint-config';
-import { BASE_OPTIONS, TURBO_PLUGIN } from './eslint/antifu.mjs';
+import { BASE_OPTIONS, TURBO_PLUGIN } from './eslint/antfu.mjs';
 
 export default antfu(
   {

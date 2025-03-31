@@ -7,4 +7,5 @@ export const libraryPrettierConfig = {
   singleQuote: true,
   semi: true,
   bracketSameLine: true,
+  plugins: ['prettier-plugin-packagejson'],
 };

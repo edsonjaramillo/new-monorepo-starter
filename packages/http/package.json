@@ -24,6 +24,10 @@
     "./response/auth": {
       "types": "./dist/response/auth.response.d.ts",
       "import": "./dist/response/auth.response.mjs"
+    },
+    "./response/health": {
+      "types": "./dist/response/health.response.d.ts",
+      "import": "./dist/response/health.response.mjs"
     }
   },
   "scripts": {
@@ -33,6 +37,7 @@
     "clean-cache": "rimraf .turbo",
     "clean-node-modules": "rimraf node_modules",
     "dev": "tsup --env.CONFIG=development",
+    "format": "prettier --write . && eslint . --fix",
     "lint": "eslint . --max-warnings 0",
     "lint:fix": "eslint . --fix",
     "prep": "tsup --env.CONFIG=prepare"
@@ -43,6 +48,8 @@
     "@repo/database": "workspace:*",
     "@types/node": "22.13.5",
     "eslint": "9.21.0",
+    "prettier": "3.5.3",
+    "prettier-plugin-packagejson": "2.5.10",
     "rimraf": "6.0.1",
     "tsup": "8.3.6",
     "typescript": "5.7.3"

@@ -17,5 +17,5 @@ export const reactLibraryPrettierConfig = {
   tailwindStylesheet: tailwindStylesheetPath,
   tailwindAttributes: ['cn', 'cva'],
   tailwindFunctions: ['cn', 'cva'],
-  plugins: ['prettier-plugin-tailwindcss'],
+  plugins: ['prettier-plugin-packagejson', 'prettier-plugin-tailwindcss'],
 };

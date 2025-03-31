@@ -4,7 +4,10 @@ import { create } from 'zustand';
 
 export type SessionContext = ReturnType<typeof createSessionContext>;
 
-interface State { session: UserSession | undefined }
+interface State {
+  session: UserSession | undefined;
+}
+
 interface Actions {
   setSession: (session: UserSession) => void;
   clearSession: () => void;

@@ -3,7 +3,10 @@ import { create } from 'zustand';
 
 export type AuthPopupContext = ReturnType<typeof createAuthPopupContext>;
 
-interface State { open: boolean }
+interface State {
+  open: boolean;
+}
+
 interface Actions {
   toggle: () => void;
 }

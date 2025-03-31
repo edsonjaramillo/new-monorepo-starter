@@ -3,7 +3,10 @@ import { create } from 'zustand';
 
 export type MenuContext = ReturnType<typeof createMenuContext>;
 
-interface State { isOpen: boolean }
+interface State {
+  isOpen: boolean;
+}
+
 interface Actions {
   open: () => void;
   close: () => void;

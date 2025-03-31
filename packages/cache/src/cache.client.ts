@@ -79,6 +79,10 @@ export class CacheClient {
     await pipeline.exec();
   }
 
+  async ping(): Promise<'PONG'> {
+    return await this.client.ping();
+  }
+
   async flushAll(): Promise<void> {
     await this.client.flushall();
   }

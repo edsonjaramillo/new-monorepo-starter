@@ -1,9 +1,8 @@
-import { loadEnv } from 'vite';
 import { defineConfig } from 'vitest/config';
+import 'dotenv/config';
 
 export default defineConfig(() => ({
   test: {
-    silent: true,
-    env: loadEnv('', process.cwd(), ''),
+    env: process.env,
   },
 }));

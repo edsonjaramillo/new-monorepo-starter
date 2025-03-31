@@ -15,8 +15,9 @@
   },
   "scripts": {
     "clean-node-modules": "rimraf node_modules",
-    "lint:fix": "eslint . --fix",
-    "lint": "eslint . --max-warnings 0"
+    "format": "prettier --write . && eslint . --fix",
+    "lint": "eslint . --max-warnings 0",
+    "lint:fix": "eslint . --fix"
   },
   "devDependencies": {
     "@antfu/eslint-config": "4.11.0",
@@ -25,6 +26,9 @@
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.19",
     "eslint-plugin-turbo": "2.3.4",
+    "prettier": "3.5.3",
+    "prettier-plugin-packagejson": "2.5.10",
+    "prettier-plugin-tailwindcss": "0.6.11",
     "rimraf": "6.0.1",
     "tailwindcss": "4.0.13",
     "tsup": "8.3.6",

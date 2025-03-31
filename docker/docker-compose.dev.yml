@@ -1,4 +1,4 @@
-name: 'monorepo-starter'
+name: monorepo-starter
 
 volumes:
   postgres_data:
@@ -6,8 +6,8 @@ volumes:
 
 services:
   postgres:
-    hostname: 'monorepo-starter-postgres'
-    container_name: 'monorepo-starter-postgres'
+    hostname: monorepo-starter-postgres
+    container_name: monorepo-starter-postgres
     image: postgres:17.2-alpine
     ports:
       - 5432:5432
@@ -24,8 +24,8 @@ services:
       - .env
     restart: unless-stopped
   redis:
-    hostname: 'monorepo-starter-redis'
-    container_name: 'monorepo-starter-redis'
+    hostname: monorepo-starter-redis
+    container_name: monorepo-starter-redis
     image: redis:7.4.2-alpine
     ports:
       - 6379:6379

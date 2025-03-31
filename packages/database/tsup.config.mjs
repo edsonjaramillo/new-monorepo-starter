@@ -1,8 +1,4 @@
-import {
-  developmentTSupConfig,
-  prepareTSupConfig,
-  productionTSupConfig,
-} from '@repo/configs/tsup/configs';
+import { developmentTSupConfig, prepareTSupConfig, productionTSupConfig } from '@repo/configs/tsup';
 import { defineConfig } from 'tsup';
 
 const entry = ['src/database.client.ts', 'src/queries/index.ts', 'src/types/index.ts'];

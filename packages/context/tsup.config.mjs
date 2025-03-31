@@ -1,8 +1,4 @@
-import {
-  developmentTSupConfig,
-  prepareTSupConfig,
-  productionTSupConfig,
-} from '@repo/configs/tsup/configs';
+import { developmentTSupConfig, prepareTSupConfig, productionTSupConfig } from '@repo/configs/tsup';
 import { defineConfig } from 'tsup';
 
 const entry = ['src/auth-popup.context.ts', 'src/menu.context.ts', 'src/session.context.ts'];

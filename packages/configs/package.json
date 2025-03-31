@@ -5,13 +5,12 @@
   "private": true,
   "license": "MIT",
   "exports": {
-    "./eslint/antifu": "./eslint/antifu.mjs",
-    "./prettier/library": "./prettier/library.mjs",
-    "./prettier/react-library": "./prettier/react-library.mjs",
+    "./antfu": "./eslint/antfu.mjs",
+    "./prettier": "./prettier/prettier.mjs",
     "./tailwind/theme.css": "./tailwind/theme.css",
     "./tsconfig/library": "./tsconfig/library.json",
     "./tsconfig/react-library": "./tsconfig/react-library.json",
-    "./tsup/configs": "./tsup/configs.mjs"
+    "./tsup": "./tsup/configs.mjs"
   },
   "scripts": {
     "clean-node-modules": "rimraf node_modules",

@@ -1,3 +1,3 @@
-import { libraryPrettierConfig } from '@repo/configs/prettier/library';
+import { libraryPrettierConfig } from '@repo/configs/prettier';
 
 export default libraryPrettierConfig;

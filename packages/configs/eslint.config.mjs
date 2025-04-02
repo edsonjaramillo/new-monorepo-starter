@@ -1,10 +1,3 @@
-import { antfu } from '@antfu/eslint-config';
-import { BASE_OPTIONS, TURBO_PLUGIN } from './eslint/antfu.mjs';
+import { LIBRARY_STANDARD_LINT_CONFIG } from './eslint/antfu.mjs';
 
-export default antfu(
-  {
-    type: 'lib',
-    ...BASE_OPTIONS,
-  },
-  TURBO_PLUGIN,
-);
+export default LIBRARY_STANDARD_LINT_CONFIG;

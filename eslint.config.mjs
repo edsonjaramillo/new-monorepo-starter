@@ -1,11 +1,3 @@
-import { antfu } from '@antfu/eslint-config';
-import { BASE_OPTIONS, TURBO_PLUGIN } from '@repo/configs/antfu';
+import { MONOREPO_LINT_CONFIG } from '@repo/configs/antfu';
 
-export default antfu(
-  {
-    type: 'lib',
-    ignores: ['apps/*', 'packages/*'],
-    ...BASE_OPTIONS,
-  },
-  TURBO_PLUGIN,
-);
+export default MONOREPO_LINT_CONFIG;

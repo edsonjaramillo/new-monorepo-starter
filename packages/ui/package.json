@@ -71,7 +71,7 @@
     "@repo/http": "workspace:*",
     "class-variance-authority": "0.7.1",
     "clsx": "2.1.1",
-    "react": "19.0.0",
+    "react": "19.1.0",
     "react-hook-form": "7.54.2",
     "sonner": "2.0.1",
     "tailwind-merge": "3.0.1"
@@ -81,7 +81,7 @@
     "@repo/configs": "workspace:*",
     "@tailwindcss/postcss": "4.0.6",
     "@types/js-cookie": "3.0.6",
-    "@types/react": "19.0.8",
+    "@types/react": "19.1.0",
     "eslint": "9.21.0",
     "prettier": "3.5.3",
     "prettier-plugin-packagejson": "2.5.10",

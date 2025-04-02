@@ -29,7 +29,7 @@
     "@antfu/eslint-config": "4.11.0",
     "@repo/configs": "workspace:*",
     "@types/node": "22.13.5",
-    "@types/react": "19.0.8",
+    "@types/react": "19.1.0",
     "eslint": "9.21.0",
     "prettier": "3.5.3",
     "prettier-plugin-packagejson": "2.5.10",

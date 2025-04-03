@@ -23,7 +23,7 @@
     "prep": "tsup --env.CONFIG=prepare"
   },
   "dependencies": {
-    "@tanstack/react-router": "1.112.17"
+    "@tanstack/react-router": "1.114.32"
   },
   "devDependencies": {
     "@antfu/eslint-config": "4.11.0",

@@ -1,8 +1,6 @@
 import { exit } from 'node:process';
-import { config } from 'dotenv';
 import { createUsers, resetUsers } from './users.seed';
-
-config();
+import 'dotenv/config';
 
 async function main(): Promise<void> {
   await resetUsers();

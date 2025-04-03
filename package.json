@@ -19,7 +19,7 @@
     "docker:dev:up": "docker compose -f ./docker/docker-compose.dev.yml up -d",
     "format": "prettier --write . --cache && eslint . --fix && turbo format",
     "graph": "mkdir -p graphs && turbo build --filter=api --graph=graphs/api.jpg && turbo build --filter=admin --graph=graphs/admin.jpg",
-    "lint": "eslint . --max-warnings 0",
+    "lint": "eslint . --max-warnings 0 && turbo lint",
     "lint:fix": "eslint . --fix && turbo lint:fix",
     "manypkg:check": "manypkg check",
     "manypkg:fix": "manypkg fix",

@@ -1,0 +1,2 @@
+pnpm manypkg:check
+pnpm check-types

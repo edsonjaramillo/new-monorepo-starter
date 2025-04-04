@@ -1,7 +1,7 @@
 import { developmentTSupConfig, prepareTSupConfig, productionTSupConfig } from '@repo/configs/tsup';
 import { defineConfig } from 'tsup';
 
-const entry = ['src/datetime.ts'];
+const entry = ['src/datetime.ts', 'src/expiration.ts'];
 
 export default defineConfig((options) => {
   switch (options.env.CONFIG) {

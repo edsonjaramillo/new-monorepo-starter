@@ -3,7 +3,7 @@ import { seo } from '@repo/start-utils/seo';
 import { Toaster } from '@repo/ui/toast';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { createRootRouteWithContext, HeadContent, Outlet, Scripts } from '@tanstack/react-router';
-import { TanStackRouterDevtools } from '@tanstack/router-devtools';
+import { TanStackRouterDevtools } from '@tanstack/react-router-devtools';
 import { DefaultCatchBoundary } from '../components/DefaultCatchBoundary';
 import { NotFound } from '../components/NotFound';
 import { DesktopNavigation } from '../components/shared/navigation/desktop-navigation';

@@ -8,6 +8,10 @@
     "./auth": {
       "types": "./dist/auth.query.d.ts",
       "import": "./dist/auth.query.mjs"
+    },
+    "./users": {
+      "types": "./dist/users.query.d.ts",
+      "import": "./dist/users.query.mjs"
     }
   },
   "scripts": {

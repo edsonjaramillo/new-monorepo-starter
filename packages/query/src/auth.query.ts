@@ -5,7 +5,7 @@ import { queryOptions } from '@tanstack/react-query';
 // eslint-disable-next-line ts/explicit-function-return-type
 export function createAutoSignInOptions(enabled: boolean) {
   return queryOptions({
-    queryKey: [],
+    queryKey: ['session'],
     queryFn: autoSignIn,
     enabled,
   });

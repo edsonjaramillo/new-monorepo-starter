@@ -439,6 +439,10 @@ importers:
         version: 5.8.2
 
   packages/http:
+    dependencies:
+      valibot:
+        specifier: 1.0.0-rc.3
+        version: 1.0.0-rc.3(typescript@5.8.2)
     devDependencies:
       '@antfu/eslint-config':
         specifier: 4.11.0

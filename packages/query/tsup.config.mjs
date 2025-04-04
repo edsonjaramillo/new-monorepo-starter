@@ -1,7 +1,7 @@
 import { developmentTSupConfig, prepareTSupConfig, productionTSupConfig } from '@repo/configs/tsup';
 import { defineConfig } from 'tsup';
 
-const entry = ['src/auth.query.ts'];
+const entry = ['src/auth.query.ts', 'src/users.query.ts'];
 
 export default defineConfig((options) => {
   switch (options.env.CONFIG) {

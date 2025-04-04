@@ -1,4 +1,5 @@
 import { JSend } from '@repo/http/JSend';
+import { DEFAULT_LIMIT, DEFAULT_PAGE } from '@repo/http/paginate';
 import { createMiddleware } from 'hono/factory';
 import * as v from 'valibot';
 
@@ -16,9 +17,6 @@ const PaginationSchema = v.object({
   limit: nonZeroSchema,
   page: nonZeroSchema,
 });
-
-const DEFAULT_LIMIT = 25;
-const DEFAULT_PAGE = 1;
 
 export function paginate(forcedLimit?: number) {
   return createMiddleware(async (c, next) => {

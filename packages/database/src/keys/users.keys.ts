@@ -1,33 +1,17 @@
-export const UsersKeys = {
-  bulk(limit: number, offset: number) {
+export class UsersKeys {
+  static bulk(limit: number, offset: number): string {
     return `users:bulk:l:${limit}:o:${offset}`;
-  },
+  }
 
-  byBirthday(birthday: string) {
-    return `users:birthday:${birthday}`;
-  },
-
-  byId(id: string) {
-    return `users:${id}`;
-  },
-
-  count() {
+  static count(): string {
     return 'users:count';
-  },
+  }
 
-  credentials(email: string) {
-    return `users:${email}:credentials`;
-  },
-
-  session(id: string) {
-    return `users:${id}:session`;
-  },
-
-  onCreate() {
+  static onCreate(): string[] {
     return ['users:bulk:*', 'users:count'];
-  },
+  }
 
-  onUpdate(id: string, email: string) {
-    return ['users:bulk:*', 'users:count', `users:${id}`, `users:${email}:credentials`];
-  },
-};
+  static onUpdate(): string[] {
+    return ['users:bulk:*'];
+  }
+}

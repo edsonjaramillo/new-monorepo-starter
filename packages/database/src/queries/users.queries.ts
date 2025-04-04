@@ -45,27 +45,19 @@ export class UsersQueries {
   }
 
   async getUsersByBirthday(birthday: string): Promise<User[]> {
-    const cachedBirthdayKey = UsersKeys.byBirthday(birthday);
-    const cachedBirthday = await this.cache.get<User[]>(cachedBirthdayKey);
-    if (cachedBirthday) {
-      return cachedBirthday;
-    }
-
     const users = await this.database.query.usersTable.findMany({
       where: eq(usersTable.birthday, birthday),
       columns: USERS_COLUMNS,
     });
 
-    await this.cache.set(cachedBirthdayKey, users);
-
     return users;
   }
 
   async getUserCounts(): Promise<RowCount> {
-    const key = UsersKeys.count();
-    const cachedCountSeasonRecords = await this.cache.get<RowCount>(key);
-    if (cachedCountSeasonRecords) {
-      return cachedCountSeasonRecords;
+    const cachedUserCountsKey = UsersKeys.count();
+    const cachedUserCounts = await this.cache.get<RowCount>(cachedUserCountsKey);
+    if (cachedUserCounts) {
+      return cachedUserCounts;
     }
 
     const [rows] = await this.database.select({ count: count() }).from(usersTable);
@@ -73,18 +65,10 @@ export class UsersQueries {
       throw new Error('No data returned from database');
     }
 
-    await this.cache.set(key, { amountOfRows: rows.count });
-
     return { amountOfRows: rows.count };
   }
 
   async getUserById(id: string): Promise<User | undefined> {
-    const cachedUserKey = UsersKeys.byId(id);
-    const cachedUser = await this.cache.get<User>(cachedUserKey);
-    if (cachedUser) {
-      return cachedUser;
-    }
-
     const user = await this.database.query.usersTable.findFirst({
       where: eq(usersTable.id, id),
       columns: USERS_COLUMNS,
@@ -94,18 +78,10 @@ export class UsersQueries {
       return undefined;
     }
 
-    await this.cache.set(cachedUserKey, user);
-
     return user;
   }
 
   async getUserSession(id: string): Promise<UserSession | undefined> {
-    const cachedUserSessionKey = UsersKeys.session(id);
-    const cachedUserSession = await this.cache.get<UserSession>(cachedUserSessionKey);
-    if (cachedUserSession) {
-      return cachedUserSession;
-    }
-
     const user = await this.database.query.usersTable.findFirst({
       where: eq(usersTable.id, id),
       columns: USERS_SESSION_COLUMNS,
@@ -115,18 +91,10 @@ export class UsersQueries {
       return undefined;
     }
 
-    await this.cache.set(cachedUserSessionKey, user);
-
     return user;
   }
 
   async getUserCredentials(email: string): Promise<UserCredentials | undefined> {
-    const cachedCredentialsKey = UsersKeys.credentials(email);
-    const cachedCredentials = await this.cache.get<UserCredentials>(cachedCredentialsKey);
-    if (cachedCredentials) {
-      return cachedCredentials;
-    }
-
     const user = await this.database.query.usersTable.findFirst({
       where: eq(usersTable.email, email),
       columns: USERS_CREDENTIALS_COLUMNS,
@@ -136,8 +104,6 @@ export class UsersQueries {
       return undefined;
     }
 
-    await this.cache.set(cachedCredentialsKey, user);
-
     return user as UserCredentials;
   }
 
@@ -146,8 +112,8 @@ export class UsersQueries {
     await this.database.insert(usersTable).values(user);
   }
 
-  async updateUser(id: string, email: string, user: UserUpdate): Promise<void> {
-    await this.cache.cleanPatterns(UsersKeys.onUpdate(id, email));
+  async updateUser(id: string, user: UserUpdate): Promise<void> {
+    await this.cache.cleanPatterns(UsersKeys.onUpdate());
     await this.database.update(usersTable).set(user).where(eq(usersTable.id, id));
   }
 }

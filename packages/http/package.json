@@ -28,6 +28,10 @@
     "./response/health": {
       "types": "./dist/response/health.response.d.ts",
       "import": "./dist/response/health.response.mjs"
+    },
+    "./response/users": {
+      "types": "./dist/response/users.response.d.ts",
+      "import": "./dist/response/users.response.mjs"
     }
   },
   "scripts": {
@@ -41,6 +45,9 @@
     "lint": "eslint . --max-warnings 0",
     "lint:fix": "eslint . --fix",
     "prep": "tsup --env.CONFIG=prepare"
+  },
+  "dependencies": {
+    "valibot": "1.0.0-rc.3"
   },
   "devDependencies": {
     "@antfu/eslint-config": "4.11.0",

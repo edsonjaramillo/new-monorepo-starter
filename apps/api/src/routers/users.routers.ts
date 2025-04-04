@@ -1,3 +1,4 @@
+import type { UsersResponse } from '@repo/http/response/users';
 import { JSend } from '@repo/http/JSend';
 import { paginationMetadata } from '@repo/http/paginate';
 import { Hono } from 'hono';
@@ -13,7 +14,7 @@ adminUsersRouter.get('/', paginate(), async (c) => {
   const { amountOfRows } = await usersQueries.getUserCounts();
   const pagination = paginationMetadata(page, amountOfRows, limit);
 
-  return c.json(JSend.pagination(users, pagination, 'Users fetched successfully'));
+  return c.json<UsersResponse>(JSend.pagination(users, pagination, 'Users fetched successfully'));
 });
 
 adminUsersRouter.get('/birthday/:birthday', async (c) => {

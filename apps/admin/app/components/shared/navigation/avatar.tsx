@@ -16,7 +16,7 @@ export function Avatar() {
     // check if auto-sign-in cookie is set
     if (Cookies.get('auto-sign-in')) {
       // eslint-disable-next-line react-hooks-extra/no-direct-set-state-in-use-effect
-      setAutoSignInEnabled(false);
+      setAutoSignInEnabled(true);
     }
 
     // if auto-sign-in is enabled, sign in the user

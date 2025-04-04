@@ -21,10 +21,8 @@ export function Avatar() {
 
     // if auto-sign-in is enabled, sign in the user
     if (autoSignInEnabled) {
-      if (isSuccess) {
-        if (data.status === 'success') {
-          setSession(data.payload);
-        }
+      if (isSuccess && data.status === 'success') {
+        setSession(data.payload);
       }
     }
   }, [autoSignInEnabled, isSuccess, data, setSession]);
